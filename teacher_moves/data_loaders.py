@@ -70,8 +70,8 @@ def format_dialogue(data):
             formatted_outputs.append(user_prompt)
             labels.append(turn["future_teacher_move_type"])
             ids.append(turn["id"])
-        if len(labels) > 6:
-            break
+        # if len(labels) > 6:
+        #     break
     return formatted_outputs, labels, ids
 
 
@@ -180,9 +180,9 @@ if __name__ == "__main__":
     train_dataset = DialogueDatasetUnpacked(train_data, tokenizer)
     collator = DialogueCollatorUnpacked(tokenizer, device) 
     train_loader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
-    for batch in train_loader:
-        print(batch)
-        break
+    # for batch in train_loader:
+    #     print(batch)
+    #     break
 
 # Data outputs 
 # {
