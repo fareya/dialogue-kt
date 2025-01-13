@@ -1,7 +1,7 @@
 import torch
 from tqdm import tqdm
 from data_loaders import read_jsonl, group_data_by_id, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 from torch.utils.data import Dataset, DataLoader
 from torch.utils.data import DataLoader
@@ -22,7 +22,7 @@ SYSTEM_PROMPT_TEMPLATE = (
 
 
 def initialize_model(model_ckpt, num_labels):
-    model = AutoModelForSequenceClassification.from_pretrained(
+    model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         num_labels=4,
         problem_type="single_label_classification",  # Multi-class classification
@@ -33,16 +33,9 @@ def get_checkpoint_path(model_name: str):
     return f"saved_models/{model_name}"
 
 def get_base_model(base_model_name: str, tokenizer: AutoTokenizer, quantize: bool):
-    base_model = AutoModelForSequenceClassification.from_pretrained(
+    base_model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
-        pad_token_id=tokenizer.pad_token_id,
-        # quantization_config=bnb_config if quantize else None,
-        # f32 seems helpful for train/test time consistency when quantizing, bf16 performs best for non-quantized
-        torch_dtype=torch.float32 if quantize else torch.bfloat16,
-        device_map={"": 0}, 
-        num_labels=4, 
-        problem_type="single_label_classification",
-
+        pad_token_id=tokenizer.pad_token_id
     )
     base_model.config.use_cache = False
     base_model.config.pretraining_tp = 1 # What is this?
@@ -154,7 +147,7 @@ def fine_tune_llama_with_lora(
         print(f"Epoch {epoch + 1}/{epochs}")
         # for batch in train_dataloader:
         for batch_idx, batch in tqdm(enumerate(train_dataloader), desc="Training Batches"):
-            print(batch)
+            # print(batch)
             outputs = model(**batch)
             loss = outputs.loss
             total_loss += loss.item() # Accumulate actual loss for logging. Think this was not in order.
@@ -244,28 +237,66 @@ def main():
                                 lora_alpha=train_config["lora_alpha"]) 
 
     # Testing batch
-    for batch_idx, batch in enumerate(train_dataloader):
-        print(f"Batch {batch_idx}: {batch.keys()}")
-        print(f"Input IDs shape: {batch['input_ids'].shape}")
-        print(f"Labels shape: {batch['labels'].shape}")
-        outputs = model(**batch)
+def main():
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device: {device}")
 
-    # fine_tune_llama_with_lora(
-    #     tokenizer,
-    #     model,
-    #     device,
-    #     train_dataset,
-    #     val_dataset,
-    #     collator,
-    #     output_dir="./fine_tuned_model_with_lora",
-    #     epochs=train_config["epochs"],
-    #     learning_rate=train_config["lr"],
-    #     batch_size=train_config["batch_size"],
-    #     grad_accum_steps=train_config["grad_accum_steps"],
-    #     use_lr_scheduler=False,
-    #     wandb=None,
-    #     early_stopping=False,
-    #     patience=2
-    # )
+    data = read_jsonl(DATA_PATH)
+    grouped_data = group_data_by_id(data)
+    train_data, val_data = split_train_val(grouped_data)
+
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer)
+    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer)
+    collator = DialogueCollatorUnpacked(tokenizer, device)
+
+    train_config = {
+        "model_name": MODEL_NAME,
+        "pt_model_name": "trainable_lora_model",
+        "r": 16,
+        "lora_alpha": 16,
+        "epochs": 5,
+        "lr": 2e-4,
+        "wd": 1e-2,
+        "gc": 1.0,
+        "batch_size": 1,
+        "grad_accum_steps": 64,
+    }
+
+    model, tokenizer = get_model(
+        MODEL_NAME,
+        test=False,
+        model_name=train_config["model_name"],
+        pt_model_name=train_config["pt_model_name"],
+        r=train_config["r"],
+        lora_alpha=train_config["lora_alpha"]
+    )
+    model.to(device)  # Move model to device
+
+    train_dataloader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
+    # for batch_idx, batch in enumerate(train_dataloader):
+    #     batch = {k: v.to(device) for k, v in batch.items()}  # Ensure batch tensors are on the same device
+    #     print(f"Batch {batch_idx}: {batch.keys()}")
+    #     print(f"Input IDs shape: {batch['input_ids'].shape}")
+    #     print(f"Labels shape: {batch['labels'].shape}")
+    #     outputs = model(**batch)
+    #     print(outputs)
+    fine_tune_llama_with_lora(
+        tokenizer,
+        model,
+        device,
+        train_dataset,
+        val_dataset,
+        collator,
+        output_dir="./fine_tuned_model_with_lora",
+        epochs=train_config["epochs"],
+        learning_rate=train_config["lr"],
+        batch_size=train_config["batch_size"],
+        grad_accum_steps=train_config["grad_accum_steps"],
+        use_lr_scheduler=False,
+        wandb=None,
+        early_stopping=False,
+        patience=2
+    )
 
 main()
