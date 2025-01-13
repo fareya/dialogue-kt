@@ -1,9 +1,12 @@
 import torch
+from tqdm import tqdm
 from data_loaders import read_jsonl, group_data_by_id, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 from torch.utils.data import Dataset, DataLoader
-
+from torch.utils.data import DataLoader
+from transformers import AdamW
+from transformers import get_scheduler
 
 MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
 DATA_PATH = '/work/pi_juanzhai_umass_edu/fareya_workspace/dialogue-kt/teacher_moves/processed_data/train.jsonl'
@@ -11,9 +14,11 @@ MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 ACCESS_TOKEN = "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"
 SYSTEM_PROMPT_TEMPLATE = (
     "You are an experienced math teacher. You are given a dialogue between a student and teacher where {desc} "
-    "Your job is to predict the next teacher move. There are four teacher moves: generic, focus, telling, probing. "
+    "Your job is to predict the next teacher move. There are four teacher moves: generic, focus, telling, probing."
+    "You will output the next teacher move only. "
     "The dialogue is as follows:"
 )
+
 
 
 def initialize_model(model_ckpt, num_labels):
@@ -81,6 +86,127 @@ def get_class_tokens(tokenizer, class_labels = ["generic", "focus", "telling", "
     }
     return class_tokens
 
+
+def fine_tune_llama_with_lora(
+    tokenizer,
+    model,
+    device,
+    train_dataset,
+    val_dataset,
+    collate_fn,
+    output_dir="./fine_tuned_model_with_lora",
+    epochs=2,
+    learning_rate=1e-4,
+    batch_size=1,
+    grad_accum_steps=32,
+    use_lr_scheduler=False,
+    wandb=None,
+    early_stopping=False,
+    patience=2
+):
+    """
+    Fine-tunes a LLaMA model using LoRA for efficient adaptation.
+
+    Args:
+        model_name (str): The base model name (e.g., 'meta-llama/Meta-Llama-3.1-8B-Instruct').
+        tokenizer (transformers.AutoTokenizer): Tokenizer corresponding to the base model.
+        model (transformers.AutoModelForCausalLM): The pre-trained LLaMA model.
+        dataset (List[Dict[str, str]]): The fine-tuning dataset with 'input' and 'output' pairs.
+        output_dir (str, optional): Directory to save the fine-tuned model. Defaults to './fine_tuned_model_with_lora'.
+        lora_r (int, optional): Rank of the LoRA adapter matrices.
+        lora_alpha (int, optional): Scaling factor for LoRA.
+        lora_dropout (float, optional): Dropout rate for LoRA layers.
+        task_type (TaskType, optional): The task type for LoRA. Defaults to CAUSAL_LM.
+        epochs (int, optional): Number of epochs to fine-tune. Defaults to 1.
+        learning_rate (float, optional): Learning rate for the optimizer. Defaults to 5e-5.
+
+    Returns:
+        None: Saves the fine-tuned model to the specified output directory.
+    """
+
+    # Prepare data
+    model.train()
+    # collator = (tokenizer, device)
+
+    # modify this code 
+    train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn)
+    val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, collate_fn=collate_fn)
+
+    # Set up optimizer and scheduler
+    optimizer = AdamW(model.parameters(), lr=learning_rate)
+    num_training_steps = len(train_dataloader) * epochs
+    lr_scheduler = get_scheduler(
+        name="linear",
+        optimizer=optimizer,
+        num_warmup_steps=0,
+        num_training_steps=num_training_steps,
+    )
+
+    print(f"Starting LoRA fine-tuning for {epochs} epoch(s) with {len(train_dataset)} samples.")
+
+    best_val_loss = float("inf")
+    epochs_no_improvement = 0
+
+    # Training loop
+    for epoch in range(epochs):
+        total_loss = 0.0
+        model.train()
+        print(f"Epoch {epoch + 1}/{epochs}")
+        # for batch in train_dataloader:
+        for batch_idx, batch in tqdm(enumerate(train_dataloader), desc="Training Batches"):
+            print(batch)
+            outputs = model(**batch)
+            loss = outputs.loss
+            total_loss += loss.item() # Accumulate actual loss for logging. Think this was not in order.
+            loss = loss / grad_accum_steps
+            loss.backward()
+
+            if (batch_idx + 1) % grad_accum_steps == 0 or batch_idx == len(train_dataloader) - 1:
+                optimizer.step()
+                optimizer.zero_grad()
+
+                if use_lr_scheduler:
+                    lr_scheduler.step()
+                    
+        avg_loss = total_loss / len(train_dataloader)
+        print(f"Epoch {epoch + 1}/{epochs}, Average Loss: {avg_loss:.4f}")
+
+        # Validation
+        model.eval()
+        total_val_loss = 0.0
+        with torch.no_grad():
+            for batch_idx, batch in tqdm(enumerate(val_dataloader), desc="Validation Batches"):
+                outputs = model(**batch)
+                total_val_loss += outputs.loss.item()
+
+        val_loss = total_val_loss / len(val_dataloader)
+        print(f"Epoch {epoch + 1}/{epochs}, Validation Loss: {val_loss:.4f}")
+
+        # Early stopping check: if no improvement, increment counter
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            epochs_no_improvement = 0
+
+            # Save the best model so far
+            model.save_pretrained(f"{output_dir}")
+            print(f"New best model saved at epoch {epoch + 1}")
+        else:
+            epochs_no_improvement += 1
+            print(f"No validation improvement for {epochs_no_improvement} epochs.")
+
+        # Early stopping condition
+        if early_stopping and epochs_no_improvement >= patience:
+            print(f"No validation improvement for {patience} epochs. Stopping early.")
+            break
+
+        if wandb:
+            wandb.log({
+                "epoch": epoch + 1,
+                "average_loss": avg_loss,
+                "validation_loss": val_loss
+            })
+
+
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")  
@@ -91,9 +217,9 @@ def main():
     train_data, val_data = split_train_val(grouped_data)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     train_dataset = DialogueDatasetUnpacked(train_data, tokenizer)
-    collator = DialogueCollatorUnpacked(tokenizer)
-    train_loader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
-    val_loader = DataLoader(val_data, batch_size=1, collate_fn=collator)
+    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer)
+    collator = DialogueCollatorUnpacked(tokenizer, device) 
+
     # TODO ask about config 
     train_config = {
         "model_name": MODEL_NAME,
@@ -107,8 +233,9 @@ def main():
         "batch_size": 1,
         "grad_accum_steps": 64,
     }
+    train_dataloader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
     # Initialize model
-    
+    #This model is AutoModelForSequenceClassification from transformers 
     model, tokenizer = get_model(MODEL_NAME, 
                                 test=False, 
                                 model_name=train_config["model_name"], 
@@ -116,11 +243,31 @@ def main():
                                 r=train_config["r"], 
                                 lora_alpha=train_config["lora_alpha"]) 
 
-    # Define optimizer and loss function
-    optimizer = torch.optim.AdamW(model.parameters(), lr=train_config.lr, weight_decay=train_config.wd)
-    loss_fn = CrossEntropyLoss()
+    # Testing batch shapes here 
+    for batch_idx, batch in enumerate(train_dataloader):
+        print(f"Batch {batch_idx}: {batch.keys()}")
+        print(f"Input IDs shape: {batch['input_ids'].shape}")
+        print(f"Labels shape: {batch['labels'].shape}")
+        outputs = model(batch['input_ids'])
+        batch['labels'] = batch['labels'].view(-1) 
+        print(f"Labels shape afterwards: {batch['labels'].shape}")
 
-    # training and validation loop 
-    # Define a proper loss function 
+    # fine_tune_llama_with_lora(
+    #     tokenizer,
+    #     model,
+    #     device,
+    #     train_dataset,
+    #     val_dataset,
+    #     collator,
+    #     output_dir="./fine_tuned_model_with_lora",
+    #     epochs=train_config["epochs"],
+    #     learning_rate=train_config["lr"],
+    #     batch_size=train_config["batch_size"],
+    #     grad_accum_steps=train_config["grad_accum_steps"],
+    #     use_lr_scheduler=False,
+    #     wandb=None,
+    #     early_stopping=False,
+    #     patience=2
+    # )
 
 main()
