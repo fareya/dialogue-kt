@@ -243,14 +243,12 @@ def main():
                                 r=train_config["r"], 
                                 lora_alpha=train_config["lora_alpha"]) 
 
-    # Testing batch shapes here 
+    # Testing batch
     for batch_idx, batch in enumerate(train_dataloader):
         print(f"Batch {batch_idx}: {batch.keys()}")
         print(f"Input IDs shape: {batch['input_ids'].shape}")
         print(f"Labels shape: {batch['labels'].shape}")
-        outputs = model(batch['input_ids'])
-        batch['labels'] = batch['labels'].view(-1) 
-        print(f"Labels shape afterwards: {batch['labels'].shape}")
+        outputs = model(**batch)
 
     # fine_tune_llama_with_lora(
     #     tokenizer,
