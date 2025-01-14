@@ -70,8 +70,8 @@ def format_dialogue(data):
             formatted_outputs.append(user_prompt)
             labels.append(turn["future_teacher_move_type"])
             ids.append(turn["id"])
-        # if len(labels) > 6:
-        #     break
+        if len(labels) > 200:
+            break
     return formatted_outputs, labels, ids
 
 
@@ -117,7 +117,7 @@ class DialogueDatasetUnpacked(DatasetBase):
 
 # Use this tokenizer 
 class DialogueCollatorUnpacked:
-    def __init__(self, tokenizer, device):
+    def __init__(self, tokenizer, device, is_test=False):
         self.tokenizer = tokenizer
         self.device = device
 
@@ -139,7 +139,7 @@ class DialogueCollatorUnpacked:
 
         # Batch tokenize all sequences with padding
         tokenizer.pad_token = tokenizer.eos_token
-        tokenizer.padding_side = "right" #if has_labels else "left" # Right at train-time and left at test-time
+        tokenizer.padding_side = "right" if not is_test else "left" # Right at train-time and left at test-time
         tokenized_seqs = tokenizer(
             prompts,
             padding=True,
@@ -149,11 +149,11 @@ class DialogueCollatorUnpacked:
 
         input_ids = tokenized_seqs.input_ids
         attn_mask = tokenized_seqs.attention_mask
-        # if not has_labels:
-        #     return {
-        #         "input_ids": input_ids,
-        #         "attention_mask": attn_mask
-        #     }
+        if is_test:
+            return {
+                "input_ids": input_ids,
+                "attention_mask": attn_mask
+            }
 
         # Create labels
         labels = input_ids.clone()
