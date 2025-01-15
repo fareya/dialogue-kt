@@ -70,8 +70,8 @@ def format_dialogue(data):
             formatted_outputs.append(user_prompt)
             labels.append(turn["future_teacher_move_type"])
             ids.append(turn["id"])
-        if len(labels) > 200:
-            break
+        # if len(labels) > 200:
+        #     break
     return formatted_outputs, labels, ids
 
 
@@ -88,15 +88,23 @@ class DialogueDatasetUnpacked(DatasetBase):
         formatted_outputs, labels, ids = format_dialogue(data)
         chat_formatted_dialogue = [dialogue_apply_chat_template(formatted_outputs[i], labels[i],ids[i], tokenizer) for i in range(len(formatted_outputs))]
         self.data = []
+        self.data_len = []
         for i in range(len(chat_formatted_dialogue)): 
             # modify this 
-            self.data.append({
-                    "id": ids[i], 
-                    "prompt":chat_formatted_dialogue[i],
-                    "label": labels[i],
-                    })
+            
+            if len(chat_formatted_dialogue[i]) < 7500:
+                self.data_len.append(len(chat_formatted_dialogue[i]))
+                self.data.append({
+                        "id": ids[i], 
+                        "prompt":chat_formatted_dialogue[i],
+                        "label": labels[i],
+                        })
         print("Processed data")
         print(f"Number of data points: {len(self.data)}")
+        #Average length of the data points
+        print(f"Average length of the data points: {sum(self.data_len)/len(self.data_len)}")
+        # Maximum length of the data points
+        print(f"Maximum length of the data points: {max(self.data_len)}")
 
 # class DialogueCollatorUnpacked:
 #     def __init__(self, tokenizer):
@@ -120,11 +128,11 @@ class DialogueCollatorUnpacked:
     def __init__(self, tokenizer, device, is_test=False):
         self.tokenizer = tokenizer
         self.device = device
-
+        self.is_test = is_test
     def __call__(self, batch):
         tokenizer = self.tokenizer
         device = self.device
-
+        is_test = self.is_test
         # Construct prompts, use output labels if given
         # has_labels = isinstance(batch[0], dict)
         # is there a better way to check if a batch has labels? 
@@ -179,10 +187,10 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME) 
     train_dataset = DialogueDatasetUnpacked(train_data, tokenizer)
     collator = DialogueCollatorUnpacked(tokenizer, device) 
-    train_loader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
-    # for batch in train_loader:
-    #     print(batch)
-    #     break
+    train_loader = DataLoader(train_dataset, batch_size=10, collate_fn=collator)
+    for batch in train_loader:
+        print(batch)
+        break
 
 # Data outputs 
 # {
