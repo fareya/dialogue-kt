@@ -86,6 +86,7 @@ class LMKTCollatorUnpacked:
         self.tokenizer = tokenizer
 
     def __call__(self, batch):
+        print(batch)
         all_prompts = [prompt for sample in batch for prompt in sample["prompts"]]
         prompts_tokenized = self.tokenizer(all_prompts, return_tensors="pt", padding=True).to(device)
         return {

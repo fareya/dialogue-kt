@@ -10,10 +10,10 @@ import pandas as pd
 RANDOM_SEED = 42
 
 # MODEL SETTINGS 
-MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+# MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
-OUTPUT_KEY = "teacher_move" 
-OUTPUT_KEY = "future_teacher_move_type"
+OUTPUT_KEY = "teacher_move_type" 
+# OUTPUT_KEY = "future_teacher_move_type"
 
 # PROMPT SETUP
 MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
@@ -24,12 +24,12 @@ SYSTEM_PROMPT_TEMPLATE= (
     "The dialogue is as follows:"
 )
 
-# SYSTEM_PROMPT_TEMPLATE= (
-#     "You are an experienced math teacher. You are given a dialogue between a student and teacher where {desc} "
-#     "Your job is to predict the last teacher move type. There are four teacher moves: generic, focus, telling, probing."
-#     "You will output the next teacher move only. "
-#     "The dialogue is as follows:"
-# )
+SYSTEM_PROMPT_TEMPLATE= (
+    "You are an experienced math teacher. You are given a dialogue between a student and teacher where {desc} "
+    "Your job is to predict the last teacher move type. There are four teacher moves: generic, focus, telling, probing."
+    "You will output the next teacher move only. "
+    "The dialogue is as follows:"
+)
 
 print("Model Name: ", MODEL_NAME)
 print("System Prompt: ", SYSTEM_PROMPT_TEMPLATE)
@@ -39,14 +39,14 @@ def read_jsonl(data_path):
         return [json.loads(line) for line in f]
 
 def group_data_by_id(data):
+    # add all ids to a list
     grouped_data = defaultdict(list)
-    
     for entry in data:
         grouped_data[entry["id"]].append(entry)
     
     # remove duplicates 
-    for key in grouped_data.keys():
-        grouped_data[key] = pd.DataFrame(grouped_data[key]).drop_duplicates(subset=['teacher_move', 'student_move']).to_dict('records')
+    # for key in grouped_data.keys():
+    #     grouped_data[key] = pd.DataFrame(grouped_data[key]).drop_duplicates(subset=['teacher_move', 'student_move']).to_dict('records')
     return grouped_data
 
 def split_train_val(grouped_data):
@@ -79,32 +79,26 @@ def dialogue_apply_chat_template(dialogue, labels, ids, tokenizer):
     return tokenizer.decode(tokenized_chat[0])
 
 
-def format_dialogue(data):
+def format_dialogue(data, pred_label_name):
     formatted_outputs = []
     labels = [] 
     ids = [] 
     print("Length of data: ", len(data))
     for conversation in data: 
-        print("Length of conversation: ", len(conversation))
+        # print("Length of conversation: ", len(conversation))
         
         dialogue_text = []
         # print(conversation)
         # print(len(conversation))
         for i, turn in enumerate(conversation):
-            print(turn)
             dialogue_text.append(f"\nTeacher Turn {turn['turn']}: {turn['teacher_move']} \nStudent Turn  {turn['turn']}: {turn['student_move']}")
             user_dialogue = " ".join(dialogue_text)
             user_prompt = "[BEGIN DIALOGUE]" + user_dialogue + "\n[END DIALOGUE]"       
             formatted_outputs.append(user_prompt)
-            labels.append(turn[OUTPUT_KEY])
+            labels.append(turn[pred_label_name])
             ids.append(turn["id"])
-        # else:
-        #     user_dialogue = " ".join(dialogue_text)
-        #     user_prompt = "[BEGIN DIALOGUE]" + user_dialogue + "\n[END DIALOGUE]"       
-        #     formatted_outputs.append(user_prompt)
-        #     labels.append(conversation[0]["future_teacher_move_type"])
-        #     ids.append(conversation)
     print("Length of formatted outputs: ", len(formatted_outputs))
+    assert len(formatted_outputs) == len(labels)
     return formatted_outputs, labels, ids
 
 
@@ -116,9 +110,10 @@ class DatasetBase(Dataset):
         return len(self.data)
 
 class DialogueDatasetUnpacked(DatasetBase):
-    def __init__(self, data: list, tokenizer, skip_first_turn: bool = False):
+    def __init__(self, data: list, tokenizer, skip_first_turn: bool = False, model_name: str = None, output_key: str = None):
         tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME) 
-        formatted_outputs, labels, ids = format_dialogue(data)
+        assert output_key == OUTPUT_KEY
+        formatted_outputs, labels, ids = format_dialogue(data, output_key)
         chat_formatted_dialogue = [dialogue_apply_chat_template(formatted_outputs[i], labels[i],ids[i], tokenizer) for i in range(len(formatted_outputs))]
         self.data = []
         self.data_len = []
@@ -149,13 +144,6 @@ class DialogueCollatorUnpacked:
         tokenizer = self.tokenizer
         device = self.device
         is_test = self.is_test
-
-        # Construct prompts, use output labels if given
-        # has_labels = isinstance(batch[0], dict)
-        # is there a better way to check if a batch has labels? 
-
-        # print(batch[0])
-        # prompts = [example["prompt"] + example["label"] + tokenizer.eos_token for example in batch] # if has_labels else batch
 
         if is_test:
             prompts = [
@@ -205,12 +193,9 @@ class DialogueCollatorUnpacked:
 # Usage example:
 if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    data_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test.jsonl"
+    data_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train.jsonl"
     incoming_test_data = read_jsonl(DATA_PATH)
     grouped_data = group_data_by_id(incoming_test_data) 
-    # print(grouped_data)
-    # train_data, val_data = split_train_val(grouped_data)
-    # print(train_data)
     test_data = get_test_formatted(grouped_data)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME) 
     train_dataset = DialogueDatasetUnpacked(test_data, tokenizer)

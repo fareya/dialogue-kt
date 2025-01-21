@@ -12,7 +12,7 @@ from huggingface_hub import login
 
 MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
 DATA_PATH = '/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test.jsonl'
-MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
 
 def get_base_model(base_model_name: str, tokenizer: AutoTokenizer, quantize: bool):
     base_model = AutoModelForCausalLM.from_pretrained(
@@ -48,7 +48,11 @@ def get_model(base_model_name: str, test: bool,
 
 def compute_metrics(preds, labels):
     # compute the accuracy
-    accuracy = (preds == labels).mean()
+    count = 0
+    for i in range(len(preds)):
+        if preds[i] == labels[i]:
+            count += 1
+    accuracy = count / len(preds)
     f1 = f1_score(labels, preds, average="macro")
     return {"accuracy": accuracy, "f1": f1}
 
@@ -60,8 +64,10 @@ def test_lora_model():
     test_data = get_test_formatted(grouped_data)
     # print(grouped_data)
 
+    PRED_LABEL_NAME = "teacher_move_type"
+
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    test_dataset = DialogueDatasetUnpacked(test_data, tokenizer)
+    test_dataset = DialogueDatasetUnpacked(test_data, tokenizer, output_key=PRED_LABEL_NAME)
     collator = DialogueCollatorUnpacked(tokenizer, device, is_test=True)
     test_loader = DataLoader(test_dataset, batch_size=1, collate_fn=collator)
     # first read the base model and tokenizer 
@@ -91,10 +97,14 @@ def test_lora_model():
 
     # now read the PEFT model 
     # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_checkpoints/"
-    lora_model_path="/project/pi_andrewlan_umass_edu/fikram_workspace/dialogue-kt/final_model/"
+    # lora_model_path="/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32b"
+    lora_model_path="/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32"
+   
+    print(f"Loading model from {lora_model_path}")
     peft_model = PeftModel.from_pretrained(model, model_id=lora_model_path, is_trainable=False)
     peft_model.to("cuda")
     peft_model.eval()
+
 
     predictions = []
     labels = []
@@ -108,16 +118,18 @@ def test_lora_model():
             model_out = peft_model.generate(input_ids, 
                                 attention_mask=attn_mask, 
                                 pad_token_id=tokenizer.pad_token_id, 
-                                max_length=1024)
+                                max_new_tokens=1000)
            
             # just look at the first output
             new_tokens = model_out[:, batch["input_ids"].shape[-1]:]
             prediction_text = tokenizer.batch_decode(new_tokens, skip_special_tokens=True)
             for i in range(len(prediction_text)):
                 print(f"Prediction: {prediction_text[i]}")
-            print(prediction_text)
+                print(f"Label: {batch_labels[i]}")
             predictions.extend(prediction_text)
             labels.extend(batch_labels)
+    metrics = compute_metrics(predictions, labels)
+    print(metrics)
 
 test_lora_model()
 

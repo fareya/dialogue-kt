@@ -1,6 +1,6 @@
 import torch
 from tqdm import tqdm
-from data_loaders import read_jsonl, group_data_by_id, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
+from teacher_moves.data_loaders import read_jsonl, group_data_by_id, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 from torch.utils.data import Dataset, DataLoader
@@ -8,29 +8,6 @@ from torch.utils.data import DataLoader
 from transformers import AdamW
 from transformers import get_scheduler
 
-MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
-DATA_PATH = '/work/pi_juanzhai_umass_edu/fareya_workspace/dialogue-kt/teacher_moves/processed_data/train.jsonl'
-MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
-ACCESS_TOKEN = "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"
-SYSTEM_PROMPT_TEMPLATE = (
-    "You are an experienced math teacher. You are given a dialogue between a student and teacher where {desc} "
-    "Your job is to predict the next teacher move. There are four teacher moves: generic, focus, telling, probing."
-    "You will output the next teacher move only. "
-    "The dialogue is as follows:"
-)
-
-
-
-def initialize_model(model_ckpt, num_labels):
-    model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME,
-        num_labels=4,
-        problem_type="single_label_classification",  # Multi-class classification
-    )
-    return model
-
-def get_checkpoint_path(model_name: str):
-    return f"saved_models/{model_name}"
 
 def get_base_model(base_model_name: str, tokenizer: AutoTokenizer, quantize: bool):
     base_model = AutoModelForCausalLM.from_pretrained(
@@ -199,57 +176,31 @@ def fine_tune_llama_with_lora(
                 "validation_loss": val_loss
             })
 
-
+    print("Finished fine-tuning.")
 def main():
+    # DATA_PATH = '/work/pi_juanzhai_umass_edu/fareya_workspace/dialogue-kt/teacher_moves/processed_data/train.jsonl'
+    DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train.jsonl"
+    print(f"Using data: {DATA_PATH}")
+    # MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+    MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
+    print(f"Using model: {MODEL_NAME}")
+    MODEL_SAVE_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2"
+    print(f"Saving model to: {MODEL_SAVE_PATH}")
+    ACCESS_TOKEN = "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"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}")  
-    # Load data and split into train and val sets
-    print("Loading data")
-    data = read_jsonl(DATA_PATH)
-    grouped_data = group_data_by_id(data)
-    train_data, val_data = split_train_val(grouped_data)
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer)
-    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer)
-    collator = DialogueCollatorUnpacked(tokenizer, device) 
 
-    # TODO ask about config 
-    train_config = {
-        "model_name": MODEL_NAME,
-        "pt_model_name": "trainable_lora_model",
-        "r": 16,
-        "lora_alpha": 16,
-        "epochs": 5,
-        "lr": 2e-4,
-        "wd": 1e-2,
-        "gc": 1.0,
-        "batch_size": 1,
-        "grad_accum_steps": 64,
-    }
-    train_dataloader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
-    # Initialize model
-    #This model is AutoModelForSequenceClassification from transformers 
-    model, tokenizer = get_model(MODEL_NAME, 
-                                test=False, 
-                                model_name=train_config["model_name"], 
-                                pt_model_name=train_config["pt_model_name"], 
-                                r=train_config["r"], 
-                                lora_alpha=train_config["lora_alpha"]) 
-
-    # Testing batch
-def main():
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    PRED_LABEL_NAME = "teacher_move_type"
+    print(f"Using prediction label: {PRED_LABEL_NAME}")
     print(f"Using device: {device}")
 
     data = read_jsonl(DATA_PATH)
     grouped_data = group_data_by_id(data)
     train_data, val_data = split_train_val(grouped_data)
-
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer)
-    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer)
+    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer, output_key = PRED_LABEL_NAME)
+    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer, output_key = PRED_LABEL_NAME)
     collator = DialogueCollatorUnpacked(tokenizer, device)
-
+ 
     train_config = {
         "model_name": MODEL_NAME,
         "pt_model_name": "trainable_lora_model",
@@ -261,7 +212,11 @@ def main():
         "gc": 1.0,
         "batch_size": 1,
         "grad_accum_steps": 64,
+        "model_save_path": MODEL_SAVE_PATH,
     }
+
+    print("Model Configuration:")
+    print(train_config)
 
     model, tokenizer = get_model(
         MODEL_NAME,
@@ -273,14 +228,7 @@ def main():
     )
     model.to(device)  # Move model to device
 
-    train_dataloader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
-    # for batch_idx, batch in enumerate(train_dataloader):
-    #     batch = {k: v.to(device) for k, v in batch.items()}  # Ensure batch tensors are on the same device
-    #     print(f"Batch {batch_idx}: {batch.keys()}")
-    #     print(f"Input IDs shape: {batch['input_ids'].shape}")
-    #     print(f"Labels shape: {batch['labels'].shape}")
-    #     outputs = model(**batch)
-    #     print(outputs)
+
     fine_tune_llama_with_lora(
         tokenizer,
         model,
@@ -288,7 +236,7 @@ def main():
         train_dataset,
         val_dataset,
         collator,
-        output_dir="./fine_tuned_model_with_lora",
+        output_dir=train_config["model_save_path"],
         epochs=train_config["epochs"],
         learning_rate=train_config["lr"],
         batch_size=train_config["batch_size"],
@@ -299,4 +247,5 @@ def main():
         patience=2
     )
 
-main()
+if __name__ == "__main__":
+    main()
