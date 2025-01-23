@@ -11,13 +11,73 @@ from torch.utils.data import DataLoader
 from transformers import AdamW
 from transformers import get_scheduler
 from teacher_moves.train_lora_model import get_base_model, get_model
-from kt_data_loading import LMKTDatasetUnpacked, LMKTCollatorUnpacked
+from kt_data_loading import (LMKTDatasetUnpacked, LMKTCollatorUnpacked, LMKTDatasetPacked, LMKTCollatorPacked,
+                             DKTDataset, DKTCollator, get_dataloader, apply_annotations)
+from prompting import get_true_false_tokens
+# from training import get_lmkt_loss_unpacked, get_lmkt_loss_packed
 # from data_loading import load_annotated_data
 # Read train data for bothe dialogue kt and teacher moves 
 # Completely consolidated standalone functions that do their own thing and load it to the training batch 
 
 # Next is to pick a model - it can the same for both as both use the causal LM model 
 # The data loader should alternate between the two datasets when training the finetuning model 
+
+def get_lmkt_loss_unpacked(model, batch, true_token, false_token, args):
+    # Get logits at last token of each sequence
+    model_output = model(input_ids=batch["input_ids"], attention_mask=batch["attention_mask"])
+    batch_size = model_output.logits.shape[0]
+    logits = model_output.logits[torch.arange(batch_size), batch["last_idxs"]]
+    # Return probability of True token over False token for each sequence
+    logits = torch.stack([logits[:, true_token], logits[:, false_token]], dim=1)
+    kc_probs = torch.softmax(logits, dim=1)[torch.arange(batch_size), 0]
+    # Get probability that all KCs are True for each turn in the batch
+    num_kc_counter = 0
+    kc_probs_grouped = []
+    corr_probs = []
+    for num_kcs in batch["num_kcs"]:
+        kc_probs_grouped.append(kc_probs[num_kc_counter : num_kc_counter + num_kcs].tolist())
+        if args.agg == "prod":
+            prob = kc_probs[num_kc_counter : num_kc_counter + num_kcs].prod()
+        elif args.agg == "mean-ar":
+            prob = kc_probs[num_kc_counter : num_kc_counter + num_kcs].mean()
+        elif args.agg == "mean-geo":
+            prob = kc_probs[num_kc_counter : num_kc_counter + num_kcs].prod() ** (1 / num_kcs)
+        corr_probs.append(prob)
+        num_kc_counter += num_kcs
+    corr_probs = torch.stack(corr_probs)
+    # Get BCE loss with correctness labels and predicted probabilities
+    loss = torch.nn.BCELoss()(corr_probs, batch["labels"])
+    return loss, kc_probs_grouped, corr_probs
+
+def get_lmkt_loss_packed(model, batch, true_token, false_token, args, device):
+    # Invert attention mask
+    attention_mask = batch["attention_mask"]
+    min_dtype = torch.finfo(model.dtype).min
+    attention_mask[attention_mask == 0] = min_dtype
+    attention_mask[attention_mask == 1] = 0
+    attention_mask = attention_mask.type(model.dtype)
+    # Get logits at last token of each sequence
+    model_output = model(input_ids=batch["input_ids"], attention_mask=attention_mask, position_ids=batch["position_ids"])
+    batch_size = model_output.logits.shape[0]
+    logits = model_output.logits[torch.arange(batch_size).unsqueeze(1), batch["last_idxs"]]
+    # Return probability of True token over False token for each sequence
+    logits = torch.stack([logits[:, :, true_token], logits[:, :, false_token]], dim=2)
+    kc_probs = torch.softmax(logits, dim=2)[:, :, 0]
+    # Get probability that all KCs are True for each turn in the batch
+    kc_probs_grouped = [probs[:num_kcs].tolist() for probs, num_kcs in zip(kc_probs, batch["num_kcs"])]
+    # Set probs on padded indices
+    padding_val = 0 if args.agg == "mean-ar" else 1
+    kc_probs = torch.masked_scatter(kc_probs, batch["last_idxs"].to(device) == 0, torch.full_like(kc_probs, padding_val).to(device))
+    # Get BCE loss with correctness labels and predicted probabilities
+    if args.agg == "prod":
+        corr_probs = kc_probs.prod(dim=1)
+    elif args.agg == "mean-ar":
+        corr_probs = kc_probs.sum(dim=1) / batch["num_kcs"]
+    elif args.agg == "mean-geo":
+        corr_probs = kc_probs.prod(dim=1) ** (1 / batch["num_kcs"])
+    loss = torch.nn.BCELoss()(corr_probs, batch["labels"])
+    return loss, kc_probs_grouped, corr_probs
+
 
 def load_annotated_data(data_path):
     def pass_typical_threshold(row, typical_cutoff=1):
@@ -33,26 +93,24 @@ def load_annotated_data(data_path):
     )
     raise Exception(f"Loading not supported for {args.dataset}")
 
-def load_dialogue_kt_data(data_path, model_name):
+def load_dialogue_kt_data(data_path, model_name, args):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token
     file_name = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/data/annotated/mathdial_train_atc.csv"
     train_df, val_df = load_annotated_data(file_name)
-    class SubstituteArgs:
-        def __init__(self, **kwargs):
-            for key, value in kwargs.items():
-                setattr(self, key, value)
-    args = SubstituteArgs(dataset = "mathdial", prompt_inc_labels=True) 
 
     print(args)
-    train_dataset = LMKTDatasetUnpacked(train_df, tokenizer, args)
+    # train_dataset = LMKTDatasetUnpacked(train_df, tokenizer, args)
+    train_dataset = LMKTDatasetPacked(train_df, tokenizer, args)
     print("Train dataset")
     print(train_dataset[:5])
-    val_dataset = LMKTDatasetUnpacked(val_df, tokenizer, args)
-    collator = LMKTCollatorUnpacked(tokenizer)
+    # val_dataset = LMKTDatasetUnpacked(val_df, tokenizer, args)
+    val_dataset = LMKTDatasetPacked(val_df, tokenizer, args)
+    # collator = LMKTCollatorUnpacked(tokenizer)
+    collator = LMKTCollatorPacked(tokenizer)
 
-    train_loader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
-    val_loader = DataLoader(val_dataset, batch_size=1, collate_fn=collator)
+    train_loader = DataLoader(train_dataset, batch_size=4, collate_fn=collator)
+    val_loader = DataLoader(val_dataset, batch_size=4, collate_fn=collator)
 
     # for idx, batch in enumerate(train_loader):
     #     print(batch)
@@ -71,19 +129,6 @@ def load_teacher_moves_data(data_path, model_name, pred_label_name, device):
     collator = DialogueCollatorUnpacked(tokenizer, device)
     return train_dataset, val_dataset, collator
 
-def load_data():
-    # create a data loader for dialogue kt data, both training and validation
-    # create a data loader for teacher moves data, both training and validation
-    # returns 4 values 
-    pass
-
-def train_model():
-    # load the model 
-    # load the data 
-    # train the model 
-    pass
-
-
 
 def fine_tune_alternate_llama_with_lora(
     tokenizer,
@@ -98,12 +143,13 @@ def fine_tune_alternate_llama_with_lora(
     output_dir="./fine_tuned_model_with_lora",
     epochs=2,
     learning_rate=1e-4,
-    batch_size=1,
+    batch_size=4,
     grad_accum_steps=32,
     use_lr_scheduler=False,
     wandb=None,
     early_stopping=False,
-    patience=2
+    patience=2, 
+    args = None,
 ):
     """
     Fine-tunes a LLaMA model using LoRA for efficient adaptation.
@@ -137,12 +183,13 @@ def fine_tune_alternate_llama_with_lora(
     train_dataloader_two = train_dataset_two # DataLoader(train_dataset_two, batch_size=batch_size, shuffle=True, collate_fn=collate_fn_2)
     val_dataloader_two = val_dataset_two #DataLoader(val_dataset_two, batch_size=batch_size, shuffle=False, collate_fn=collate_fn_2)
 
-    for idx, batch in enumerate(train_dataloader_two):
-        print(batch)
-        if idx == 5:
-            break
+    # for idx, batch in enumerate(train_dataloader_two):
+    #     print(batch)
+    #     if idx == 5:
+    #         break
     # Set up optimizer and scheduler
     optimizer = AdamW(model.parameters(), lr=learning_rate)
+    true_token, false_token = get_true_false_tokens(tokenizer)
     # num_training_steps = len(train_dataloader) * epochs
     # lr_scheduler = get_scheduler(
     #     name="linear",
@@ -167,8 +214,8 @@ def fine_tune_alternate_llama_with_lora(
         for batch_idx, (batch1, batch2) in tqdm( enumerate(itertools.zip_longest(train_dataloader_one, train_dataloader_two, fillvalue=None)), total=total_training_batches, desc="Processing Training Batches",):
             if batch1 is not None:
                 # Process batch from dataloader1
-                print("Batch 1")
-                print(batch1)
+                # print("Batch 1")
+                # print(batch1)
                 outputs = model(**batch1)
                 loss = outputs.loss
                 total_loss += loss.item() # Accumulate actual loss for logging. Think this was not in order.
@@ -177,16 +224,16 @@ def fine_tune_alternate_llama_with_lora(
                 iterations += 1
             if batch2 is not None:
                 # Process batch from dataloader2
-                print("Batch 2")
-                print(batch2)
-                print(batch2.keys())
-                print(len(batch2["input_ids"]))
-                print(batch2["input_ids"])
-                print(len(batch2["labels"]))
-                print(batch2["labels"])
-                outputs = model(**batch2)
-                loss = outputs.loss
-                total_loss += loss.item() # Accumulate actual loss for logging. Think this was not in order.
+                # print("Batch 2")
+                # print(batch2)
+                # print(batch2.keys())
+                # print(len(batch2["input_ids"]))
+                # print(batch2["input_ids"])
+                # print(len(batch2["labels"]))
+                # print(batch2["labels"])
+                loss, _, _ = get_lmkt_loss_packed(model, batch2, true_token, false_token, args, device)
+                total_loss += loss.item() 
+                loss = loss / grad_accum_steps
                 loss.backward()
                 iterations += 1
             # using batch_idx*2 to determine when to step the optimizer, multiplyin by 2 because we are processing two batches at a time 
@@ -275,7 +322,7 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     DATA_PATH_ONE = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train.jsonl"
     DATA_PATH_TWO = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/data/annotated/mathdial_train_atc.csv"
-    MODEL_SAVE_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama_mixed"
+    MODEL_SAVE_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama_mixed_4gpu"
 
     print(f"Using model: {MODEL_NAME}")
     print(f"Using teacher moves data: {DATA_PATH_ONE}")
@@ -284,14 +331,20 @@ def main():
     print(f"Using prediction label: {PRED_LABEL_NAME}")
     print(f"Using device: {device}")
 
+    class SubstituteArgs:
+        def __init__(self, **kwargs):
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+    args = SubstituteArgs(dataset = "mathdial", prompt_inc_labels=True, agg = "prod") 
+
     train_dataset_one, val_dataset_one, collator_one = load_teacher_moves_data(DATA_PATH_ONE, MODEL_NAME, PRED_LABEL_NAME, device)
     # train_dataset_two, val_dataset_two, collator_two = load_dialogue_kt_data(DATA_PATH_TWO, MODEL_NAME)
-    train_dataset_two, val_dataset_two = load_dialogue_kt_data(DATA_PATH_TWO, MODEL_NAME)
+    train_dataset_two, val_dataset_two = load_dialogue_kt_data(DATA_PATH_TWO, MODEL_NAME, args)
 
-    for idx, batch in enumerate(train_dataset_two):
-        print(batch)
-        if idx == 5:
-            break
+    # for idx, batch in enumerate(train_dataset_two):
+        # print(batch)
+        # if idx == 5:
+        #     break
 
     train_config = {
         "model_name": MODEL_NAME,
@@ -302,8 +355,8 @@ def main():
         "lr": 2e-4,
         "wd": 1e-2,
         "gc": 1.0,
-        "batch_size": 1,
-        "grad_accum_steps": 64,
+        "batch_size": 4,
+        "grad_accum_steps": 4,
         "model_save_path": MODEL_SAVE_PATH,
     }
 
@@ -339,7 +392,8 @@ def main():
         use_lr_scheduler=False,
         wandb=None,
         early_stopping=False,
-        patience=2
+        patience=2, 
+        args = args,
     )
 
 if __name__ == "__main__":
