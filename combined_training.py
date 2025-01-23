@@ -109,8 +109,8 @@ def load_dialogue_kt_data(data_path, model_name, args):
     # collator = LMKTCollatorUnpacked(tokenizer)
     collator = LMKTCollatorPacked(tokenizer)
 
-    train_loader = DataLoader(train_dataset, batch_size=4, collate_fn=collator)
-    val_loader = DataLoader(val_dataset, batch_size=4, collate_fn=collator)
+    train_loader = DataLoader(train_dataset, batch_size=1, collate_fn=collator)
+    val_loader = DataLoader(val_dataset, batch_size=1, collate_fn=collator)
 
     # for idx, batch in enumerate(train_loader):
     #     print(batch)
@@ -129,6 +129,19 @@ def load_teacher_moves_data(data_path, model_name, pred_label_name, device):
     collator = DialogueCollatorUnpacked(tokenizer, device)
     return train_dataset, val_dataset, collator
 
+def load_data():
+    # create a data loader for dialogue kt data, both training and validation
+    # create a data loader for teacher moves data, both training and validation
+    # returns 4 values 
+    pass
+
+def train_model():
+    # load the model 
+    # load the data 
+    # train the model 
+    pass
+
+
 
 def fine_tune_alternate_llama_with_lora(
     tokenizer,
@@ -143,7 +156,7 @@ def fine_tune_alternate_llama_with_lora(
     output_dir="./fine_tuned_model_with_lora",
     epochs=2,
     learning_rate=1e-4,
-    batch_size=4,
+    batch_size=1,
     grad_accum_steps=32,
     use_lr_scheduler=False,
     wandb=None,
@@ -355,8 +368,8 @@ def main():
         "lr": 2e-4,
         "wd": 1e-2,
         "gc": 1.0,
-        "batch_size": 4,
-        "grad_accum_steps": 4,
+        "batch_size": 1,
+        "grad_accum_steps": 64,
         "model_save_path": MODEL_SAVE_PATH,
     }
 
