@@ -4,6 +4,8 @@ data/src/mathdial
 data/src/*.csv
 data/src/*.json
 results/**/*.json
+data/src/*.jsonl
+results/**/*.jsonl
 results/**/*.txt
 results/**/*.csv
 saved_models/
