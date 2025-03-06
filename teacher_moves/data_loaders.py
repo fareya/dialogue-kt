@@ -9,12 +9,6 @@ import pandas as pd
 # Constants and Global Variables
 RANDOM_SEED = 42
 
-# MODEL SETTINGS 
-# MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
-MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
-OUTPUT_KEY = "teacher_move_type" 
-# OUTPUT_KEY = "future_teacher_move_type"
-
 # PROMPT SETUP
 MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
 SYSTEM_PROMPT_TEMPLATE= (
@@ -31,8 +25,8 @@ SYSTEM_PROMPT_TEMPLATE= (
     "The dialogue is as follows:"
 )
 
-print("Model Name: ", MODEL_NAME)
-print("System Prompt: ", SYSTEM_PROMPT_TEMPLATE)
+# print("Model Name: ", MODEL_NAME)
+# print("System Prompt: ", SYSTEM_PROMPT_TEMPLATE)
 # Read JSONL File
 def read_jsonl(data_path):
     with open(data_path) as f:
@@ -73,10 +67,10 @@ def dialogue_apply_chat_template(dialogue, labels, ids, tokenizer):
         {"role": "user", "content": user_message},
     ]
     # Ensuring that we are adding the generator prompt here 
-    tokenized_chat = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors="pt")
+    tokenized_chat = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True) #, return_tensors="pt")
 
     # print(tokenizer.decode(tokenized_chat[0]))
-    return tokenizer.decode(tokenized_chat[0])
+    return tokenized_chat
 
 
 def format_dialogue(data, pred_label_name):
@@ -86,17 +80,34 @@ def format_dialogue(data, pred_label_name):
     print("Length of data: ", len(data))
     for conversation in data: 
         # print("Length of conversation: ", len(conversation))
-        
         dialogue_text = []
         # print(conversation)
         # print(len(conversation))
         for i, turn in enumerate(conversation):
-            dialogue_text.append(f"\nTeacher Turn {turn['turn']}: {turn['teacher_move']} \nStudent Turn  {turn['turn']}: {turn['student_move']}")
-            user_dialogue = " ".join(dialogue_text)
-            user_prompt = "[BEGIN DIALOGUE]" + user_dialogue + "\n[END DIALOGUE]"       
-            formatted_outputs.append(user_prompt)
-            labels.append(turn[pred_label_name])
-            ids.append(turn["id"])
+            if pred_label_name == "future_teacher_move_type":
+                if turn['future_teacher_move_type']:
+                    dialogue_text.append(f"\nTeacher Turn {turn['turn']}: {turn['teacher_move']} \nStudent Turn  {turn['turn']}: {turn['student_move']}")
+                    user_dialogue = "".join(dialogue_text) # replaced 
+                    user_prompt = "[BEGIN DIALOGUE]" + user_dialogue + "\n[END DIALOGUE]"       
+                    formatted_outputs.append(user_prompt)
+                    labels.append(turn[pred_label_name])
+                    ids.append(turn["id"])
+            
+            elif pred_label_name == "teacher_move_type":
+                print("Turn: ", turn)
+                # print (turn)
+                if turn['teacher_move_type'] and i < len(conversation)-1:
+                    curr_teacher_move_model= conversation[i+1]['teacher_move']
+                    curr_teacher_turn = conversation[i+1]['turn']
+                    curr_teacher_type = conversation[i+1]['teacher_move_type']
+                    
+                    additional_text = f"\nTeacher Turn {curr_teacher_turn}: {curr_teacher_move_model}"
+                    dialogue_text.append(f"\nTeacher Turn {turn['turn']}: {turn['teacher_move']} \nStudent Turn  {turn['turn']}: {turn['student_move']}")
+                    user_dialogue = "".join(dialogue_text) # replaced 
+                    user_prompt = "[BEGIN DIALOGUE]" + user_dialogue + additional_text + "\n[END DIALOGUE]"       
+                    formatted_outputs.append(user_prompt)
+                    labels.append(curr_teacher_type)
+                    ids.append(turn["id"])
     print("Length of formatted outputs: ", len(formatted_outputs))
     assert len(formatted_outputs) == len(labels)
     return formatted_outputs, labels, ids
@@ -111,15 +122,21 @@ class DatasetBase(Dataset):
 
 class DialogueDatasetUnpacked(DatasetBase):
     def __init__(self, data: list, tokenizer, skip_first_turn: bool = False, model_name: str = None, output_key: str = None):
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME) 
-        assert output_key == OUTPUT_KEY
+        tokenizer = AutoTokenizer.from_pretrained(model_name) 
+        # print(OUTPUT_KEY)
+        # print(output_key)
+        
+        # assert output_key == OUTPUT_KEY
         formatted_outputs, labels, ids = format_dialogue(data, output_key)
+        print("Formatted data")
+        # for i in range(50):
+        #     print(formatted_outputs[i])
+        #     print(labels[i])
         chat_formatted_dialogue = [dialogue_apply_chat_template(formatted_outputs[i], labels[i],ids[i], tokenizer) for i in range(len(formatted_outputs))]
         self.data = []
         self.data_len = []
         for i in range(len(chat_formatted_dialogue)): 
             # modify this 
-            
             if len(chat_formatted_dialogue[i]) < 7500:
                 self.data_len.append(len(chat_formatted_dialogue[i]))
                 self.data.append({
@@ -147,18 +164,20 @@ class DialogueCollatorUnpacked:
 
         if is_test:
             prompts = [
-                example["prompt"] + tokenizer.eos_token
+                example["prompt"] 
                 for example in batch
             ]
         else:
+            # todo: rerun for train 
             prompts = [
-                example["prompt"] + tokenizer.decode(tokenizer(example["label"], add_special_tokens=False).input_ids) + tokenizer.eos_token
+                example["prompt"] + example["label"] + tokenizer.eos_token
                 for example in batch
             ]
 
         # Batch tokenize all sequences with padding
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = "right" if not is_test else "left" # Right at train-time and left at test-time
+        
         tokenized_seqs = tokenizer(
             prompts,
             padding=True,
@@ -192,13 +211,16 @@ class DialogueCollatorUnpacked:
 
 # Usage example:
 if __name__ == "__main__":
+    output_key = "teacher_move_type"
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    data_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train.jsonl"
-    incoming_test_data = read_jsonl(DATA_PATH)
+    data_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test_check.jsonl"
+    incoming_test_data = read_jsonl(data_path)
     grouped_data = group_data_by_id(incoming_test_data) 
     test_data = get_test_formatted(grouped_data)
+    MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
+
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME) 
-    train_dataset = DialogueDatasetUnpacked(test_data, tokenizer)
+    train_dataset = DialogueDatasetUnpacked(test_data, tokenizer, output_key = output_key)
     collator = DialogueCollatorUnpacked(tokenizer, device) 
     train_loader = DataLoader(train_dataset, batch_size=10, collate_fn=collator)
     for batch in train_loader:
