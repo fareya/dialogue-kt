@@ -1,0 +1,851 @@
+{"processed_text": "Student: In Section 3 Topic 2:\r\nV=(w+2)(w)(w+2 over 4)\r\nIn Part B of Beat the Test Darnell multiplied that equation by 1/4. Why?  ", "id": 2207545, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: To get rid of the fraction, you multiply by the reciprocal. ", "id": 2207545, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Yes, so wouldn't the reciprocal be 4, not 1/4? ", "id": 2207545, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: At what time in the video does this happen Martin? ", "id": 2207545, "order": 3, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Check the last 5 minutes ", "id": 2207545, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: He didn't really multiply the equation by 1/4, he just moved the 1/4 out of the parentheses to the front of the equation ", "id": 2207545, "order": 5, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Oh ok thank you Jennifer, that answers my question. Good night Algebra Nation! ", "id": 2207545, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Take care Martin :) ", "id": 2207545, "order": 7, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Can you guys help the answer to this question would be C right? ", "id": 216431, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: ok great thanks! but can a study expert tell me please just to make sure? ", "id": 216431, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: that seems correct ", "id": 216431, "order": 3, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thank you! ", "id": 216431, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: :) ", "id": 216431, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: And while I might get some wrong, I have never seen Maria get any wrong   ", "id": 216431, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: **Post Closed** ", "id": 216431, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: hey Algebra nation i need help. if a shirt is 120 dollars and it is 50 percent of how much is it now? ", "id": 2240663, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: If you get 50% off a shirt, you are only paying half the price.  What is one half of 120, or 120 divided by 2? ", "id": 2240663, "order": 1, "list_of_labels": "['giving_explanation', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 60 dollars right ", "id": 2240663, "order": 2, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: to find 50% off, you divide the cost by 2 ", "id": 2240663, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 60 dollars right sabrina ", "id": 2240663, "order": 4, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yup! ", "id": 2240663, "order": 5, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank you very much sabrina ", "id": 2240663, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I know that a compound inequality must me like this (Ex) 0&lt;x&lt;3 but why can't it be 3&gt;x&gt;0? ", "id": 1063881, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: be*\r\n ", "id": 1063881, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: it is the same thing ", "id": 1063881, "order": 2, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: it looks better to put the smallest number on the left of the equation ", "id": 1063881, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: :) ", "id": 1063881, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: How to solve for X: X+2/Y-1=2 ", "id": 321777, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: first you would follow pemdas for the inverse opperation ", "id": 321777, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: you'd have do divide Y-1 on both sides to help get x isolated ", "id": 321777, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Okay ", "id": 321777, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: you're welcome and good job! ", "id": 321777, "order": 7, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: what video is it emily? ", "id": 2302801, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: section 2 topic 10 ", "id": 2302801, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: what study expert are you using? ", "id": 2302801, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: the sound is working for me, try to refresh the page and make sure the sound button on the video is not muted! ", "id": 2302801, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: if that doesnt work check the sound icon on the bottom of your computer and make sure its on :) ", "id": 2302801, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: okay ill try ", "id": 2302801, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Hi guys, I have a problem that I don't know how to solve it I wanted to know if you guys can help me?? The problem is: 5(r-2)\u00b2=35 ", "id": 2244636, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Are you trying to solve for r?\r\n\r\nIf so, first, you need r alone on one side. First step? Try and get rid of the 5 ", "id": 2244636, "order": 1, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: First you need to take care of the exponent because of order of operations. So you need to do (r-2)\u00b2 then you distribute the 5 to what you get ", "id": 2244636, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Do I have to distrube the r * r and the r *-2? ", "id": 2244636, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: You would do (r-2)(r-2), so yes ", "id": 2244636, "order": 4, "list_of_labels": "['confirmatory_feedback', 'giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Ok thanks, and after I distribute and add light terms I get 5(r\u00b2-4r+4)=35? Is that right? ", "id": 2244636, "order": 5, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yes! Now you can distribute the 5 ", "id": 2244636, "order": 6, "list_of_labels": "['confirmatory_feedback', 'giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thank you so much! ", "id": 2244636, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: You're welcome! ", "id": 2244636, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: what is a simple definition of the vertical line test? I'm really confused :O ", "id": 1049006, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: um they say that with the verticle line test, two points can not come across the same line  ", "id": 1049006, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: no problem:) ", "id": 1049006, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: are you mean johnathan\r\n ", "id": 1049006, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: no im just trying to help:) ", "id": 1049006, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: drawing lines vertically to see if a crooked line is a function or not\r\n ", "id": 1049006, "order": 8, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thanks..... ", "id": 1049006, "order": 9, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: WAS UP JHON  ", "id": 1049006, "order": 10, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: :)\r\n ", "id": 1049006, "order": 11, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: yo  ", "id": 1049006, "order": 14, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: yess yess i did tank u ", "id": 1049006, "order": 15, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: WUD BRO ", "id": 1049006, "order": 16, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: helping others right now hbu? ", "id": 1049006, "order": 17, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: NUN BRO  ", "id": 1049006, "order": 18, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: hey miss abigal are you my teacher ", "id": 1049006, "order": 20, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: great:) ", "id": 1049006, "order": 21, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: how do u get kp ", "id": 199976, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: By helping people online, but the study experts have to approve ", "id": 199976, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: What is kp?\r\n ", "id": 199976, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: dont u get kp for uploading something and postin? ", "id": 199976, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: posting ", "id": 199976, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: nope, you dont get any for asking questions, only helping others with their questions ", "id": 199976, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: k thx ", "id": 199976, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Hello Im in math class right now\r\n\r\n ", "id": 2495185, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: cool! do u need any help? ", "id": 2495185, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Nah\r\n ", "id": 2495185, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Im just bored\r\n ", "id": 2495185, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: alright\r\n ", "id": 2495185, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: 2x-10=90\r\n3g+45=90\r\n5n+40=90\r\n2a-88=100\r\n6b+9=87\r\n7v-40=58\r\n2c-33=55 ", "id": 3589, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: 3g+45=90 /-45  3g=45  g=45/3  g=15 ", "id": 3589, "order": 3, "list_of_labels": "['giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Good job! ", "id": 3589, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Thanks =D ", "id": 3589, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Your welcome :D ", "id": 3589, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: You are really good at math, why don't you try making your own problems, too? ", "id": 3589, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Anyone can try this ", "id": 3589, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: great job guys! way to help each other out =) ", "id": 3589, "order": 9, "list_of_labels": "['praising_and_encouraging', 'encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thank you ", "id": 3589, "order": 10, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: :D ", "id": 3589, "order": 11, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: 2x-10=90         2x=100          x=50 \r\n3g+45=90       3g=45           g=15 \r\n5n+40=90       5n=50         n=10\r\n2a-88=100      2a=188      a=94 \r\n6b+9=87        6b=78         b=13\r\n7v-40=58        7v=98        v=14 \r\n2c-33=55        2c=88        c=44 ", "id": 3589, "order": 12, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Did I get this right? ", "id": 3589, "order": 13, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: You did! +100 karma points to you, James ", "id": 3589, "order": 14, "list_of_labels": "['confirmatory_feedback', 'encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: redo your first one Gonzalo before I can reward Karma points ", "id": 3589, "order": 16, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Whoops,\r\n2x-10=90\r\n2x-10+10=90+10\r\n2x/2=100/2\r\nx=50 ", "id": 3589, "order": 17, "list_of_labels": "['giving_instruction', 'giving_answers', 'acknowledging_tutor_issue']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: there yah go! +100 karma points to you ", "id": 3589, "order": 18, "list_of_labels": "['encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: You got it correct YAY! ", "id": 3589, "order": 19, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: 2x-10=90  2x=100 x=50\r\n\r\n3g+45=90   3g=45  g=15\r\n\r\n5n+40=90   5n=50   n=10\r\n\r\n2a-88=100   2a=188   a=94\r\n\r\n6b+9=87   6b=78  b=13\r\n\r\n7v-40=58 7v=98  v=14\r\n\r\n2c-33=55   2c=88  c=44 ", "id": 3589, "order": 21, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: That's right, Jiyansh! +100 karma points to you! This question is now closed to karma points ", "id": 3589, "order": 22, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: 1. x = 50\r\n2. g = 15\r\n3. n = 10\r\n4. a = 94\r\n5. b = 13\r\n6. v = 14\r\n7. c = 44 ", "id": 3589, "order": 23, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Oh dang it 1 comment too late .-. ", "id": 3589, "order": 24, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: It wasn't too late ", "id": 3589, "order": 25, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Sorry! :) ", "id": 3589, "order": 29, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: My graph shows that the solution is in all the quadrants with quadrant three having a small solution. ", "id": 1184637, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Can you show us your graph Robert? ", "id": 1184637, "order": 1, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Also consider that this is a system, meaning it's defined by the intersection of the two regions ", "id": 1184637, "order": 3, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: some what like that\r\n ", "id": 1184637, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: but the answers do not say quadrant 4 ", "id": 1184637, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I got the answer its C ", "id": 1184637, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: On Ashley's video for Section 4 Topic 10 she stated that 48\u00f74 is 4, when it should've been 48\u00f712 is 4. At 3:40 ", "id": 2346054, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Hi Joshua, thank you for letting us know!  I'll look into it! ", "id": 2346054, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Ok! ", "id": 2346054, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: By the time I go looking for mistakes there won\u2019t be anymore,Good Job! ", "id": 2346054, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Lol, Thanks Mayah! ", "id": 2346054, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Thank you for keeping an eye out for mistakes and reporting them! ", "id": 2346054, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: You're Welcome! ", "id": 2346054, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: I forgot how do  simplified again ? ", "id": 254485, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Simplify what? Can you post a problem? :) ", "id": 254485, "order": 1, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Post a specific problem ", "id": 254485, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I mean what video and section ", "id": 254485, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: \u221a45\r\n   divided \r\n\u221a147 ", "id": 254485, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Alright. \r\nSection 8 - Video 6 - Multiplying and Dividing Radicals  ", "id": 254485, "order": 6, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank u ", "id": 254485, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Welcome ", "id": 254485, "order": 8, "list_of_labels": "['irrelevant_statement']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: What does -6&lt;x&lt;-4 mean? ", "id": 2229852, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: That your x value is greater than -6 but less than -4!  ", "id": 2229852, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: well it is a AND inequality ", "id": 2229852, "order": 2, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: It is a simplified version of saying x &gt; -6 AND x &lt; -4 ", "id": 2229852, "order": 3, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: i hope i just have not inadvertantly gave away and answer ", "id": 2229852, "order": 4, "list_of_labels": "['acknowledging_tutor_issue']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Ok, now I get it.  ", "id": 2229852, "order": 5, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: because thats in compound inequality the way that is wrote ", "id": 2229852, "order": 6, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thanks! ", "id": 2229852, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: You did not give away the answer. No worries. ", "id": 2229852, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student:  5y = 23.\r\ny=4.6\r\nbut thats not an answer ", "id": 2276413, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: what do i do  ", "id": 2276413, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: if you divide both sides by 5, you get 23/5 which is the first answer choice ", "id": 2276413, "order": 2, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: It looks like they are keeping answers in fraction form, so how did you solve this? ", "id": 2276413, "order": 3, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: NM thx dow ", "id": 2276413, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: i just was no this and i got the Question right ", "id": 2276413, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: like what the hay ", "id": 2276413, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Elyssay, let us know if you need more help! ", "id": 2276413, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: So just divide by five. It would be 23/5 ", "id": 2276413, "order": 8, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Quick question, I need to know where I can find the section 8 test yourself is and I don't know where to find it. ", "id": 3277635, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Check under videos and more ", "id": 3277635, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: I checked under section 8, I haven't found it. ", "id": 3277635, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: See that pencil/pen image at the end and it says test yoruself in front of it? That is where it is ", "id": 3277635, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Thank you ", "id": 3277635, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: 3x*2/y ; x=3 and y=6  ", "id": 52729, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: 3 ", "id": 52729, "order": 1, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: THANK YOU I GOT IT RIGHT\r\n ", "id": 52729, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Easy, just plug in for the x and y and then solve.\r\n\r\nWhat will it look like when you plug it in Sasha? ", "id": 52729, "order": 5, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Hailey the purpose is to help them and not give them the answer. Don't give the answers because we have to guide them step by step. ", "id": 52729, "order": 6, "list_of_labels": "['guiding_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I know thanks she helped out\r\n ", "id": 52729, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: great! THIS POST IS NOW CLOSED! ", "id": 52729, "order": 8, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: distribute it so it is expanded ", "id": 2102323, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: solve for d then solve for g and you take those anwsers and combine them ", "id": 2102323, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: solve for bouth exponets i think\r\n ", "id": 2102323, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: are values for d and g given ", "id": 2102323, "order": 4, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: you could multiply with the box method of F.O.I.L. standing for \r\nFront\r\nOutside\r\nInside\r\nLast.\r\nwhat is-\r\nd*d\r\nd*g\r\nd*g\r\ng*g? ", "id": 2102323, "order": 7, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: no values are given so woldnt it be d^2 + g^2 ", "id": 2102323, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: you are close Madison, you are forgetting d*g and d*g, dg+dg is what madi? ", "id": 2102323, "order": 9, "list_of_labels": "['questioning', 'praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: that is not how it works you need to distribute out the terms to expand it ", "id": 2102323, "order": 10, "list_of_labels": "['negative_feedback', 'correcting']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: yup! ", "id": 2102323, "order": 13, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: yeah ", "id": 2102323, "order": 14, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: great thanks ", "id": 2102323, "order": 15, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: pythagorean theoram  ", "id": 2354500, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: I put this because i saw people had trouble in my class ", "id": 2354500, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: yes, that is the pythageorean theorem! ", "id": 2354500, "order": 3, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Adam, is it possible to get points for posting questions? ", "id": 2354500, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: no you can't get points for posting questions, only for helping students! ", "id": 2354500, "order": 5, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Oh. In my class everyone wants to get points for answering so no-one posts ", "id": 2354500, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Algebra nation should make GOOD questions worth kp. ", "id": 2354500, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Pythagorean theorem ", "id": 2354500, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Hi. This is the answer I got but I'm not very confident with it so can you double check my work?  ", "id": 3251935, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: i don't think that's right. do you know the properties of an isosceles trapezoid? ", "id": 3251935, "order": 1, "list_of_labels": "['negative_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Hi Danielle! What do you know about the diagonals of an isosceles trapezoid? ", "id": 3251935, "order": 2, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: They are congruent.  ", "id": 3251935, "order": 3, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor:  so you would set them equal to each other instead of adding to 360  ", "id": 3251935, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Wait do I set them up equal to each other since they are congruent? ", "id": 3251935, "order": 5, "list_of_labels": "['linguistic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yes! ", "id": 3251935, "order": 6, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I have a question. If two people have the same amount of karma points do they tie for the same place. Or is one on top. Like how does it work. ", "id": 3258492, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: oh nvm\r\n\r\n ", "id": 3258492, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: You get karma points by answering or helping someone on the wall.\r\n ", "id": 3258492, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Jiya, I am not sure about this. I will have to find out. ", "id": 3258492, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: For your first post you get a 100 karma point. Then after that you are given points according to your response from a study expert. Beside your name you can click karma points for more information. You can also win cool prizes! ", "id": 3258492, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: thank u Jiya\r\n ", "id": 3258492, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: No problem\r\n ", "id": 3258492, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Ok thanks Ms.Katie\r\n ", "id": 3258492, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: how do i find the standard diviation ", "id": 1389266, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: anybody?\r\n ", "id": 1389266, "order": 1, "list_of_labels": "['asking_for_elaboration']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Do you have a specific problem? Or do you just need to know? ", "id": 1389266, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: i need to know\r\n ", "id": 1389266, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: I forgot  look at section 10 video 4\r\n ", "id": 1389266, "order": 4, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Section 10 video 4 of MAFS! ", "id": 1389266, "order": 5, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok thanks ", "id": 1389266, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: when working with the closure property, can a polynomial be closed under division ", "id": 2201344, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Have you watched section 3 topic 5? ", "id": 2201344, "order": 1, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: not fully  ", "id": 2201344, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Check out the video :) ", "id": 2201344, "order": 3, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: adam help me ", "id": 2201344, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: shank you ", "id": 2201344, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Tatiana, the on ramp tool will help you!  ", "id": 2201344, "order": 6, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: *thank you\r\n ", "id": 2201344, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: At McArthur High School, there are 785 students in this year's senior class. If there are 77 more females in the class than males, calculate the number of male students of the senior class.\r\n Enter your answer into the grid below. \r\nHELP ME PLAESE\r\n ", "id": 228781, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: PLEASE\r\n ", "id": 228781, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: ok just subtract 77 from 785. then the numbers will be equal, so just divide your answer by 2 ", "id": 228781, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: really it was that easy thanks guys sry my mind went blank lol  ", "id": 228781, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: well, theres two ways to solve this, I just told you the less complicated way :) ", "id": 228781, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: great\r\npost now clsoed ", "id": 228781, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Can you help me. I do not understand this. Here is the question:\r\nwithdrawing  10$ every week from an outstanding\r\nbalance of \u0344400$ ", "id": 3150856, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Hello Nada, withdrawal means total money getting less, so subtraction is involved. ", "id": 3150856, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: is 10-400w correct? ", "id": 3150856, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: You are close, $400 is the balance and we are withdrawing $10 every week. Can you fix the expression now ", "id": 3150856, "order": 3, "list_of_labels": "['correcting', 'questioning', 'praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 400-10w ", "id": 3150856, "order": 4, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Perfect! ", "id": 3150856, "order": 5, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Okay thank you! ", "id": 3150856, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I have this and just one more I didnt know ", "id": 3289703, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: and I think it's a ", "id": 3289703, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: both c and d are completely inaccurate and b is false ", "id": 3289703, "order": 2, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: I agree, a is exponential ", "id": 3289703, "order": 3, "list_of_labels": "['confirmatory_feedback', 'giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thanks for your help again ", "id": 3289703, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: You're welcome again :) ", "id": 3289703, "order": 5, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: exponential for sure\r\n ", "id": 3289703, "order": 7, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: hi, sorry i wasn't online for a while, i had stuff to do\r\n ", "id": 1220313, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: thats fine what do you need help with? ", "id": 1220313, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: section 1 video 6 on mafs ", "id": 1220313, "order": 4, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: MAFS Section 1 video 6 may help  ", "id": 1220313, "order": 5, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok thx\r\n ", "id": 1220313, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: you're welcome Richard ", "id": 1220313, "order": 7, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: whats the answer you just put = and then nothing ", "id": 310451, "order": 1, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: it just says Simplify the expression ", "id": 310451, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: =18 ", "id": 310451, "order": 3, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: oh okay so first distribute -8(-1-9h) ", "id": 310451, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: oh wait it was 8+72h\r\nhank you any ways\r\n ", "id": 310451, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: ok well youre welcome ", "id": 310451, "order": 7, "list_of_labels": "['irrelevant_statement']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: 100 KP Katherine for helping out! ", "id": 310451, "order": 8, "list_of_labels": "['encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: i need help with ", "id": 2150204, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: We need to get x alone right Lily! ", "id": 2150204, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: so multiply 5 by 93 ? ", "id": 2150204, "order": 2, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: yep! ", "id": 2150204, "order": 3, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: then x equals my answer ? ", "id": 2150204, "order": 5, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: correct! ", "id": 2150204, "order": 6, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: welcome! ", "id": 2150204, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Can somebody take a quick glance and verify my answers  ", "id": 3172185, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Looks good.  ", "id": 3172185, "order": 2, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Welcome!! ", "id": 3172185, "order": 5, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok thank you ricky  ", "id": 3172185, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: No problem ", "id": 3172185, "order": 7, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Can I get help? ", "id": 2162071, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: with what ", "id": 2162071, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: I answered a question for another student and these study experts ain't giving me my karma points ", "id": 2162071, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Brandi where my karma points?\r\n ", "id": 2162071, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: By answering the question I was helping the student ", "id": 2162071, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: I gave Darryn G. an example and he said it helped him and you ain't give me no karma points  ", "id": 2162071, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: better have gave me my karma points ", "id": 2162071, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Are there any videos for polynomials on here? ", "id": 2468425, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: try section 1 topic 2! ", "id": 2468425, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Yes, you can try section 1 topic 2. The main focus for that video is polynomials. Also, do you have a specific problem that you need help with??? ", "id": 2468425, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: no, i dont have any specfic problem i need help with. thank you though Earl B.!! ", "id": 2468425, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Thank you! I am watching it right now, Earl! ", "id": 2468425, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Do i get kp for this? ", "id": 2468425, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Riley bought 3 bagels and 2 muffins for $7.25. Karen bought 5 bagels and 4 muffins for $13.25. What  are the two equations that would follow this scenario.  ", "id": 1147730, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: 3b + 2m = 7.25 \r\n5b + 4m = 13.25 \r\nb = bagels\r\nm = muffins\r\n ", "id": 1147730, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: That's right. ", "id": 1147730, "order": 2, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: correct ", "id": 1147730, "order": 3, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Okay thank you Zack and Mrs. Berns. :D  ", "id": 1147730, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: yup! thats correct\r\n ", "id": 1147730, "order": 5, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: you're welcome ", "id": 1147730, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 3/5x-7=18 how can I find X? ", "id": 1127, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: To start the problem, we must get all constants on one side and all variables on the other. So you must get rid of -7. How would you do that? ", "id": 1127, "order": 1, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: add 7 ", "id": 1127, "order": 2, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: 125/3 ", "id": 1127, "order": 4, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Right! So if you simplify that, you would get 41.666... which you can also represent as 41 2/3, so x = 41 2/3. ", "id": 1127, "order": 5, "list_of_labels": "['confirmatory_feedback', 'giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank you ", "id": 1127, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: when you are multiplying (3x+2) (2x-1) and you are multiplying 3x x 2x would it be 6x squared or 6x? ", "id": 2148724, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: useing the box method\r\n ", "id": 2148724, "order": 1, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: you have to combine like terms ", "id": 2148724, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: 6x\u00b2 because you have 2 x's. if it was 4x and then a constant like 2 then it would be 8x. but since there are 2 x's you must have an exponent of 2 ", "id": 2148724, "order": 3, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank you for giving me an explanation and the answor to this problom  ", "id": 2148724, "order": 4, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: because my teacher didnt\r\n ", "id": 2148724, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: 6x squared ", "id": 2148724, "order": 6, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok thank you\r\n ", "id": 2148724, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: ok thank you ", "id": 2148724, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: hi chance\r\n ", "id": 2356828, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: ?!?!??!?!??!?!??!?!?!??!? ", "id": 2356828, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Gabriel do you need any help? ", "id": 2356828, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Please keep comments algebra related ", "id": 2356828, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok\r\n ", "id": 2356828, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: like this ", "id": 2356828, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: If you have an algebra question please make a new post ", "id": 2356828, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: who is the guy who makes the main videos? is he ever on the algebra wall? ", "id": 201206, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Zach. I don't believe he is ", "id": 201206, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: I don't think so ", "id": 201206, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: He doesn't tutor on the wall ", "id": 201206, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: how come? ", "id": 201206, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Shami has the idea :) ", "id": 201206, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Do you have any challenge problems on practicing how to find the slope of a line?  ", "id": 1217000, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: First we need to have 2 points on a graph to use the slope formula ", "id": 1217000, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Okay. I don't have any specific points. Would something like (2,5) and (5,6) work?\r\n ", "id": 1217000, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Or use y2-y1/x2-x1 ", "id": 1217000, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Yes Emily! Then plug those points into Toyin's formula to get the slope of a line ", "id": 1217000, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Yeah we could! So if the formula is y2-y1/x2-X11 we can just plug in the coordinates  ", "id": 1217000, "order": 5, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: :)  ", "id": 1217000, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Okay so which point do I use first? Does it matter? ", "id": 1217000, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: I replied on the other post!  ", "id": 1217000, "order": 8, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: it's taken me so long. I can't figure it out ", "id": 186176, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Plug in c ", "id": 186176, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Set the two formulas equal to each other.  ", "id": 186176, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: OH I GET IT so it would be the area equals the volume. then I would solve like a 2step??? ", "id": 186176, "order": 5, "list_of_labels": "['conceptual_knowledge', 'strategic_knowledge']", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: yup, pretty much! ", "id": 186176, "order": 6, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Right!! However, I think you have to put in &quot;c&quot; for r on the left and &quot;S&quot; for r on the right since they tell you to in the problem.  ", "id": 186176, "order": 7, "list_of_labels": "['confirmatory_feedback', 'giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: How do you determine the domain and range for continuous graphs? And how do you know if it is all real numbers? ", "id": 2266378, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: It is all real numbers if it doesn\u2019t stop in either direction. The domain will be how wide it will be since they are x-values and the range will be the height of it since they are the y-values ", "id": 2266378, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: whoops just kidding i was thinking of something else, sorry ", "id": 2266378, "order": 3, "list_of_labels": "['irrelevant_statement']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Savannah, do you have an example? ", "id": 2266378, "order": 4, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: No i do not have a specific example  ", "id": 2266378, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Ellen somewhat answered my question ", "id": 2266378, "order": 6, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: i think I understand for now, but thanks! ", "id": 2266378, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Is there a graphing section? ", "id": 281714, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Will you please be more specific? Lines, parabolas? ", "id": 281714, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Section 5 Video 4, specifically. Although, video 5 covers the topic of lines. ", "id": 281714, "order": 4, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: section 5 and 6 ", "id": 281714, "order": 5, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thanks ", "id": 281714, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: True, Section 6 covers lines, as well. ", "id": 281714, "order": 7, "list_of_labels": "['confirmatory_feedback', 'providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Find the Value  -4 + 15 + (-30).  ", "id": 3226401, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Well, let's start with the first two numbers, whats -4+15? ", "id": 3226401, "order": 1, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: -19\r\n ", "id": 3226401, "order": 4, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Nice, that's the final answer ", "id": 3226401, "order": 5, "list_of_labels": "['giving_explanation', 'praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thank you ", "id": 3226401, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: No problem ", "id": 3226401, "order": 7, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Great work, both of you! ", "id": 3226401, "order": 8, "list_of_labels": "['praising_and_encouraging', 'encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I joined the wall yesterday and I'm not sure what Karma points do. What do they do? ", "id": 1169688, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Study Experts award Karma Points to students for helping other students and starting new discussions about Geometry on the Geometry Wall. You can help students by telling them which videos will help them with their questions and by explaining how to start problems. You won't be given Karma Points if you just give the answer. You\u2019ll be awarded 100, 200 or 500 Karma Points, depending on your post. You can also see where you stand with other students by looking at the Karma Points Leaderboard. The number of Karma Points you\u2019ve earned is shown on each wall post that you make, on the header above the video player, and on the My Account page. Why do you want to earn Karma Points? Because you can win great prizes! Check out MathNation.com/karmapoints for more info. ", "id": 1169688, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: We are switching up the prize system now so it is to be determined! ", "id": 1169688, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: What about this month? ", "id": 1169688, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: @Alina He said it's not determined yet, so it must be a surprise ;) ", "id": 1169688, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: this is my last question, ergo, no more from me for the day. Chapter 10: 5\u00d7\u221a81\u00d7\u02c93\u221a25 ", "id": 69885, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: I didn't know, I was trying to help people practice. ", "id": 69885, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: 5x\u221a9x-3\u221a5. :) ", "id": 69885, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Ok. :) ", "id": 69885, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Nathan - please top posting pictures and problems.  This wall is for algebra help only. thanks.\r\n**post closed** ", "id": 69885, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Nathan - please stop posting pictures and problems.  This wall is for algebra help only. thanks.\r\n**post closed** ", "id": 69885, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: so, if i stand correct, 3a\u00b2 - 18a - 81 = 3(a-9)(a+3) not  3(a+6)(a-9) ???   ", "id": 228800, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: correct ", "id": 228800, "order": 1, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: But, in Trinomials Part 1 it says 3a\u00b2 - 18a - 81 = 3(a+6)(a-9) ", "id": 228800, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Yes, good job ", "id": 228800, "order": 3, "list_of_labels": "['confirmatory_feedback', 'praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: that must be a mistake, sorry about that, can you report that to help@algebranation.com ", "id": 228800, "order": 4, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: shouldn't the mistake in the video be fixed?  ", "id": 228800, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: oh ok.  ", "id": 228800, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: post closed ", "id": 228800, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Good afternoon! I was just wondering, about \"Karma Points\". What are they, and how do they supply us with assistance? ", "id": 644, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: You can click the question mark on Karma Points to learn more. Basically, you help people and Study Experts give you either 100, 250, or 500 karma points. You can also get karma points for asking great questions. They supply us with a contest prize which I believe is an iPad. Makes you want to help people doesn't it? ", "id": 644, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Was my question a good one? ", "id": 644, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: no it doesnt bruh  ", "id": 644, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: an no it waznt bruh ", "id": 644, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Go suck it \"bruh\". Get outa here ", "id": 644, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: suck it yoself cracka ", "id": 644, "order": 10, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: u think i giv a fuhhh ", "id": 644, "order": 12, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: you do cause you keep talking ", "id": 644, "order": 13, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: WORLDDDSTAAAAAAAAAAARRR !!!!!!!!! ", "id": 644, "order": 14, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: foo im boutta crackah smack u thru tha computer ", "id": 644, "order": 15, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: THanks for helping out, Gonzalo! +100 karma points! ", "id": 644, "order": 16, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: f(x)={      x+8\r\n       {-----------------    if x\u22604\r\n       {   (x+8)(x\u22124)\r\n       {   10                   if x=4\r\nWhat is the domain of the real-valued function f(x)?\r\nA. {x \u2208 R \u2223 x \u2260 \u22128}\r\nB. { x \u2208 R \u2223 x \u2260 8}\r\nC. { x \u2208 R \u2223 x >  8}\r\nD. { x \u2208 R \u2223 \u22128 \u2264 x \u2264 8}\r\nE. None of the above ", "id": 4372, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: is this a challenge question Gonzalo? ", "id": 4372, "order": 1, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: It's actually something I do not really understand. I remember doing something with an easier function, but this is much more detailed. Can you please help? ", "id": 4372, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: i'm stumped, no 100 kp for me D: ", "id": 4372, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: it's not a random 10.. i think it's part of the (x + 8)(x - 4).. it's just the way they put it that makes it confusing. let me draw it for you ", "id": 4372, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: ok I'm saying A.  Again, it's been awhile since I've seen a question like this, and fyi, this won't be on EOC.  But...because this is a rational function, we cannot let the denominator equal 0 ever.\r\n\r\nso basically we can plug in any number we want, except 4, like it says in the problem, AND except for -8 because if we plug that into (x+8), it would cause that to equal 0 which then causes the whole denominator to equal zero.\r\n\r\nDoes that make any sense? ", "id": 4372, "order": 6, "list_of_labels": "['giving_explanation', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: agreed! lol.  really the x\u2260 4 is there because that is one value that cannot be plugged in for x.  the 10 is just there, well, i think as a distractor...it's a constant, so there really isn't any values that can be plugged in for it. ", "id": 4372, "order": 8, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Right, it is just multiplying whatever you get on the denominator side. A is the right answer because if x = 8, your result is 16/0 which is what you're trying to avoid to get for your answer. ", "id": 4372, "order": 9, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Gonzalo - that is right you are trying to avoid a 0 in the denominator ", "id": 4372, "order": 10, "list_of_labels": "['encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: if your slope lines up with your x or y axis how do u know the slope and what is it\r\n ", "id": 2386486, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: section 4 topic 2 can help with slope! ", "id": 2386486, "order": 2, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: yes\r\n ", "id": 2386486, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: thanks Jeevika +100kp\r\nRobert, what is the question? ", "id": 2386486, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: x(4y)=-13 ", "id": 2386486, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: lets start by isolating y ", "id": 2386486, "order": 6, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok\r\n ", "id": 2386486, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: When someone post something in the bottom right corner theres a thumbs up symbol and you have an option to like them, whats the point of that ", "id": 33588, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: If you like their post comment you can like them ", "id": 33588, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ohh ", "id": 33588, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: when day light saving time happened, the time stamp on the wall never was changed. ", "id": 33588, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: oh ok  thanks for the info ", "id": 33588, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: anytime! ", "id": 33588, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Its not tested on the EOC.. ", "id": 204871, "order": 2, "list_of_labels": "['other']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: really ?? ", "id": 204871, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Yes.  ", "id": 204871, "order": 6, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: do you know the answer ?? ", "id": 204871, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Post closed.  ", "id": 204871, "order": 8, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: mn\u00b2.m\u00b2n-\u2074.mn-\u00b9 ", "id": 1165707, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Hey Andrew, what are the periods supposed to be? ", "id": 1165707, "order": 3, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: multiplication signs\r\n ", "id": 1165707, "order": 4, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: mn\u00b9m\u00b2n\u02c9\u2074 ", "id": 1165707, "order": 5, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: ok so is this a challenge question? ", "id": 1165707, "order": 6, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: not quite, it's easier to put the negative exponents in the denominator first then solve ", "id": 1165707, "order": 7, "list_of_labels": "['negative_feedback', 'giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ohh cool\r\n ", "id": 1165707, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: And you are trying to find the slope? ", "id": 1050975, "order": 1, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Combine like terms for this one. We can solve for y first. To get it into y=mx+b ", "id": 1050975, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: You have to eliminate one variable\r\n(add 4x on both sides) ", "id": 1050975, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: What do you get ", "id": 1050975, "order": 7, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Hannah - what are you solving for? ", "id": 1050975, "order": 8, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Did you add the  4x in front of the 6y to both side a ", "id": 1050975, "order": 9, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Subtract 9 from one side\r\nafter adding 4x\r\n ", "id": 1050975, "order": 10, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: lets wait for Hannah to reply ", "id": 1050975, "order": 13, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: That leaves 6y=4x+9 ", "id": 1050975, "order": 14, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: yes 6y = 4x + 9 is what i got\r\n ", "id": 1050975, "order": 15, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: from both sides ", "id": 1050975, "order": 17, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: No, try again.\r\n-4x + 4x, what happens? ", "id": 1050975, "order": 18, "list_of_labels": "['negative_feedback', 'questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: No you would divide by 6 on both sides. ", "id": 1050975, "order": 19, "list_of_labels": "['negative_feedback', 'correcting']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Are you just solving regularly, Hannah? ", "id": 1050975, "order": 20, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Rohin, you cannot combine 9 with anything\r\n\r\nHannah, now you would do the inverse operation of the coefficient, which is 6 ", "id": 1050975, "order": 21, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok\r\n ", "id": 1050975, "order": 22, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: hold on lets follow Zachariah's lead ", "id": 1050975, "order": 23, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Oh.. okay ", "id": 1050975, "order": 26, "list_of_labels": "['acknowledging_tutor_issue']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: So that will be y=9/6 ", "id": 1050975, "order": 27, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: I disagree, Jordan. Zachariah's post on the 4xs. ", "id": 1050975, "order": 30, "list_of_labels": "['negative_feedback']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok so do i or do i not subtract 9 from each side ", "id": 1050975, "order": 32, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Victoria - exactly ", "id": 1050975, "order": 33, "list_of_labels": "['encouraging_peer_tutoring']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor:  -4x + 6y = -4x +9\r\nAdd 4x\r\n -4x + 6y = -4x +9\r\n+4x             +4x\r\n\r\nThese will cancel out. ", "id": 1050975, "order": 34, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: okay thank i got the answer \r\n ", "id": 1050975, "order": 35, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Hannah - ok ", "id": 1050975, "order": 37, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: -3 ?\r\n ", "id": 1050975, "order": 38, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: No, that's wrong, how did you get that? ", "id": 1050975, "order": 39, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Hannah - follow Zachariah and Olvia ", "id": 1050975, "order": 42, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: wouldnt an independent variable be a letter such as x, attached to number. ", "id": 2357313, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Do you have an example we can work through together? ", "id": 2357313, "order": 1, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Honestly im not sure what an example would look like. ", "id": 2357313, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I just took a guess ", "id": 2357313, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: okay, so the dependent variable is usually isolated on one side of an equation and depends on one or more other variables. ", "id": 2357313, "order": 4, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Ok Thanks ", "id": 2357313, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: welcome!  ", "id": 2357313, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: do you want to guess what the independent variable means? ", "id": 2357313, "order": 7, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: If you mean a number attached to a number you probably were thinking about slope since there is a number attached to a variable ", "id": 2357313, "order": 8, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Will you post a challenge question about factoring? ", "id": 1183146, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: I have a test tomorrow and apparently its really hard so I need practice ", "id": 1183146, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: thanks :) ", "id": 1183146, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Yep sorry probably not yet but you should definitely check out the test yourself questions on the quadratics section for extra practice  ", "id": 1183146, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok thanks ", "id": 1183146, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: My dad helped me study and I feel prepared now thanks ", "id": 1183146, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Thats really nice :) my dad always used to help me with my math hw up until I got to college lol ", "id": 1183146, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: The test creator probably messed up while creating the test. ", "id": 145220, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: that makes perfect <a href=\"http://sense.Thx\" rel=\"nofollow\" target=\"_blank\">sense.Thx</a>. ", "id": 145220, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: No but i can copy the writing. ", "id": 145220, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: one sec. ", "id": 145220, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: :) ", "id": 145220, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Hello everyone! I was attempting to assess myself, and came across this problem: I already know the answer, and I want to see how many people know how to solve! ", "id": 1053768, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: What are we solving for? ", "id": 1053768, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: That's important lol. you are solving for b ", "id": 1053768, "order": 3, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: So we use proportions:\r\n3x\u00b2*6=4b\u00b3*5b\r\n3x\u00b2*6=20b\u2074\r\n /20     /20\r\n3x\u00b2*6=b\u2074\r\n\u2074\u221a3x\u00b2*6=b\r\n I am going to check...... ", "id": 1053768, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Is it 3x\u00b2 or 3\u00d72? ", "id": 1053768, "order": 5, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: squared\r\n ", "id": 1053768, "order": 6, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: You didn't divide your left side by 20 ", "id": 1053768, "order": 7, "list_of_labels": "['correcting']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: true. ", "id": 1053768, "order": 8, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Oh, yeah... I am just re-doing it now.. ", "id": 1053768, "order": 9, "list_of_labels": "['acknowledging_tutor_issue']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: 3x\u00b2*6=4b\u00b3*5b\r\n18x\u00b2=20b\u2074\r\n /20    /20\r\n9x\u00b2/10=b\u2074\r\n\u2074\u221a9x\u00b2\r\n   -----\r\n    10\r\nAnswer: 9^1/4* x^1/2\r\n              -------------------=b\r\n                      10^1/4 ", "id": 1053768, "order": 10, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Yup! ", "id": 1053768, "order": 11, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Great job Olivia! A personal congratulations for that iPad today! ", "id": 1053768, "order": 12, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Thank you very much!:) ", "id": 1053768, "order": 13, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: No problem.\r\nWell deserved reward :D ", "id": 1053768, "order": 14, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: ;) ", "id": 1053768, "order": 15, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Good job on that problem Olivia  ", "id": 1053768, "order": 16, "list_of_labels": "['encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Thank you! ", "id": 1053768, "order": 17, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I need some help on setting up an equation:\r\nEthan's job at a local home improvement store is to mmix paint to different colors. For a particular customer, he mixed p liters of blue paint, 0.8 liters of yellow paint, and p 0.4 liters of orange paint. He then divided the mixture into two cans. I f each can contains 1.9 liters of paint, how many liters of blue paint did he use?\r\nI am not that great when it comes to setting up equations but I am better at solving the equation!\r\n:) ", "id": 26520, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: can someone please explain this to me! ", "id": 26520, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: by refresh wall it says search wall type in the post # ", "id": 26520, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok thank you I saw it  ", "id": 26520, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: If u have more questions let me know! ", "id": 26520, "order": 7, "list_of_labels": "['managing_frustration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: can you help me with finding slope\r\n ", "id": 1207905, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Slope is rise over run i believe. ", "id": 1207905, "order": 2, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Hey there Dylan! What specifically do you have a question on?:) ", "id": 1207905, "order": 4, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Check out section 3 videos 2 and 3 MAFS Dylan:) ", "id": 1207905, "order": 6, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok i will thank you\r\n ", "id": 1207905, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: :) ", "id": 1207905, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: (6x^3+4x^2+2x)(2x^2+5x)\r\n\r\nDo you need to distribute everything individually from the first to the second side then add like terms to make it one answer? \r\nLike this: (6x^3)(2x^2+5x)+(4x^2)(2x^2+5x)+(2x)(2x^2+5x)\r\n ", "id": 229115, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: yes thats correct ulysses! ", "id": 229115, "order": 1, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: oh ok thanks ", "id": 229115, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: no problem ", "id": 229115, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Just Wondering.... can i get one of those algebra nation t-shirts lol ? ", "id": 229115, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Me too\r\n ", "id": 229115, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: i'll see if i can make that happen! ", "id": 229115, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: aww... and maybe you guys should ", "id": 229115, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I forgot how to determine if its a function or if it isn\u2019t with the circles. ", "id": 3276076, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: inputs are on the left? ", "id": 3276076, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: correct :) ", "id": 3276076, "order": 4, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Does it matter if one of the other inputs is connected to the same output? So like 2 inputs connected to one output? ", "id": 3276076, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Ah never mind it says which doesn't represent a function, thank you ", "id": 3276076, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: section 3 topic 1 can help ", "id": 3276076, "order": 8, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Hi Alexis\r\n ", "id": 1328843, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: whats 2*2 ", "id": 1328843, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: its fish\r\n ", "id": 1328843, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: HALO 0=) ", "id": 1328843, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Hey Alexis! Let us know if you have any questions? ", "id": 1328843, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok great! ", "id": 1328843, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: I need help with \r\n2x-1+1=9+1 ", "id": 2104712, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Hi Jodecy :) first we have to combine like terms on both sides of the equation ", "id": 2104712, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: good start Anila =) ", "id": 2104712, "order": 2, "list_of_labels": "['encouraging_peer_tutoring']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: (: Yup! Now what is our next step? ", "id": 2104712, "order": 4, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Yes, so what did you get as your answer? :) ", "id": 2104712, "order": 6, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 2x-1+1=9+1\r\n2x/2=10/2\r\nx=5 ", "id": 2104712, "order": 7, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: good job =) ", "id": 2104712, "order": 9, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank you :) ", "id": 2104712, "order": 10, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: welcome! ", "id": 2104712, "order": 11, "list_of_labels": "['irrelevant_statement']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: no problem :) ", "id": 2104712, "order": 12, "list_of_labels": "['irrelevant_statement']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: okay I look at the video and it help me out a lot thank you again  ", "id": 2104712, "order": 13, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: great!  go ahead and try the practice problem that Anila posted...just remember to comment back on that thread =) ", "id": 2104712, "order": 14, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: glad to hear that it helped! :) ", "id": 2104712, "order": 15, "list_of_labels": "['irrelevant_statement']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I don't really know where to start with this... ", "id": 3220655, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Hi Kenzie, do you have a problem you need help with? ", "id": 3220655, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: If you have an Algebra question, post it. If you know how to help others with their question, then you can earn Karma points. Click on Karma Points above to find out more. Welcome! ", "id": 3220655, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Well, I'm in 9th grade and I've never been good at math. We're going over slope and I'm just really confused on graphing points...or when they give me two points and then no graph :(  ", "id": 3220655, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Ok, thanks so much :) I have a feeling I'll be using this a lot :))  ", "id": 3220655, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Section 4 Topic 2-4 would be a great start for you ", "id": 3220655, "order": 7, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: So click on Videos and More ", "id": 3220655, "order": 8, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Study Experts award Karma Points to students for helping other students and starting new discussions about Algebra on the Algebra Wall. You can help students by telling them which videos will help them with their questions and by explaining how to start problems. You won't be given Karma Points if you just give the answer. You\u2019ll be awarded 100, 200 or 500 Karma Points, depending on your post. You can also see where you stand with other students by looking at the Karma Points Leaderboard. The number of Karma Points you\u2019ve earned is shown on each wall post that you make, on the header above the video player, and on the My Account page. Why do you want to earn Karma Points? Because you can win great prizes ", "id": 233043, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Yeah and thanks ", "id": 233043, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Where's my kp for my first post ", "id": 233043, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Thank you  ", "id": 233043, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: hang on ", "id": 87208, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: What are you doing?\r\n ", "id": 87208, "order": 2, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ixl gcf ", "id": 87208, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: nope sorry =-(] ", "id": 87208, "order": 4, "list_of_labels": "['negative_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: my work is taking the 25h\u00b2 and 1 and plugging it into the parenthesis which gives me (5h+1)\u00b2  ", "id": 87208, "order": 5, "list_of_labels": "['conceptual_knowledge', 'strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: looks good! ", "id": 87208, "order": 6, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thanks ", "id": 87208, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Of course! ", "id": 87208, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Hello Cononiah would you be able to please help me.  ", "id": 3146966, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Hey, Erica!  I'm unfamiliar with pq\u00b2 square units?  Are there directions on anything about pq?\r\n\r\nI do, however, know that the area of parallelogram is equal to base x height. ", "id": 3146966, "order": 2, "list_of_labels": "['giving_explanation', 'acknowledging_tutor_issue']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: <a href=\"https://www.brevardschools.org/cms/lib/FL02201431/Centricity/Domain/8064/73927_Algebra_1_EOC_Test_Prep_Packet_2012.pdf\" rel=\"nofollow\" target=\"_blank\">https://www.brevardschools.org/cms/lib/FL02201431/Centricity/Domain/8064/73927_Algebra_1_EOC_Test_Prep_Packet_2012.pdf</a> Question number 28. This is the link for the book that I have asked the question to. ", "id": 3146966, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Ok.  I'm unsure of pq\u00b2 square units.  I don't know what that is.\r\n\r\nYou can, however, still use the basic formula for a parallelogram.  A = (base)(height) and solve for the height. ", "id": 3146966, "order": 5, "list_of_labels": "['acknowledging_tutor_issue']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Ohhh!!  Ok!  I see.  The exponents were a bit off in your original post.\r\n\r\nWhen you use the formula A = (base)(height) and you plug in the information that you know, what do you get? ", "id": 3146966, "order": 6, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Do Iplug in the 35 and 5? ", "id": 3146966, "order": 7, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yes, for the area and the base.  Make sure you also plug in the p and q with their respective exponents.\r\n\r\nYou will have to solve for height but also use properties of exponents. ", "id": 3146966, "order": 8, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Would the base be 5pq\u00b2  and the height be 35p\u2076 q\u00b2 ? ", "id": 3146966, "order": 9, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Not quite, but it's ok.  We can walk through it.  The formula is A = (base)(height).\r\n\r\nWhat is the area the problem gives you? ", "id": 3146966, "order": 10, "list_of_labels": "['negative_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: nan ", "id": 3146966, "order": 11, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: No, the first sentence in the problem gives you the area.  It says &quot;the area of a parallelogram is....&quot;\r\n\r\nWe are not given the height.  That's what we're trying to find. ", "id": 3146966, "order": 12, "list_of_labels": "['negative_feedback', 'correcting']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: The area I believe is 35p\u2076 q\u2076 . ", "id": 3146966, "order": 13, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I just don't know how to do the (base)(height) because of the exponets throw me off. ", "id": 3146966, "order": 14, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yes!  Now, we can plug that into our equation A = (base)(height)\r\n\r\n35p\u2076 q\u2076 = (base)(height)\r\n\r\nWe also know the base.  The base is 5pq\u00b2 .\r\n\r\nNow, we have 35p\u2076 q\u2076 = (5pq\u00b2)(height) ", "id": 3146966, "order": 15, "list_of_labels": "['confirmatory_feedback', 'giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: What needs to move out of the way to get height by itself? ", "id": 3146966, "order": 16, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Not quite.  What is being multiplied by the height? ", "id": 3146966, "order": 18, "list_of_labels": "['negative_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 5pq\u00b2 ? ", "id": 3146966, "order": 19, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yes!  It needs to move to the other side.  It is being multiplied by height.  What is the opposite (or inverse) operation of multiplication? ", "id": 3146966, "order": 20, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Yes!  You're on a roll!  We need to divide both sides by 5pq\u00b2.  When we divide the right side by this, we just get height (which is what we're trying to find).  We have to do some simplifying to the right side.\r\n\r\nWe will have (35p\u2076q\u2076) / (5pq\u00b2).\r\n\r\nLet's work with the &quot;like terms&quot; first.  What is 35/5?  ", "id": 3146966, "order": 22, "list_of_labels": "['confirmatory_feedback', 'giving_explanation', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 7 ", "id": 3146966, "order": 23, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yep.  So that's part of our answer.\r\n\r\nNow, what is p\u2076/p?  (Remember, p can be rewritten as p\u00b9) ", "id": 3146966, "order": 24, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: p\u2076  I think because since we divided 35/5 we would multiply our exponets. ", "id": 3146966, "order": 26, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Are you familiar with exponent properties? ", "id": 3146966, "order": 27, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Don't remember them. ", "id": 3146966, "order": 28, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Ok.  p\u2076 = (p)(p)(p)(p)(p)(p)  p\u00b9 = p.  When we divide, we have...\r\n\r\n(p)(p)(p)(p)(p)(p)\r\n-------------\r\n(p)\r\n\r\nRemember that (p)/(p) just equals one.  Once we simplify, what are we left with? ", "id": 3146966, "order": 29, "list_of_labels": "['giving_explanation', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: p by itself? ", "id": 3146966, "order": 30, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: It confuses me because of it just being p. ", "id": 3146966, "order": 31, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Don\u2019t  worry about p ", "id": 3146966, "order": 32, "list_of_labels": "['managing_frustration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: No.  Do you see how one of the (p)'s in the numerator is paired with a (p) in the denominator? ", "id": 3146966, "order": 33, "list_of_labels": "['negative_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: So would it be 1? ", "id": 3146966, "order": 34, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Yes. ", "id": 3146966, "order": 35, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Ok, since they are paired together and their being divided, that just equals 1.\r\n\r\nWe STILL have 5 p's in the numerator that are still being multiplied together.  We can't forget those.  What does that equal? ", "id": 3146966, "order": 36, "list_of_labels": "['giving_explanation', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 25 ", "id": 3146966, "order": 38, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: No.  It's still p.  How many times is p being multiplied? ", "id": 3146966, "order": 39, "list_of_labels": "['negative_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Ohhh. p\u2075  ", "id": 3146966, "order": 42, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Yes!  So, before we find out what happens to q, let's see what we just did.  We had p\u2076/p\u00b9 and ended with p\u2075.  \r\n\r\nWe can we do to 6 and 1 in order to get 5? ", "id": 3146966, "order": 43, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Subtract. ", "id": 3146966, "order": 44, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: q\u2074  ", "id": 3146966, "order": 46, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: You can just type the letter answer A, B, C, or D. ", "id": 3146966, "order": 48, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: A ", "id": 3146966, "order": 49, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: i was watching the video for section 2 practice problem 3 and i think the instructor made a mistake , she said the range is the x axis, but i thoughtvit was the y, and domain was the x? im confused.. and other students may be getting confused by this error too.\r\n ", "id": 116195, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: x is domain y is range ", "id": 116195, "order": 1, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: she said the ranger is along the x-axis but she pointed to the y-axis... ", "id": 116195, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: and its (x,y) for graphing ", "id": 116195, "order": 3, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: range*\r\n ", "id": 116195, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: thank u ", "id": 116195, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: post any errors to help@algebranation.com ", "id": 116195, "order": 8, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Does anyone here go to Eagles Landing Middle School ", "id": 1271770, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Yes Vasakan I c u right now ", "id": 1271770, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: I'm in class with u ", "id": 1271770, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Ok then ......... ", "id": 1271770, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Oh ya, I forgot :) ", "id": 1271770, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Wow Vasakan!!! ", "id": 1271770, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: What is a scatterplot? ", "id": 2292357, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Would you like a video recommendation Billy? ", "id": 2292357, "order": 1, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Just tell it in words\r\n ", "id": 2292357, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Section 10 topic 4 can help! ", "id": 2292357, "order": 4, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: a scatter plot is similar to a line graph they use horizontal and vertical axes to plot data points ", "id": 2292357, "order": 6, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thx sonny ", "id": 2292357, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I'm new to this thing so HI \r\n ", "id": 2195740, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Hi Nia! Welcome to Algebra Nation, you too Aliyah! Do you guys need help with anything? ", "id": 2195740, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: cool\r\n ", "id": 2195740, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: and no\r\n ", "id": 2195740, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: hi ", "id": 2195740, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: hello\r\n ", "id": 2195740, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Hi Nia, do you need help with any math today? ", "id": 2195740, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: No thank you I have to got bye \r\n ", "id": 2195740, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: try again\r\n ", "id": 2166844, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: its okay to check answers with a calculator\r\n ", "id": 2166844, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ???? what ", "id": 2166844, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: im not allowed to use calculators in my classroom ", "id": 2166844, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: yes ", "id": 2166844, "order": 6, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: hello??? ", "id": 2166844, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: can i have help a glass window 2 feet by 4 feet. the with of the border is equal and was made out of 7 square feet of glass. what is the width of the boarder? ", "id": 1370245, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: helpppppppppppppppppppppppppppppppppppppppppppppppppppppppp pls ", "id": 1370245, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Jacob, can you please show us a picture?\r\nIt's kind of hard to understand with text. Thank you! ", "id": 1370245, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Use the 'Draw Something' tool to show us your picture, Jacob. ", "id": 1370245, "order": 6, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: does any one need help?\r\n ", "id": 1370245, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Where did you get this question Jacob? Does the question tell you what the border is equal to? ", "id": 1370245, "order": 8, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Hi good Morning Guys  ", "id": 1427739, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: hey ", "id": 1427739, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Good morning :) ", "id": 1427739, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: hi Victoria can we do a quick CQ ", "id": 1427739, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Will I be able to use Algebra Nation next year? ( The 10th grade ) ", "id": 2102533, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: I don't you do you? ", "id": 2102533, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: know  ", "id": 2102533, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Hi Cincere,  Algebra Nation will be available! ", "id": 2102533, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: ok thank you  ", "id": 2102533, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: You sure? ", "id": 2102533, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: yes Cincere ", "id": 2102533, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: yes, geometry and algebra 2 as of now are closed next year to get help (although u still have videos and test yourselves u can use, just not the wall).  :) ", "id": 2102533, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: ok ", "id": 2102533, "order": 10, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: u can get community service hours for helping!  (i am not in algebra 1 lol so i know u can still help)   if u are interested check out the videos and more tab and additional resources tab for more info ", "id": 2102533, "order": 11, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Community Service hours are really needed for me right now, Do i talk to my counselor about this first? ", "id": 2102533, "order": 12, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: yes, u can watch the video there also under additional resources, but the requirements, points wise, are slightly different school to school ", "id": 2102533, "order": 13, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: ok and I did not know you can get community service and I can't talk to my counselor because today was the last day of school and I really need can I do it next year? ", "id": 2102533, "order": 16, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: it  ", "id": 2102533, "order": 17, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: depends on the school, mine is fine with it.  otherwise email them if u know the email ", "id": 2102533, "order": 18, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: and u can keep helping into next year to get more also if that is what u meant.     it is an estimate 1000 points is an hour, but try emailing your counselor for more info, as the school makes the final amount ", "id": 2102533, "order": 19, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: I don't know their email ", "id": 2102533, "order": 20, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: I need help with number 1 please. ", "id": 2098627, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: So whats the biggest common number and variable  ", "id": 2098627, "order": 1, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: is that 2m\u2075 and 32m\u2074? ", "id": 2098627, "order": 2, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: . ", "id": 2098627, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Yes Adam  ", "id": 2098627, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: so you can start with the finding the greatest number in common and then find the greatest variable in common! ", "id": 2098627, "order": 6, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: so what is the GCF of 2 and 32? ", "id": 2098627, "order": 7, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: So whats the biggest number in commin between 2 and 32 ", "id": 2098627, "order": 8, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Correct? ", "id": 2098627, "order": 9, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Yes now variables  ", "id": 2098627, "order": 10, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: M\u2074 and m\u2075 ", "id": 2098627, "order": 11, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: M? ", "id": 2098627, "order": 13, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: With m^4 that is m*m*m*m\r\n\r\nM^5 is m*m*m*m*m\r\n\r\nHow many m's do they both have at least ", "id": 2098627, "order": 15, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Like \r\n\r\nM^6 and m^7     the gcf is m^6    as they bogh have 6 m's at least :) ", "id": 2098627, "order": 16, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: GCF=m^4 ", "id": 2098627, "order": 17, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Yes! ", "id": 2098627, "order": 18, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: correct, so put them together, and what would the answer be? ", "id": 2098627, "order": 19, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: So  the GCF  of 2m^5 and 32m^4 is 2m^4 right? ", "id": 2098627, "order": 21, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: Thanks I'll post more soon ", "id": 2098627, "order": 24, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: you're welcome! ", "id": 2098627, "order": 25, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: sup\r\n ", "id": 1349857, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Need any math help today? ", "id": 1349857, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: nop ", "id": 1349857, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Alright! Let me know if you do! ", "id": 1349857, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: shooka ", "id": 1349857, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: I don't think so  ", "id": 200216, "order": 1, "list_of_labels": "['negative_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Why??? ", "id": 200216, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: it's almost correct.  don't forget to distribute the -5 when multiplying the top by the conjugate ", "id": 200216, "order": 4, "list_of_labels": "['correcting', 'giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: I meat 5\u221a10 for the answer ", "id": 200216, "order": 5, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: yes, then that's correct =) ", "id": 200216, "order": 6, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: kk. Thanks :) ", "id": 200216, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: anytime! ", "id": 200216, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: i don't get it ", "id": 3148110, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: hey Sara.  just to verify the problem below is the problem you need help with?\r\n\r\n-3[(4-3)\u00b2 + 6]\u00b2  ", "id": 3148110, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: so i start where it say (4-3)? ", "id": 3148110, "order": 3, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: correct.  you want to follow order of operations.  if we start inside the ( )'s, what would the problem then look like? ", "id": 3148110, "order": 4, "list_of_labels": "['confirmatory_feedback', 'giving_instruction', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: it would be -3[(1)2nd +6]2nd ", "id": 3148110, "order": 5, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: correct.  what part do you think we would do next? ", "id": 3148110, "order": 6, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: the (1) to the 2nd ", "id": 3148110, "order": 7, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: it would be -3[1+6]2nd ? ", "id": 3148110, "order": 10, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: correct!  what part would be next? ", "id": 3148110, "order": 11, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 1+6 ? ", "id": 3148110, "order": 12, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: it would = 7 then -3[7]2nd ", "id": 3148110, "order": 14, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: 7\u00b2  it would be 49  ", "id": 3148110, "order": 18, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: perfect! ", "id": 3148110, "order": 21, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank u for the help ", "id": 3148110, "order": 22, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: you're welcome! ", "id": 3148110, "order": 23, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: your good at this Sara  ", "id": 3148110, "order": 24, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Thank you Tanvi, please try to post on current threads ", "id": 3148110, "order": 25, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Hi I need some help with a problem I am on Section 1 Topic 1 Question 7 Part C and i am not sure how to find the percentage. ", "id": 3154046, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: 1.Convert the problem to an equation using the percentage formula: P% * X = Y.\r\n2.P is 10%, X is 150, so the equation is 10% * 150 = Y.\r\n3.Convert 10% to a decimal by removing the percent sign and dividing by 100: 10/100 = 0.10.\r\nThis is kind of an example ", "id": 3154046, "order": 2, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Part C ", "id": 3154046, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Of how to do percentage ", "id": 3154046, "order": 4, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: 1.07 (3.99f + 1.50c) or equivalent\r\nexpression\u2026.multiplying by 1.07 will give the new total cost including 7% tax.  ", "id": 3154046, "order": 6, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thank you that helped a lot. ", "id": 3154046, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: so do you guys want me to repeat the equation or can you find it from my other post ", "id": 1055234, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: If you could repost it that would be helpful. :)  ", "id": 1055234, "order": 1, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: (Here it is just for reference so we don't have to keep going back)\r\nt1/3-t5/3+t3/4)0=2\u221at  ", "id": 1055234, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: (t1/3-t5/3+t3/4)\u2070=2\u221at im solving for t ", "id": 1055234, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: remember the fractions are supposed to be exponents\r\n ", "id": 1055234, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Well, let's start with the exponent\r\n\r\nt3/4)\u2070 ", "id": 1055234, "order": 5, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: i wrote the zero as an exponents because i messed up last time\r\n ", "id": 1055234, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: anything to the zero power equals what? ", "id": 1055234, "order": 7, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: it would all equal 1 ", "id": 1055234, "order": 8, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: but then how do i solve for t ", "id": 1055234, "order": 10, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: divide by 2 first ", "id": 1055234, "order": 12, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: so it would be 1/2=\u221at ", "id": 1055234, "order": 13, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Yes. Now what do we do with the \u221a ", "id": 1055234, "order": 14, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: right and then what would we do to cancel out the square root next? ", "id": 1055234, "order": 15, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: is it possible to divide a \u221a ", "id": 1055234, "order": 16, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: nope.  we want to raise it some power/exponent.  what exponent do you think will cancel out a square root? ", "id": 1055234, "order": 17, "list_of_labels": "['negative_feedback', 'giving_explanation', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 2 \r\n ", "id": 1055234, "order": 18, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: so it would be 1/2\u00b2=t ", "id": 1055234, "order": 20, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: just simplify (1/2)\u00b2 ....square both the 1 and the 2 ", "id": 1055234, "order": 21, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: 1/4 ", "id": 1055234, "order": 22, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: yup! ", "id": 1055234, "order": 23, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: YUp. Nice job. ", "id": 1055234, "order": 24, "list_of_labels": "['confirmatory_feedback', 'praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: so t=1/4 ", "id": 1055234, "order": 26, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: yup. ", "id": 1055234, "order": 28, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: length times width ", "id": 236994, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: hey alex, so first, you've got to plug in 391 for y. then, you've got to move everything over so that the equation equals 0 ", "id": 236994, "order": 2, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: what would i do after that ", "id": 236994, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: i got x=3 after solving it using the quadratic formula ", "id": 236994, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: does it tell you what x stands for? ", "id": 236994, "order": 5, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: .\r\n ", "id": 236994, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: no ", "id": 236994, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: ahh i see okay, so we need to factor 30x\u00b2+37x+10. that'll give us the expressions for length and the width, and then we can plug in x to find the length and width ", "id": 236994, "order": 8, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Can you guys me with this Multiply Using Expanded Form ", "id": 3186437, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Is this a Geometry related question ", "id": 3186437, "order": 1, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: yes ", "id": 3186437, "order": 2, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: im in 4rth \r\n ", "id": 3186437, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: What is the greatest common factor in the equation? ", "id": 1139879, "order": 1, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Try Section 7 Video's 1-3 ", "id": 1139879, "order": 2, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thats what i dont know ", "id": 1139879, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: I got it, thank you. ", "id": 1139879, "order": 5, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Okay great to hear! ", "id": 1139879, "order": 6, "list_of_labels": "['other']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: It kinda gets blurry in Section 9, Topic 4, 1:53 ", "id": 2103971, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Which study expert are you watching Kyler? ", "id": 2103971, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Ashley ", "id": 2103971, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Okay, just reporting what looked to be an error, thanks! ", "id": 2103971, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: I think the projector was moving while the study expert was making the video, maybe that's what was making it blurry. ", "id": 2103971, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Probably. ", "id": 2103971, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: ok :) ", "id": 2103971, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: you really didn't really anything on the video it just look fogge  ", "id": 2103971, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Just looking out! ", "id": 2103971, "order": 10, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: okay that's fine  ", "id": 2103971, "order": 11, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Anila, that wasn't the projector moving, that was the camera lens refocusing ", "id": 2103971, "order": 12, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: The version of a utopia that Hitler and the Germans tried to create was one where the world was free of Jewish people. They wanted people who could contribute to German society. They wanted all people to be blond haired blue eyed people. They wanted only people who could contribute to society as a whole. They wanted to have a world free of racism. In the Giver the community is free of racism, and no other things of color such as clothes, flowers, grass and much more. They wanted to have no pain that was bad. They had no wars because there was nothing to fight over. They tried to keep everyone separated so there would be no arguing amongst themselves. They didn't want any kind of war  or fighting ever. What must be given up according to these two examples we would need to give up races, religion, tradition, color of objects, the right of fee speech and every other right in the Bill of Rights. I think yes we could create the perfect society at some point. But do i think it is with the loss? No I do not think it would be worth the loss. We would loss most of the rights that we have and that would not be fair to anyone. It can not allowed to happen. It would be unfair to those who are kind, caring, loving. This cannot be allowed to happen EVER. It would be like slaughter on peoples soul. That is NOT fair! So I think yes we could eventually make the perfect society but that we never should. ", "id": 267033, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: please spread! Thank you! :) ", "id": 267033, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Ok....? I also think Holocaust=bad  ", "id": 267033, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Thanks Please send to Everyone! ", "id": 267033, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Um not Algebra related. I'm going to have to take down this post. SOrry ", "id": 267033, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: As much as I agree that this is inhumane, this is designated for algebra, not social media. Thanks!  ", "id": 267033, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: No please don't!\r\n ", "id": 267033, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Can we please have a challenge question on expressions?  ", "id": 1159931, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: something different :)) ", "id": 1159931, "order": 1, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: I'll do my best :) ", "id": 1159931, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: thank you soooo much Mr.Boursiquot!!!! :)) ", "id": 1159931, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Yayyyyyy!!! ", "id": 1159931, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: :))) ", "id": 1159931, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: can anybody help me with #11\r\n ", "id": 2384536, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Are you trying to complete the square? ", "id": 2384536, "order": 1, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Section 5 Topic 7 can help! ", "id": 2384536, "order": 3, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: I know you have to take the middle term and divide it by 2 than square that number &amp; put it as C, but when I tried to divide by 2 it is a long decimal  ", "id": 2384536, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Let's just leave it as a fraction then!  What is (4/3)2? ", "id": 2384536, "order": 5, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Yes ", "id": 2384536, "order": 7, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Not yet you need to divide by 2 first! ", "id": 2384536, "order": 8, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: what is a exponential function or where can i learn more about it? ", "id": 2101542, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: An exponential function is a mathematical function of the following form: f ( x ) = a x. where x is a variable, and a is a constant called the base of the function.  ", "id": 2101542, "order": 2, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: okay thanks for all the help. ", "id": 2101542, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: no problem ", "id": 2101542, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: &quot;henrik p&quot; has been cheating he looked up my question on google and copy and pasted it word for word. ", "id": 2101542, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: he is doing this just to get karma points ", "id": 2101542, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: I can verify that. I looked it up when I saw that he posted it and it is exact ", "id": 2101542, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thank you &quot;alexa j&quot; ", "id": 2101542, "order": 9, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: no problem dewayne\r\n ", "id": 2101542, "order": 11, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: on topic please! ", "id": 2101542, "order": 12, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: sorry ", "id": 2101542, "order": 13, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: i was just trying to help and didnt know the answer, ill answer from what I know in the future. sorry, i didnt know that i was doing something wrong ", "id": 2101542, "order": 14, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: ok ", "id": 2101542, "order": 15, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: an exponential function is basically an equation like x\u00b2 or 2x\u00b2+7x ", "id": 2101542, "order": 16, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: a function whose value is a constant raised to the power of the argument, especially the function where the constant is e. ", "id": 2101542, "order": 18, "list_of_labels": "['giving_explanation']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: We'll have a CQ soon :) ", "id": 1372880, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Whats a CQ? ", "id": 1372880, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: a challenge question ", "id": 1372880, "order": 3, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok thanks ", "id": 1372880, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Just posted a challenge question!  ", "id": 1372880, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Where would the challenge question be? ", "id": 1372880, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: never mind ", "id": 1372880, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: i need help in math\r\n ", "id": 2252010, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: what do you need help with ja'kayla! ", "id": 2252010, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Hello ja'kayla, in what I can help you today? ", "id": 2252010, "order": 2, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: im failing i need bad help ", "id": 2252010, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: what do you need help with? ", "id": 2252010, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: is there a specific problem you need help with? ", "id": 2252010, "order": 6, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: nan ", "id": 2252010, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: with fractions you multiply straight across. so do 15 times 1 in the numerator and 16 times 16 in the denominator ", "id": 2252010, "order": 8, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: This is another question. ", "id": 3166309, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: \r\nAmina, before we get to this one, please go back to the other one and check my message. There's something we need to fix! ", "id": 3166309, "order": 1, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Have you watched the video yet for this section? ", "id": 3166309, "order": 3, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: No I have not but will watch it now.  ", "id": 3166309, "order": 4, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: That would be great! Let me know if you still need more help going through this after you watch the video for section 2 topic 3. ", "id": 3166309, "order": 5, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Great! ", "id": 3166309, "order": 8, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: What would -6x 4y=14 (1,4) simplify to? ", "id": 2210781, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: you have to plug in 1 and 4 for x and y! is there a + in between -6x and 4y? ", "id": 2210781, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Yes ", "id": 2210781, "order": 2, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Also, I did that, and it said I was wrong. I got 10 ", "id": 2210781, "order": 3, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Oh wait ", "id": 2210781, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Plug in the 1 and 4 into their variables. What is your equation now?  ", "id": 2210781, "order": 8, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: I got a question. \r\nHow do I factor x\u00b2 + 4x + 6 = 0 \r\nLike I can't find a number between 4 and 6 which is 2 but how I find the other number? ", "id": 2112341, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Alexis, try solving the equation using the quadratic formula.  ", "id": 2112341, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: what multiplies to 6 and adds to 4? if u can not find this it is probably not factorable ", "id": 2112341, "order": 2, "list_of_labels": "['giving_explanation', 'questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: section 5 video 3 covers solving with factorin\r\n\r\nand section 5 video 9 covers quadratic formula ", "id": 2112341, "order": 4, "list_of_labels": "['providing_further_references']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: is there like a not factorable option? this can not be factored.  because if u list the factors out there are none that cover both unless i am missing something? did u type it right? ", "id": 2112341, "order": 5, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: 3 x 2 = 6 and 6x1=6  there are none that add up to 4 so I just leave it as it is \r\n ", "id": 2112341, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Yeah.  ", "id": 2112341, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: Alexis, Cassandra is correct. This quadratic is not factorable.  ", "id": 2112341, "order": 8, "list_of_labels": "['confirmatory_feedback', 'giving_explanation']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Does anybody have a math question????!!!! ", "id": 2423115, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Well, no not yet. ", "id": 2423115, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ? ", "id": 2423115, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: oh ok! ", "id": 2423115, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Bye!!! ", "id": 2423115, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: :) ", "id": 2423115, "order": 6, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: ok bye ", "id": 2423115, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: what is 100*300+1/100  ", "id": 2179544, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Sarah, you need to focus on order of operations, or PEMDAS, to evaluate this expression. ", "id": 2179544, "order": 1, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: in what step\r\n\r\n ", "id": 2179544, "order": 2, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: In PEMDAS, the first operation that we encounter is multiplication. Perform the multiplication, then combine that number with the fraction 1/100. ", "id": 2179544, "order": 3, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Hi sarah. first you have to do pemdas so you would do 100*300 first. after you get that answer you divide 1/100. After you have those answers you need to add both of them together to get your solution ", "id": 2179544, "order": 4, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: thanks ahmed and spenser ", "id": 2179544, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: Your welcome ", "id": 2179544, "order": 7, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: How do you factor out this problem? \r\n3x4th power +12x3rd power -48x\r\n\r\n ", "id": 256497, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: What's the gcf? ", "id": 256497, "order": 1, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Tutor: Yep mow factor it out ", "id": 256497, "order": 3, "list_of_labels": "['confirmatory_feedback', 'giving_instruction']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Never mind it would end up being. (X3rd power+4x2power-16)  ", "id": 256497, "order": 5, "list_of_labels": "['computational_skill']", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: Yup now what multiples of -16 add to 4 ", "id": 256497, "order": 6, "list_of_labels": "['confirmatory_feedback', 'questioning']", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: Did you get this one? ", "id": 256497, "order": 7, "list_of_labels": "['managing_discussions']", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: How would you solve this problem?\r\n\r\n8\u221a2+ 4\u221a2-5\u221a2 ", "id": 224604, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: if you have the same square root , put them together and you only ,then , have to solve the outside numbers do you follow ?? ", "id": 224604, "order": 1, "list_of_labels": "['giving_instruction', 'questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: So just adding like terms basically? Would it become 7\u221a2 ? ", "id": 224604, "order": 2, "list_of_labels": "['strategic_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: perfect! ", "id": 224604, "order": 4, "list_of_labels": "['confirmatory_feedback']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Thank you Claire!\r\n ", "id": 224604, "order": 5, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Teacher: Good job!  I handed out some kp.  Let's close this post now!  :) ", "id": 224604, "order": 7, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: In Section 5 - Topic 2 Ashley's voice is kind of scratchy can someone try to fix that? ", "id": 2462606, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Teacher: try another study expert! ", "id": 2462606, "order": 1, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: Like at the begining, I think its her microphone though. :/ ", "id": 2462606, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Tutor: OK, well the best thing I know to do is to do what Emily said and pick a different study expert. ", "id": 2462606, "order": 4, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Teacher: ok thanks for letting us know! try another study expert in the meantime! ", "id": 2462606, "order": 5, "list_of_labels": "[]", "is_tutor": true, "Success": 0}
+{"processed_text": "Student: and a little throughout the video ", "id": 2462606, "order": 6, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: Your welcome just wanted to let ya'll know. :) ", "id": 2462606, "order": 7, "list_of_labels": "[]", "is_tutor": false, "Success": 0}
+{"processed_text": "Student: 9*7 if a*b= (a\u00b2-9)/(b\u00b3+7)+21 ", "id": 5609, "order": 0, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor: What are you trying to find? ", "id": 5609, "order": 2, "list_of_labels": "['asking_for_elaboration']", "is_tutor": true, "Success": 1}
+{"processed_text": "Student: Forgot to mention this is a challenge ", "id": 5609, "order": 3, "list_of_labels": "[]", "is_tutor": false, "Success": 1}
+{"processed_text": "Student: 9*7 i am defining an operation ", "id": 5609, "order": 5, "list_of_labels": "['conceptual_knowledge']", "is_tutor": false, "Success": 1}
+{"processed_text": "Tutor:  i think its 26,930\r\ni think i missed calculated ", "id": 5609, "order": 8, "list_of_labels": "['giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: (9\u00b2-9)(7\u00b3+7)+21\r\n(81-9)(343+7)+21\r\n72(350)+21\r\n25200+21\r\n25221 ", "id": 5609, "order": 9, "list_of_labels": "['giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: if so then:\r\n\r\n9*7 if a*b= (a\u00b2-9)/(b\u00b3+7)+21\r\nsubstitute\r\n(9\u00b2-9)/(7\u00b3+7)+21\r\nsimplify\r\n72/340 + 21\r\nadd\r\n72/361 :D ", "id": 5609, "order": 10, "list_of_labels": "['giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: (9\u00b2-9)/(7\u00b3+7)+21\r\n(81-9)/(343+7)+21\r\n72(350)+21\r\n72/350+21\r\n21 and 72/350\r\n\r\nsorry:D ", "id": 5609, "order": 11, "list_of_labels": "['giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: oh sorry I made a mistake!\r\n\r\n9*7 if a*b= (a\u00b2-9)/(b\u00b3+7)+21\r\nsubstitute\r\n(9\u00b2-9)/(7\u00b3+7)+21\r\nsimplify\r\n72/350 + 21\r\nadd\r\n72/371 :D ", "id": 5609, "order": 12, "list_of_labels": "['giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: 9*7 if a*b=(a\u00b2-9)/(b\u00b3+7)+21\r\n(9\u00b2-9)/(7\u00b3+7)+21\r\n(81-9)/(343+7)+21\r\n72/350+21\r\n72/371 ", "id": 5609, "order": 13, "list_of_labels": "['giving_instruction', 'giving_answers']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Your answer should be 72/350 + 21 ", "id": 5609, "order": 14, "list_of_labels": "['correcting']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: You cannot add the denominator with 21! 72/350 is a fraction! ", "id": 5609, "order": 16, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Is it ok to have a mixed number? ", "id": 5609, "order": 17, "list_of_labels": "['questioning']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Thank you for the explanation Jiyansh. ", "id": 5609, "order": 18, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: It depends on your teacher really, but I think it's better to either leave it as the separate sum or convert it into a fraction. 21 and 72/350 is a bit vague because it makes it seem like you are giving two answers instead of one sum ", "id": 5609, "order": 19, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: Okay ", "id": 5609, "order": 20, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: nan ", "id": 5609, "order": 21, "list_of_labels": "[]", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: oh sorry I made a mistake!\r\n\r\n9*7 if a*b= (a\u00b2-9)/(b\u00b3+7)+21\r\nsubstitute\r\n(9\u00b2-9)/(7\u00b3+7)+21\r\nsimplify\r\n72/350 + 21 :D ", "id": 5609, "order": 22, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Nice challenge! ", "id": 5609, "order": 23, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}
+{"processed_text": "Tutor: 9*7 if a*b= (a\u00b2-9)/(b\u00b3+7)+21\r\nIf 9 is a and 7 is b\r\n\r\n(81-9)/(343+7)+21\r\n72/350 + 21 ", "id": 5609, "order": 24, "list_of_labels": "['giving_instruction']", "is_tutor": true, "Success": 1}
+{"processed_text": "Teacher: Simran, good job. Let's consider this challenge mastered.  ", "id": 5609, "order": 25, "list_of_labels": "['praising_and_encouraging']", "is_tutor": true, "Success": 1}

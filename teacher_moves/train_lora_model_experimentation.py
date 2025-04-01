@@ -1,6 +1,6 @@
 import torch
 from tqdm import tqdm
-from data_loaders_5 import read_jsonl, group_data_by_id, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
+from data_loaders_florida import read_jsonl, group_data_by_id, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 from torch.utils.data import Dataset, DataLoader
@@ -187,20 +187,24 @@ def fine_tune_llama_with_lora(
 
 def main():
     # DATA_PATH = '/work/pi_juanzhai_umass_edu/fareya_workspace/dialogue-kt/teacher_moves/processed_data/train.jsonl'
-    DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train_check4.jsonl"
+    # DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train_check4.jsonl"
+    DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_train_data.jsonl"
     print(f"Using data: {DATA_PATH}")
     MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
     # MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
     print(f"Using model: {MODEL_NAME}")
-    MODEL_SAVE_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_future_correctness_with_prev_moves"
+    MODEL_SAVE_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/328b_future_teacher_move_type_nlabels_anation"
     print(f"Saving model to: {MODEL_SAVE_PATH}")
     ACCESS_TOKEN = "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"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # PRED_LABEL_NAME = "future_teacher_move_type"
+    PRED_LABEL_NAME = "future_teacher_move_type"
     
-    PRED_LABEL_NAME = "future_correctness_annotation"
+    # PRED_LABEL_NAME = "dialogue_correctness"
+    include_labels = False
+
     print(f"Using prediction label: {PRED_LABEL_NAME}")
+    print(f"Using include_labels: {include_labels}")    
     print(f"Using device: {device}")
 
     data = read_jsonl(DATA_PATH)
