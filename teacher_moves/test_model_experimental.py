@@ -1,6 +1,6 @@
 import torch
 from tqdm import tqdm
-from data_loaders_5 import read_jsonl, group_data_by_id, get_test_formatted, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
+from data_loaders_florida import read_jsonl, group_data_by_id, get_test_formatted, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 from torch.utils.data import Dataset, DataLoader
@@ -10,8 +10,13 @@ from transformers import get_scheduler
 from sklearn.metrics import f1_score
 import numpy as np
 
+import ast
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.metrics import f1_score, accuracy_score, hamming_loss
+
 MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
-DATA_PATH = '/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test_check4.jsonl'
+# DATA_PATH = '/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test_check4.jsonl'
+DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_val_data.jsonl"
 MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
 
 def get_base_model(base_model_name: str, tokenizer: AutoTokenizer, quantize: bool):
@@ -55,6 +60,107 @@ def compute_metrics(preds, labels):
     accuracy = count / len(preds)
     f1 = f1_score(labels, preds, average="macro")
     return {"accuracy": accuracy, "f1": f1}
+
+def evaluate_multi_label(y_true_raw, y_pred_raw):
+    """
+    y_true_raw: list of strings (e.g., "['label1', 'label2']")
+    y_pred_raw: list of lists (e.g., [['label1'], ['label2', 'label3']])
+    all_labels: list of all possible labels
+    """
+
+
+    all_labels = [
+        'confirmatory feedback', 'negative feedback', 'correcting',
+        'giving instruction', 'giving explanation',
+        'providing further references', 'questioning', 'asking for elaboration',
+        'praising and encouraging', 'managing frustration',
+        'managing discussions', 'giving answers', 'encouraging peer tutoring',
+        'guiding peer tutoring', 'acknowledging tutor issue', 'other',
+        'irrelevant statement', 'computational skill', 'linguistic knowledge',
+        'conceptual knowledge', 'strategic knowledge', 'affective control'
+    ]
+    # Convert stringified lists into actual Python lists
+    y_true = [ast.literal_eval(item) if isinstance(item, str) else item for item in y_true_raw]
+
+    # Initialize binarizer with fixed label set for consistent vectorization
+    mlb = MultiLabelBinarizer(classes=all_labels)
+    mlb.fit(y_true + y_pred_raw)  # Fit once
+
+    y_true_bin = mlb.transform(y_true)
+    y_pred_bin = mlb.transform(y_pred_raw)
+
+    f1 = f1_score(y_true_bin, y_pred_bin, average='samples')
+    exact_match_acc = accuracy_score(y_true_bin, y_pred_bin)
+    hamming_acc = 1 - hamming_loss(y_true_bin, y_pred_bin)
+
+    print(f"F1 Score (samples): {f1:.4f}")
+    print(f"Exact Match Accuracy: {exact_match_acc:.4f}")
+    print(f"Hamming Accuracy: {hamming_acc:.4f}")
+    
+    return f1, exact_match_acc, hamming_acc
+
+def evaluate_multi_label_safe(y_true_raw, y_pred_raw):
+    import ast
+    from sklearn.preprocessing import MultiLabelBinarizer
+    from sklearn.metrics import f1_score, accuracy_score, hamming_loss
+
+    all_labels = [
+        'confirmatory feedback', 'negative feedback', 'correcting',
+        'giving instruction', 'giving explanation',
+        'providing further references', 'questioning', 'asking for elaboration',
+        'praising and encouraging', 'managing frustration',
+        'managing discussions', 'giving answers', 'encouraging peer tutoring',
+        'guiding peer tutoring', 'acknowledging tutor issue', 'other',
+        'irrelevant statement', 'computational skill', 'linguistic knowledge',
+        'conceptual knowledge', 'strategic knowledge', 'affective control', 'none'
+    ]
+    # Parse and clean
+    y_true = [ast.literal_eval(s) if isinstance(s, str) else s for s in y_true_raw]
+    y_pred = [ast.literal_eval(s) if isinstance(s, str) else s for s in y_pred_raw]
+
+    print(y_true)
+    print(y_pred)
+    # Strip spaces
+    y_true = [[label.strip() for label in ex] for ex in y_true]
+    y_pred = [[label.strip() for label in ex] for ex in y_pred]
+
+    total = 0 
+    for i in range(len(y_true)): 
+        # if y_true[i] == []: 
+        #     y_true[i] == ['none']
+        # if y_pred[i] == []:
+        #     y_pred[i] = ['none']
+        if y_pred[i] == y_true[i]:
+            print(i)
+            print(y_pred[i])
+            total = total + 1 
+    print(y_true)
+    print(y_pred)
+
+    print(total/ len(y_true))
+    # Initialize binarizer with fixed class order
+    mlb = MultiLabelBinarizer()
+    mlb.fit(y_true + y_pred)
+    # mlb.fit([])
+
+    y_true_bin = mlb.transform(y_true)
+    y_pred_bin = mlb.transform(y_pred)
+
+    # Sanity check
+    if y_pred_bin.shape != y_true_bin.shape:
+        raise ValueError("Shape mismatch between predictions and ground truth after binarization.")
+
+    # Compute metrics
+    f1 = f1_score(y_true_bin, y_pred_bin, average='samples')
+    exact_match_acc = accuracy_score(y_true_bin, y_pred_bin)
+    hamming_acc = 1 - hamming_loss(y_true_bin, y_pred_bin)
+
+    print(f"F1 Score (samples): {f1:.4f}")
+    print(f"Exact Match Accuracy: {exact_match_acc:.4f}")
+    print(f"Hamming Accuracy: {hamming_acc:.4f}")
+
+    return f1, exact_match_acc, hamming_acc
+
 
 def true_positive_true_negative(y_true, y_pred, test_data):
     class_names = ['generic', 'focus', 'telling', 'probing']
@@ -107,7 +213,8 @@ def test_lora_model():
     grouped_data = group_data_by_id(data)
     test_data = get_test_formatted(grouped_data)
 
-    PRED_LABEL_NAME = "future+correctness_annotation"
+    PRED_LABEL_NAME = "future_teacher_move_type" # teacher_move_type, dialogue_correctness, future_teacher_move_type
+    
     print(f"Using label: {PRED_LABEL_NAME}")
     print(f"Model: {MODEL_NAME}")   
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -143,8 +250,29 @@ def test_lora_model():
     # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_225"
     # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_future_correctness"
     # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_correctness_with_prev_moves"
-    lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_future_correctness_with_prev_moves"
+    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_future_correctness_with_prev_moves"
+    # lora_model_path =  "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_21model_llama32bv2_218_general_classification_success"
+    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_218_general_classification_success_with_labels"
+    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_218_general_classification_teacher_moves_with_labels"
+    # model_llama32bv2_218_general_classification_teacher_moves_with_labels
+    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_218_general_classification_without_success"
+    
+    #     No previous labels, curr move classification
+    # model_name = 328b_teacher_move_type_nlabels_anation
+
+    # Previous labels, curr move classification 
+    # model_name = 328b_teacher_move_type_labels_anation
+
+    # No previous labels, future 
+    # model_name = 328b_future_teacher_move_type_nlabels_anation
+
+    # Previous label, future
+    # model_name = 328b_future_teacher_move_type_labels_anation
+
+    lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/328b_future_teacher_move_type_labels_anation"
+    #lora_model_path = "model_llama32bv2_218_general_correctness_no_labels"
     print(f"Loading model from {lora_model_path}")
+    
     peft_model = PeftModel.from_pretrained(model, model_id=lora_model_path, is_trainable=False)
     peft_model.to("cuda")
     peft_model.eval()
@@ -175,16 +303,19 @@ def test_lora_model():
             prediction_text = tokenizer.batch_decode(new_tokens, skip_special_tokens=True)
 
             for i in range(len(prediction_text)):
+                print(f"Input: {decoded_inputs[i]}")
                 print(f"Prediction: {prediction_text[i]}")
                 print(f"Label: {batch_labels[i]}")
 
             predictions.extend(prediction_text)
             labels.extend(batch_labels)
 
+
     metrics = compute_metrics(predictions, labels)
     print(metrics)
-
+    if PRED_LABEL_NAME == "teacher_move_type" or PRED_LABEL_NAME == "future_teacher_move_type":
+        evaluate_multi_label_safe(labels, predictions)
     # Call function to analyze misclassifications
-    true_positive_true_negative(labels, predictions, decoded_inputs)
+    # true_positive_true_negative(labels, predictions, decoded_inputs)
 
 test_lora_model()
