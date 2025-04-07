@@ -519,6 +519,11 @@ def evaluate_model(model, test_loader, device):
 
 ### ======= Main ======= ###
 if __name__ == "__main__":
+
+    print(INPUT_KEY)
+    print(LABEL_KEY)
+    print(LABEL_MODE)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
@@ -537,8 +542,17 @@ if __name__ == "__main__":
     sequences_train, labels_train = format_sequences_with_labels(
         train_data, window_size, INPUT_KEY, LABEL_KEY, LABEL_MODE
     )
+
     X_train, y_train, label2idx = encode_teacher_moves(sequences_train, labels_train)
 
+    for i in range(10):
+        print(sequences_train[i])
+        print(X_train[i])
+        print(labels_train[i])
+        print(y_train[i])
+
+    print(label2idx)
+    
     sequences_val, labels_val = format_sequences_with_labels(
         val_data, window_size, INPUT_KEY, LABEL_KEY, LABEL_MODE
     )
@@ -551,6 +565,7 @@ if __name__ == "__main__":
     for i in range(5):
         print(f"Input: {sequences_train[i]} → Label: {labels_train[i]}")
 
+    print("vocab_size", len(label2idx))
     model = LSTMModel(
         vocab_size=len(label2idx),
         embedding_dim=64,
