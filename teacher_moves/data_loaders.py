@@ -90,16 +90,16 @@ def format_dialogue(data, pred_label_name):
                     user_dialogue = "".join(dialogue_text) # replaced 
                     user_prompt = "[BEGIN DIALOGUE]" + user_dialogue + "\n[END DIALOGUE]"       
                     formatted_outputs.append(user_prompt)
-                    labels.append(turn[pred_label_name])
+                    labels.append(turn["gpt_future_teacher_move_type"])
                     ids.append(turn["id"])
             
             elif pred_label_name == "teacher_move_type":
                 print("Turn: ", turn)
                 # print (turn)
-                if turn['teacher_move_type'] and i < len(conversation)-1:
+                if turn['teacher_move_type'] and i < len(conversation)-1 and conversation[i+1]['teacher_move_type']:
                     curr_teacher_move_model= conversation[i+1]['teacher_move']
                     curr_teacher_turn = conversation[i+1]['turn']
-                    curr_teacher_type = conversation[i+1]['teacher_move_type']
+                    curr_teacher_type = conversation[i+1]['gpt_teacher_move_type']
                     
                     additional_text = f"\nTeacher Turn {curr_teacher_turn}: {curr_teacher_move_model}"
                     dialogue_text.append(f"\nTeacher Turn {turn['turn']}: {turn['teacher_move']} \nStudent Turn  {turn['turn']}: {turn['student_move']}")

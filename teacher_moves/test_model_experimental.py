@@ -1,6 +1,6 @@
 import torch
 from tqdm import tqdm
-from data_loaders_florida import read_jsonl, group_data_by_id, get_test_formatted, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
+from ultimate_data_loader import read_jsonl, group_data_by_id, get_test_formatted, split_train_val, DialogueDatasetUnpacked, DialogueCollatorUnpacked
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
 from torch.utils.data import Dataset, DataLoader
@@ -9,6 +9,7 @@ from transformers import AdamW
 from transformers import get_scheduler
 from sklearn.metrics import f1_score
 import numpy as np
+import argparse
 
 import ast
 from sklearn.preprocessing import MultiLabelBinarizer
@@ -16,8 +17,11 @@ from sklearn.metrics import f1_score, accuracy_score, hamming_loss
 
 MATHDIAL_DIALOGUE_DESC = "the student is attempting to solve a math problem."
 # DATA_PATH = '/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test_check4.jsonl'
-DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_val_data.jsonl"
+# DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_val_data.jsonl"
+DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test_with_gpt_labels.jsonl"
 MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
+MATHDIAL = "mathdial"
+ANATION = "anation"
 
 def get_base_model(base_model_name: str, tokenizer: AutoTokenizer, quantize: bool):
     base_model = AutoModelForCausalLM.from_pretrained(
@@ -206,19 +210,36 @@ def true_positive_true_negative(y_true, y_pred, test_data):
             print(f"- True: {ex['true_label']}, Predicted: {ex['predicted_label']}")
             print(f"  Input Data: {ex['input_data']}\n")  # Print input for debugging
 
-def test_lora_model():
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+def test_lora_model(dataset_name, pred_label_name, include_prev):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    DATASET_NAME = dataset_name
+    PRED_LABEL_NAME = pred_label_name # options: future_teacher_move_type, teacher_move_type, correctness_annotation, future_correctness_annotation, final_correctness
+    MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
+    INCLUDE_PREV = include_prev
+
+    if DATASET_NAME == MATHDIAL:
+        DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/test_check4.jsonl"
+    if DATASET_NAME == ANATION:
+        DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_val_data_final.jsonl"
+
+    print(f"Using dataset: {DATASET_NAME}")
+    print(f"Using data: {DATA_PATH}")
+    print(f"Using model: {MODEL_NAME}")
+    print(f"Using prediction label: {PRED_LABEL_NAME}")
+    print(f"Using include_labels: {INCLUDE_PREV}")    
     print(f"Using device: {device}")
+
+    lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/46_runs/"+MODEL_NAME+"_"+DATASET_NAME+"_"+PRED_LABEL_NAME+"_include_labels_"+str(INCLUDE_PREV)
+    print(f"Trained Model:{lora_model_path}")
     data = read_jsonl(DATA_PATH)
     grouped_data = group_data_by_id(data)
     test_data = get_test_formatted(grouped_data)
 
-    PRED_LABEL_NAME = "future_teacher_move_type" # teacher_move_type, dialogue_correctness, future_teacher_move_type
-    
     print(f"Using label: {PRED_LABEL_NAME}")
     print(f"Model: {MODEL_NAME}")   
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    test_dataset = DialogueDatasetUnpacked(test_data, tokenizer, model_name=MODEL_NAME, output_key=PRED_LABEL_NAME)
+    test_dataset = DialogueDatasetUnpacked(test_data, tokenizer, output_key = PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name = DATASET_NAME)
     collator = DialogueCollatorUnpacked(tokenizer, device, is_test=True)
     test_loader = DataLoader(test_dataset, batch_size=1, collate_fn=collator)
 
@@ -243,35 +264,6 @@ def test_lora_model():
         r=model_config["r"],
         lora_alpha=model_config["lora_alpha"]
     )
-
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/saved_models/model_llama32bv2_5_lr_0.0003_r_16"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32b_212"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32b_224"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_225"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_future_correctness"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_correctness_with_prev_moves"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_227_future_correctness_with_prev_moves"
-    # lora_model_path =  "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_21model_llama32bv2_218_general_classification_success"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_218_general_classification_success_with_labels"
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_218_general_classification_teacher_moves_with_labels"
-    # model_llama32bv2_218_general_classification_teacher_moves_with_labels
-    # lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/model_llama32bv2_218_general_classification_without_success"
-    
-    #     No previous labels, curr move classification
-    # model_name = 328b_teacher_move_type_nlabels_anation
-
-    # Previous labels, curr move classification 
-    # model_name = 328b_teacher_move_type_labels_anation
-
-    # No previous labels, future 
-    # model_name = 328b_future_teacher_move_type_nlabels_anation
-
-    # Previous label, future
-    # model_name = 328b_future_teacher_move_type_labels_anation
-
-    lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/328b_future_teacher_move_type_labels_anation"
-    #lora_model_path = "model_llama32bv2_218_general_correctness_no_labels"
-    print(f"Loading model from {lora_model_path}")
     
     peft_model = PeftModel.from_pretrained(model, model_id=lora_model_path, is_trainable=False)
     peft_model.to("cuda")
@@ -303,7 +295,7 @@ def test_lora_model():
             prediction_text = tokenizer.batch_decode(new_tokens, skip_special_tokens=True)
 
             for i in range(len(prediction_text)):
-                print(f"Input: {decoded_inputs[i]}")
+                print(f"Input: {decoded_inputs[-1]}")
                 print(f"Prediction: {prediction_text[i]}")
                 print(f"Label: {batch_labels[i]}")
 
@@ -313,9 +305,18 @@ def test_lora_model():
 
     metrics = compute_metrics(predictions, labels)
     print(metrics)
-    if PRED_LABEL_NAME == "teacher_move_type" or PRED_LABEL_NAME == "future_teacher_move_type":
-        evaluate_multi_label_safe(labels, predictions)
+    # if PRED_LABEL_NAME == "teacher_move_type" or PRED_LABEL_NAME == "future_teacher_move_type":
+    #     evaluate_multi_label_safe(labels, predictions)
     # Call function to analyze misclassifications
     # true_positive_true_negative(labels, predictions, decoded_inputs)
 
-test_lora_model()
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset_name", type=str, choices=["mathdial", "anation"], required=True)
+    parser.add_argument("--pred_label_name", type=str, required=True)
+    parser.add_argument("--include_prev", action="store_true")
+    args = parser.parse_args()
+
+    test_lora_model(args.dataset_name, args.pred_label_name, args.include_prev)

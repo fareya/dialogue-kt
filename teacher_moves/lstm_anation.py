@@ -10,7 +10,7 @@ import pandas as pd
 # ---------- Parameters ---------- #
 INPUT_WINDOW = 3
 DEBUG = False
-PREDICT_CURRENT = True   # Predict the current turn instead of next
+PREDICT_CURRENT = False   # Predict the current turn instead of next
 PREDICT_CORRECTNESS = False  # Predict correctness instead of labels
 VALIDATION_SPLIT = 0.2
 LABEL_LIST = [
@@ -187,6 +187,15 @@ if __name__ == "__main__":
         np.array(y_true), np.array(y_pred), average=average, zero_division=0
     )
     print(f"Test Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}")
+    # Compute accuracy
+    correct = 0
+    total = 0
+    for pred, true in zip(y_pred, y_true):
+        if np.array_equal(pred, true):
+            correct += 1
+        total += 1
+    accuracy = correct / total if total > 0 else 0
+    print(f"Test Accuracy: {accuracy:.4f}")
 
     # Save predictions vs actual
     output_df = pd.DataFrame({
