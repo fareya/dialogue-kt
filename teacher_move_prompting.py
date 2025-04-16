@@ -498,33 +498,35 @@ formatted_outputs, labels, turn_ids = format_dialogue(grouped_data)
 
 prompts = [(PROMPT1 if use_prompt_one else PROMPT2) + out for out in formatted_outputs]
 
-model = "gpt-4o"
-max_tokens = 512
-batch_size = 1
-temperature = 0
+for p in range(30): 
+    print(prompts[p])
+# model = "gpt-4o"
+# max_tokens = 512
+# batch_size = 1
+# temperature = 0
 
-print(os.getenv("AZURE_OPENAI_API_KEY"))
-print(os.getenv("AZURE_OPENAI_ENDPOINT"))
+# print(os.getenv("AZURE_OPENAI_API_KEY"))
+# print(os.getenv("AZURE_OPENAI_ENDPOINT"))
 
-oac = OpenAIClient(use_azure_client=True)
-responses = oac.get_batched_responses(prompts, model, max_tokens, batch_size, temperature, system_message=SYSTEM)
-write_to_jsonl(out_path, responses)
-prediction_data = read_jsonl(out_path)
+# oac = OpenAIClient(use_azure_client=True)
+# responses = oac.get_batched_responses(prompts, model, max_tokens, batch_size, temperature, system_message=SYSTEM)
+# write_to_jsonl(out_path, responses)
+# prediction_data = read_jsonl(out_path)
 
-extracted_labels, extracted_ground_truth_labels = extract_labels(prediction_data, labels)
+# extracted_labels, extracted_ground_truth_labels = extract_labels(prediction_data, labels)
 
-mapped_labels = extracted_labels if use_prompt_one else map_to_category(extracted_labels)
+# mapped_labels = extracted_labels if use_prompt_one else map_to_category(extracted_labels)
 
-f1 = f1_score(extracted_ground_truth_labels, mapped_labels, average='weighted')
-accuracy = accuracy_score(extracted_ground_truth_labels, mapped_labels)
-print(f"F1 Score: {f1}")
-print(f"Accuracy: {accuracy}")
+# f1 = f1_score(extracted_ground_truth_labels, mapped_labels, average='weighted')
+# accuracy = accuracy_score(extracted_ground_truth_labels, mapped_labels)
+# print(f"F1 Score: {f1}")
+# print(f"Accuracy: {accuracy}")
 
-# Inject GPT labels and future labels
-label_key = "gpt_teacher_move_type" if use_prompt_one else "gpt_teacher_move_subtype"
-updated_data = inject_gpt_labels_by_turn_ids(grouped_data, prediction_data, turn_ids, label_key=label_key)
-updated_data = add_future_gpt_move_type(updated_data, label_key=label_key)
+# # Inject GPT labels and future labels
+# label_key = "gpt_teacher_move_type" if use_prompt_one else "gpt_teacher_move_subtype"
+# updated_data = inject_gpt_labels_by_turn_ids(grouped_data, prediction_data, turn_ids, label_key=label_key)
+# updated_data = add_future_gpt_move_type(updated_data, label_key=label_key)
 
-# Save final data
-write_dicts_to_jsonl(output_gpt_labeled_data, updated_data)
-print(f"Wrote GPT-labeled training data to: {output_gpt_labeled_data}")
+# # Save final data
+# write_dicts_to_jsonl(output_gpt_labeled_data, updated_data)
+# print(f"Wrote GPT-labeled training data to: {output_gpt_labeled_data}")

@@ -128,12 +128,14 @@ def main():
     parser.add_argument("--dataset_name", choices=["mathdial", "anation"], required=True, help="Name of the dataset")
     parser.add_argument("--pred_label_name", type=str, required=True, help="Label to predict")
     parser.add_argument("--include_prev", action="store_true", help="Include previous turn types")
+    parser.add_argument("--single_turn", action="store_true", help="Baseline where we only train on a single teacher move")
 
     args = parser.parse_args()
 
     DATASET_NAME = args.dataset_name
     PRED_LABEL_NAME = args.pred_label_name
     INCLUDE_PREV = args.include_prev
+    SINGLE_TURN = args.single_turn
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
@@ -143,7 +145,10 @@ def main():
     else:
         DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_train_data_final.jsonl"
 
-    MODEL_SAVE_PATH = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/46_runs/{MODEL_NAME}_{DATASET_NAME}_{PRED_LABEL_NAME}_include_labels_{str(INCLUDE_PREV)}"
+    if SINGLE_TURN:
+        MODEL_SAVE_PATH = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/414_runs/{MODEL_NAME}_{DATASET_NAME}_{PRED_LABEL_NAME}_include_labels_{str(INCLUDE_PREV)}_single_turn_{str(SINGLE_TURN)}"
+    else:
+        MODEL_SAVE_PATH = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/414_runs/{MODEL_NAME}_{DATASET_NAME}_{PRED_LABEL_NAME}_include_labels_{str(INCLUDE_PREV)}"
 
     print(f"Using dataset: {DATASET_NAME}")
     print(f"Using data: {DATA_PATH}")
@@ -158,17 +163,18 @@ def main():
     train_data, val_data = split_train_val(grouped_data)
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer, model_name=MODEL_NAME, output_key=PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name=DATASET_NAME)
-    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer, model_name=MODEL_NAME, output_key=PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name=DATASET_NAME)
+    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer, model_name=MODEL_NAME, output_key=PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name=DATASET_NAME, single_turn=SINGLE_TURN)
+    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer, model_name=MODEL_NAME, output_key=PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name=DATASET_NAME, single_turn=SINGLE_TURN)
     collator = DialogueCollatorUnpacked(tokenizer, device)
 
+    # hyperparameter tuning : {'lr': 0.0001, 'lora_rank': 32}
     train_config = {
         "model_name": MODEL_NAME,
         "pt_model_name": "trainable_lora_model",
-        "r": 8,
+        "r": 32,
         "lora_alpha": 8,
         "epochs": 5,
-        "lr": 0.0003,
+        "lr": 0.0001,
         "wd": 1e-2,
         "gc": 1.0,
         "batch_size": 1,
@@ -186,6 +192,7 @@ def main():
     )
     model.to(device)
 
+    
     fine_tune_llama_with_lora(
         tokenizer,
         model,
@@ -203,6 +210,94 @@ def main():
         early_stopping=False,
         patience=2
     )
+
+def hyperparameter_tuning():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset_name", choices=["mathdial", "anation"], required=True, help="Name of the dataset")
+    parser.add_argument("--pred_label_name", type=str, required=True, help="Label to predict")
+    parser.add_argument("--include_prev", action="store_true", help="Include previous turn types")
+    parser.add_argument("--single_turn", action="store_true", help="Baseline where we only train on a single teacher move")
+    args = parser.parse_args()
+
+    DATASET_NAME = args.dataset_name
+    PRED_LABEL_NAME = args.pred_label_name
+    INCLUDE_PREV = args.include_prev
+    SINGLE_TURN = args.single_turn
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    BASE_MODEL_NAME = "meta-llama/Llama-3.2-3B-Instruct"
+
+    if DATASET_NAME == MATHDIAL:
+        DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/train_check4.jsonl"
+    else:
+        DATA_PATH = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/processed_data/anation_train_data_final.jsonl"
+
+    print(f"Using dataset: {DATASET_NAME}")
+    print(f"Using data: {DATA_PATH}")
+    print(f"Using model: {BASE_MODEL_NAME}")
+    print(f"Using prediction label: {PRED_LABEL_NAME}")
+    print(f"Using include_labels: {INCLUDE_PREV}")
+    print(f"Using device: {device}")
+
+    data = read_jsonl(DATA_PATH)
+    grouped_data = group_data_by_id(data)
+    train_data, val_data = split_train_val(grouped_data)
+
+    tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
+    train_dataset = DialogueDatasetUnpacked(train_data, tokenizer, model_name=BASE_MODEL_NAME, output_key=PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name=DATASET_NAME, single_turn=SINGLE_TURN)
+    val_dataset = DialogueDatasetUnpacked(val_data, tokenizer, model_name=BASE_MODEL_NAME, output_key=PRED_LABEL_NAME, include_previous_turn_types=INCLUDE_PREV, dataset_name=DATASET_NAME, single_turn=SINGLE_TURN)
+    collator = DialogueCollatorUnpacked(tokenizer, device)
+
+    # HYPERPARAMETER GRID
+
+    learning_rates = [5e-5, 1e-4, 2e-4, 3e-4]
+    lora_ranks = [4, 8, 16, 32]
+    best_val_loss = float("inf")
+    best_config = None
+
+    for lr in learning_rates:
+        for r in lora_ranks:
+            model_save_subdir = f"lr_{lr}_r_{r}"
+            model_save_path = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/413_runs/{BASE_MODEL_NAME}_{DATASET_NAME}_{PRED_LABEL_NAME}_include_labels_{str(INCLUDE_PREV)}_single_turn{str(SINGLE_TURN)}/{model_save_subdir}"
+            print(f"\n🔍 Tuning with LR={lr}, LoRA rank={r}")
+            print(f"Saving to: {model_save_path}")
+
+            model, tokenizer = get_model(
+                BASE_MODEL_NAME,
+                test=False,
+                model_name=BASE_MODEL_NAME,
+                pt_model_name="trainable_lora_model",
+                r=r,
+                lora_alpha=r,  # usually same as `r` or `2*r`
+            )
+            model.to(device)
+
+            val_loss = fine_tune_llama_with_lora(
+                tokenizer,
+                model,
+                device,
+                train_dataset,
+                val_dataset,
+                collator,
+                output_dir=model_save_path,
+                epochs=5,
+                learning_rate=lr,
+                batch_size=1,
+                grad_accum_steps=64,
+                use_lr_scheduler=False,
+                wandb=None,
+                early_stopping=False,
+                patience=2
+            )
+            if val_loss < best_val_loss:
+                best_val_loss = val_loss
+                best_config = {'lr':lr, 'lora_rank':r}
+                print("BEST SO FAR!")
+                print(best_config)
+
+            print(f"Finished LR={lr}, LoRA rank={r} → Val Loss: {val_loss:.4f}")
+    print("The best config was:")
+    print(best_config)
 
 if __name__ == "__main__":
     main()
