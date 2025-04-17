@@ -20,7 +20,18 @@ LABEL_LIST = [
 LABEL_TO_INDEX = {label: i for i, label in enumerate(LABEL_LIST)}
 
 def chunk_list(lst, chunk_size):
-    return [lst[i:i + chunk_size] for i in range(0, len(lst), chunk_size)]
+    lst = [int(i) for i in lst]  # Ensure all elements are integers
+    print(lst)
+    clist = [lst[i:i + chunk_size] for i in range(0, len(lst), chunk_size)]  # Chunk the list
+    decoded_list =  []
+    for sublist in clist: 
+        new_list = [] 
+        for i in range(len(sublist)):
+            if sublist[i] == 1: 
+                new_list.append(LABEL_LIST[i])
+        decoded_list.append(new_list)
+    print(decoded_list)
+    return decoded_list
 
 
 def evaluate_multi_label_safe_2(y_true_raw, y_pred_raw):
