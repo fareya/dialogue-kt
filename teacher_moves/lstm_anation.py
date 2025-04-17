@@ -150,6 +150,13 @@ def extract_label_sequences(data):
         move_vecs = torch.stack([convert_labels_to_multihot(turn["list_of_labels"]) for turn in tutor_turns])
         correctness_vecs = torch.Tensor([turn["Success"] for turn in tutor_turns])
 
+        for i in range(move_vecs.size(0)):  # Iterate over rows
+            if move_vecs[i].sum() == 0:  # Check if the sum of the row is 0
+                move_vecs[i] = torch.full_like(move_vecs[i], -100) 
+        
+        # ALT 
+        # mask = move_vecs.sum(dim=1) == 0
+        # move_vecs[mask] = -100
         if PREDICT_CORRECTNESS:
             sequences.append(move_vecs)
             labels.append(correctness_vecs)
@@ -165,7 +172,10 @@ def extract_label_sequences(data):
             for idx, (vec, correct) in enumerate(zip(move_vecs, correctness_vecs)):
                 seq_labels = [label for label, i in LABEL_TO_INDEX.items() if vec[i] == 1.0]
                 print(f"Step {idx}: One-hot => {vec.tolist()}, Decoded => {seq_labels}, Correctness => {correct[0]}")
-
+    # print("sequences")
+    # print(sequences)
+    # print("labels")
+    # print(labels)
     return sequences, labels
 
 # ---------- Run Everything ---------- #
@@ -210,6 +220,7 @@ if __name__ == "__main__":
     results, yt, ypred = evaluate_model(model, test_loader, device, PREDICT_CORRECTNESS, True)
     yt_proc = chunk_list(yt, len(LABEL_LIST))
     ypred_proc = chunk_list(ypred, len(LABEL_LIST))
+    evaluate_multi_label_safe_2(yt_proc, ypred_proc)
     total_corr = 0 
     total = len(ypred)
 
