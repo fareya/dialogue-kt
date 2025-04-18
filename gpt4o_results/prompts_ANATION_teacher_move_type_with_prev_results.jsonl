@@ -1,0 +1,1304 @@
+{"10520892": ["giving_instruction"]}
+{"10520893": "giving_instruction"}
+{"10520894": ["giving_instruction"]}
+{"10520896": "giving_instruction"}
+{"10520899": ["giving_instruction"]}
+{"105208912": ["confirmatory_feedback", "giving_answers"]}
+{"10489171": ["questioning"]}
+{"10489173": ["questioning", "giving_instruction"]}
+{"10489176": ["giving_instruction"]}
+{"10489179": ["confirmatory_feedback"]}
+{"104891712": ["giving_instruction", "giving_explanation"]}
+{"31492691": ["giving_instruction", "giving_explanation", "providing_further_references"]}
+{"31492693": ["providing_further_references"]}
+{"31492697": ["giving_answers", "giving_explanation"]}
+{"31492698": "asking_for_elaboration"}
+{"31492699": ["questioning"]}
+{"314926911": ["managing_discussions"]}
+{"22290302": ["questioning"]}
+{"22290303": ["asking_for_elaboration"]}
+{"22290304": ["managing_discussions"]}
+{"22290307": ["giving_explanation"]}
+{"22290308": ["giving_explanation"]}
+{"31472912": ["giving_instruction"]}
+{"31472913": ["giving_instruction"]}
+{"31472914": ["giving_instruction"]}
+{"31472915": ["giving_instruction"]}
+{"31472918": ["praising_and_encouraging"]}
+{"314729111": ["confirmatory_feedback"]}
+{"314729113": ["praising_and_encouraging"]}
+{"314729117": ["giving_explanation"]}
+{"314729119": ["giving_explanation"]}
+{"13686541": ["providing_further_references"]}
+{"13686543": ["giving_instruction"]}
+{"13686545": ["confirmatory_feedback"]}
+{"13686547": ["asking_for_elaboration"]}
+{"3699962": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"3699964": ["confirmatory_feedback"]}
+{"3699965": ["giving_explanation"]}
+{"3699967": ["confirmatory_feedback"]}
+{"24239071": ["giving_instruction"]}
+{"24239072": ["negative_feedback", "questioning"]}
+{"24239074": ["giving_instruction", "giving_explanation"]}
+{"24239077": ["giving_instruction", "questioning"]}
+{"24239078": ["giving_instruction", "questioning"]}
+{"3854901": ["giving_instruction", "questioning"]}
+{"3854903": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"3854905": ["praising_and_encouraging"]}
+{"3854906": ["praising_and_encouraging", "confirmatory_feedback"]}
+{"10487091": ["giving_instruction"]}
+{"10487093": ["giving_explanation"]}
+{"10487094": ["confirmatory_feedback", "questioning"]}
+{"10487095": ["giving_answers"]}
+{"10487096": ["giving_explanation"]}
+{"10487097": ["negative_feedback"]}
+{"104870910": ["guiding_peer_tutoring"]}
+{"104870911": ["acknowledging_tutor_issue"]}
+{"104870912": ["giving_instruction", "giving_explanation"]}
+{"104870916": ["confirmatory_feedback"]}
+{"104870917": "confirmatory_feedback"}
+{"22637533": ["praising_and_encouraging"]}
+{"22637535": ["questioning"]}
+{"22637536": ["questioning"]}
+{"22637538": ["managing_discussions"]}
+{"23399841": ["giving_instruction", "giving_explanation"]}
+{"23399843": ["giving_instruction", "giving_explanation"]}
+{"2055992": ["giving_instruction"]}
+{"2055994": ["negative_feedback", "giving_explanation"]}
+{"2055996": ["giving_explanation"]}
+{"1655591": ["giving_instruction"]}
+{"1655593": ["questioning"]}
+{"1655595": ["questioning"]}
+{"1655597": ["praising_and_encouraging"]}
+{"21466891": ["giving_instruction", "questioning"]}
+{"21466892": ["confirmatory_feedback", "questioning"]}
+{"21466897": ["negative_feedback", "correcting"]}
+{"21466898": ["questioning", "asking_for_elaboration"]}
+{"10513001": ["giving_instruction"]}
+{"10513002": ["giving_instruction"]}
+{"10513003": ["giving_explanation"]}
+{"10513005": ["giving_instruction"]}
+{"10513006": ["giving_instruction"]}
+{"10513007": ["negative_feedback"]}
+{"10513008": ["guiding_peer_tutoring"]}
+{"105130011": ["correcting"]}
+{"105130012": ["guiding_peer_tutoring"]}
+{"105130013": ["guiding_peer_tutoring"]}
+{"105130014": ["confirmatory_feedback"]}
+{"105130015": ["confirmatory_feedback"]}
+{"105130017": ["negative_feedback"]}
+{"105130018": ["negative_feedback"]}
+{"105130020": ["giving_instruction"]}
+{"105130022": ["negative_feedback", "asking_for_elaboration"]}
+{"105130024": ["giving_instruction"]}
+{"105130025": "giving_instruction"}
+{"105130027": ["praising_and_encouraging"]}
+{"105130030": ["encouraging_peer_tutoring"]}
+{"105130031": ["confirmatory_feedback"]}
+{"105130032": ["confirmatory_feedback"]}
+{"21112841": ["questioning"]}
+{"21112844": ["giving_instruction", "giving_explanation"]}
+{"21112845": ["giving_instruction"]}
+{"3229252": ["questioning"]}
+{"3229254": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"3229255": ["giving_instruction"]}
+{"3229257": ["questioning"]}
+{"33221301": ["negative_feedback", "correcting"]}
+{"33221303": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"33221304": ["providing_further_references"]}
+{"33221306": "confirmatory_feedback"}
+{"10542881": ["questioning"]}
+{"10542882": "asking_for_elaboration"}
+{"10542884": ["giving_explanation"]}
+{"10542888": ["asking_for_elaboration"]}
+{"22757791": ["giving_instruction"]}
+{"22757793": ["confirmatory_feedback"]}
+{"22757794": ["giving_instruction"]}
+{"22757796": ["correcting", "confirmatory_feedback"]}
+{"32336263": ["providing_further_references"]}
+{"32336264": ["questioning"]}
+{"32336265": ["acknowledging_tutor_issue"]}
+{"12227103": ["questioning"]}
+{"12227104": ["questioning"]}
+{"12227106": ["giving_instruction"]}
+{"2471462": ["providing_further_references"]}
+{"2471463": ["providing_further_references", "encouraging_peer_tutoring"]}
+{"2471466": ["acknowledging_tutor_issue"]}
+{"20989701": ["giving_instruction"]}
+{"20989703": ["questioning"]}
+{"20989704": ["praising_and_encouraging"]}
+{"20989706": ["giving_instruction"]}
+{"20989707": ["giving_explanation"]}
+{"20989708": ["giving_explanation"]}
+{"209897010": ["confirmatory_feedback", "questioning"]}
+{"209897011": ["giving_instruction"]}
+{"209897013": ["negative_feedback", "giving_instruction"]}
+{"209897015": ["confirmatory_feedback", "questioning"]}
+{"209897017": ["negative_feedback", "correcting"]}
+{"209897019": ["negative_feedback", "correcting", "giving_explanation"]}
+{"41541": ["giving_answers"]}
+{"41542": ["giving_answers"]}
+{"41543": ["giving_instruction", "giving_explanation"]}
+{"41545": ["giving_explanation"]}
+{"41546": ["praising_and_encouraging"]}
+{"415410": ["questioning"]}
+{"415415": "questioning"}
+{"415416": ["giving_explanation", "questioning"]}
+{"415418": ["praising_and_encouraging", "giving_instruction"]}
+{"415422": ["encouraging_peer_tutoring", "correcting"]}
+{"415423": ["encouraging_peer_tutoring"]}
+{"415424": ["praising_and_encouraging"]}
+{"415427": ["praising_and_encouraging", "encouraging_peer_tutoring"]}
+{"415428": ["confirmatory_feedback"]}
+{"415431": ["praising_and_encouraging"]}
+{"33203883": ["managing_discussions"]}
+{"33203885": ["questioning"]}
+{"33203887": "questioning"}
+{"31511942": ["giving_instruction"]}
+{"31511944": ["questioning", "giving_instruction"]}
+{"31511947": ["confirmatory_feedback", "giving_instruction", "questioning"]}
+{"31511949": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"32671051": ["providing_further_references"]}
+{"32671053": ["giving_instruction"]}
+{"32671054": ["managing_discussions"]}
+{"32671056": ["giving_instruction"]}
+{"1052632": ["providing_further_references", "praising_and_encouraging"]}
+{"1052633": ["providing_further_references"]}
+{"1052637": ["giving_instruction", "questioning"]}
+{"35891": ["giving_answers"]}
+{"35893": ["correcting", "giving_instruction"]}
+{"35899": ["praising_and_encouraging", "encouraging_peer_tutoring"]}
+{"358912": ["giving_instruction", "giving_answers"]}
+{"358914": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"358915": ["praising_and_encouraging", "acknowledging_tutor_issue"]}
+{"358917": "negative_feedback"}
+{"358918": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"358920": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"358921": ["encouraging_peer_tutoring"]}
+{"358923": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"21027691": ["questioning"]}
+{"21027693": ["asking_for_elaboration"]}
+{"21027696": ["managing_discussions"]}
+{"21027698": ["providing_further_references"]}
+{"210276910": ["providing_further_references"]}
+{"210276913": ["acknowledging_tutor_issue"]}
+{"210276914": ["giving_answers"]}
+{"210276916": ["giving_instruction"]}
+{"210276917": ["giving_instruction"]}
+{"31645861": ["giving_instruction"]}
+{"31645865": ["giving_instruction", "providing_further_references"]}
+{"31645867": ["providing_further_references"]}
+{"31645868": ["praising_and_encouraging"]}
+{"2314841": ["questioning"]}
+{"2314843": ["giving_explanation"]}
+{"2314845": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"2314847": ["giving_instruction", "giving_explanation"]}
+{"11981": ["questioning"]}
+{"11983": "giving_instruction"}
+{"11985": ["giving_instruction"]}
+{"11987": ["acknowledging_tutor_issue", "giving_instruction"]}
+{"11988": ["giving_explanation", "giving_answers"]}
+{"119810": ["confirmatory_feedback"]}
+{"119813": ["giving_instruction"]}
+{"119814": ["praising_and_encouraging"]}
+{"23029421": ["providing_further_references"]}
+{"23029424": ["giving_instruction"]}
+{"363671": ["providing_further_references"]}
+{"363676": ["praising_and_encouraging", "managing_discussions"]}
+{"363677": ["encouraging_peer_tutoring"]}
+{"2567891": ["giving_instruction"]}
+{"2567893": ["giving_explanation"]}
+{"2567895": ["negative_feedback", "providing_further_references"]}
+{"2567896": ["correcting"]}
+{"2567898": ["questioning"]}
+{"10514391": ["giving_instruction"]}
+{"10514392": ["confirmatory_feedback", "questioning"]}
+{"10514393": ["providing_further_references"]}
+{"10514394": ["giving_instruction"]}
+{"10514396": ["confirmatory_feedback", "giving_explanation"]}
+{"10514397": ["giving_instruction", "praising_and_encouraging"]}
+{"10514398": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"105143910": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"105143911": ["confirmatory_feedback"]}
+{"105143912": ["confirmatory_feedback"]}
+{"12892911": ["praising_and_encouraging", "giving_instruction"]}
+{"12892912": ["encouraging_peer_tutoring"]}
+{"12892916": "confirmatory_feedback"}
+{"23033431": ["providing_further_references"]}
+{"23033432": ["providing_further_references", "praising_and_encouraging"]}
+{"23033435": ["providing_further_references", "encouraging_peer_tutoring"]}
+{"23033436": ["acknowledging_tutor_issue", "praising_and_encouraging"]}
+{"23033438": ["other"]}
+{"22067941": ["giving_instruction", "giving_explanation"]}
+{"22067943": ["asking_for_elaboration"]}
+{"22067945": ["giving_instruction"]}
+{"22067946": ["giving_explanation", "providing_further_references"]}
+{"22067947": ["giving_instruction", "giving_explanation"]}
+{"22078961": ["giving_instruction", "questioning", "praising_and_encouraging"]}
+{"22078963": ["providing_further_references"]}
+{"22078964": ["giving_instruction"]}
+{"22078966": ["giving_explanation"]}
+{"32037411": ["giving_explanation"]}
+{"32037414": ["questioning"]}
+{"32037416": ["giving_explanation"]}
+{"32037417": ["giving_explanation"]}
+{"33163861": ["questioning"]}
+{"33163862": ["other"]}
+{"33163865": ["managing_discussions"]}
+{"33163868": ["giving_explanation"]}
+{"22603412": ["negative_feedback", "asking_for_elaboration"]}
+{"22603413": ["questioning"]}
+{"22603414": ["managing_discussions"]}
+{"22603416": ["giving_instruction"]}
+{"21018112": ["questioning"]}
+{"21018115": ["questioning"]}
+{"21018118": ["managing_frustration", "giving_explanation"]}
+{"21018119": ["providing_further_references"]}
+{"210181111": ["providing_further_references", "praising_and_encouraging"]}
+{"210181114": ["questioning"]}
+{"210181116": ["giving_instruction"]}
+{"210181118": ["questioning"]}
+{"210181121": ["giving_instruction", "giving_explanation"]}
+{"210181123": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"21723032": ["giving_answers", "confirmatory_feedback"]}
+{"21723036": ["confirmatory_feedback"]}
+{"21723037": ["giving_explanation"]}
+{"21723038": ["giving_explanation"]}
+{"11862001": ["giving_instruction"]}
+{"11862002": ["giving_instruction", "giving_explanation"]}
+{"11862006": ["providing_further_references"]}
+{"47272": ["giving_instruction", "managing_frustration"]}
+{"47273": ["questioning"]}
+{"47275": ["acknowledging_tutor_issue"]}
+{"47276": ["questioning"]}
+{"47277": ["giving_explanation", "correcting"]}
+{"47279": ["praising_and_encouraging", "questioning"]}
+{"472712": ["managing_frustration", "praising_and_encouraging"]}
+{"472713": ["giving_answers"]}
+{"472714": ["managing_discussions"]}
+{"33034921": ["questioning"]}
+{"33034923": ["giving_explanation"]}
+{"33034926": ["confirmatory_feedback", "praising_and_encouraging", "giving_explanation"]}
+{"33034928": ["confirmatory_feedback", "giving_explanation", "praising_and_encouraging"]}
+{"12960611": ["questioning"]}
+{"12960612": "asking_for_elaboration"}
+{"12960614": ["asking_for_elaboration"]}
+{"12960617": ["providing_further_references"]}
+{"31615832": ["questioning"]}
+{"31615834": ["questioning"]}
+{"31615835": ["managing_discussions"]}
+{"10505431": ["giving_instruction"]}
+{"10505433": ["correcting", "giving_instruction"]}
+{"10505434": ["confirmatory_feedback"]}
+{"10505435": ["giving_instruction"]}
+{"10505438": ["asking_for_elaboration"]}
+{"10505439": ["correcting"]}
+{"105054310": ["acknowledging_tutor_issue"]}
+{"105054312": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"105054314": ["praising_and_encouraging"]}
+{"10638812": ["confirmatory_feedback"]}
+{"10638814": ["giving_explanation"]}
+{"10638815": ["confirmatory_feedback", "giving_explanation"]}
+{"22092651": ["giving_instruction"]}
+{"22092654": ["negative_feedback", "questioning"]}
+{"22092656": ["negative_feedback", "questioning"]}
+{"22092657": ["questioning"]}
+{"31464125": ["giving_answers"]}
+{"31464126": ["giving_explanation"]}
+{"31464128": ["questioning"]}
+{"314641211": ["giving_instruction"]}
+{"314641212": ["giving_instruction", "questioning"]}
+{"314641215": ["confirmatory_feedback"]}
+{"44361": ["acknowledging_tutor_issue", "giving_answers"]}
+{"44362": ["giving_explanation"]}
+{"44363": ["providing_further_references"]}
+{"44366": ["giving_instruction", "giving_explanation"]}
+{"44367": ["giving_instruction"]}
+{"44368": ["acknowledging_tutor_issue"]}
+{"443610": ["acknowledging_tutor_issue"]}
+{"443612": ["questioning"]}
+{"443615": ["giving_instruction", "asking_for_elaboration"]}
+{"443617": ["correcting", "giving_explanation"]}
+{"443618": ["praising_and_encouraging", "questioning"]}
+{"443625": ["praising_and_encouraging", "questioning", "encouraging_peer_tutoring"]}
+{"443627": ["giving_explanation"]}
+{"443632": ["praising_and_encouraging"]}
+{"443634": ["giving_instruction", "questioning"]}
+{"11205741": ["providing_further_references"]}
+{"11205742": ["questioning"]}
+{"11205743": ["providing_further_references", "giving_instruction"]}
+{"11205746": ["giving_explanation"]}
+{"3952703": ["giving_instruction"]}
+{"3952705": ["praising_and_encouraging"]}
+{"2686791": ["questioning"]}
+{"2686794": ["giving_instruction"]}
+{"2686796": ["praising_and_encouraging"]}
+{"2686797": ["providing_further_references"]}
+{"31577051": ["giving_instruction"]}
+{"31577052": ["managing_discussions", "praising_and_encouraging"]}
+{"31577057": ["giving_instruction"]}
+{"2016423": ["giving_answers"]}
+{"2016425": ["giving_instruction"]}
+{"21312561": ["giving_explanation"]}
+{"21312564": ["confirmatory_feedback"]}
+{"21312565": ["confirmatory_feedback"]}
+{"21312567": ["giving_explanation"]}
+{"23653091": ["questioning"]}
+{"23653092": ["asking_for_elaboration"]}
+{"23653094": ["giving_explanation"]}
+{"23653095": ["questioning"]}
+{"23653097": ["confirmatory_feedback"]}
+{"10489071": ["questioning"]}
+{"10489074": ["giving_instruction"]}
+{"10502451": ["questioning"]}
+{"10502452": ["questioning"]}
+{"10502458": ["praising_and_encouraging"]}
+{"11236181": ["providing_further_references"]}
+{"11236182": ["giving_instruction", "questioning"]}
+{"11236185": ["giving_instruction"]}
+{"11236187": ["giving_instruction"]}
+{"11236188": ["giving_instruction"]}
+{"31505851": ["providing_further_references", "giving_instruction"]}
+{"31505852": ["providing_further_references"]}
+{"31505856": "giving_instruction"}
+{"31505858": ["acknowledging_tutor_issue"]}
+{"315058510": ["giving_explanation", "questioning", "praising_and_encouraging"]}
+{"315058511": ["questioning"]}
+{"315058514": ["guiding_peer_tutoring"]}
+{"315058515": ["confirmatory_feedback", "giving_instruction"]}
+{"315058518": ["confirmatory_feedback", "questioning"]}
+{"13161841": ["providing_further_references"]}
+{"13161842": "questioning"}
+{"13161844": ["questioning"]}
+{"13161846": ["praising_and_encouraging"]}
+{"13161848": ["praising_and_encouraging"]}
+{"1868864": ["giving_instruction", "providing_further_references"]}
+{"1868866": ["questioning"]}
+{"23196071": ["questioning"]}
+{"23196074": ["questioning"]}
+{"23196077": ["giving_answers"]}
+{"23196078": ["negative_feedback"]}
+{"10505544": ["providing_further_references"]}
+{"10505545": ["giving_instruction"]}
+{"10505547": ["praising_and_encouraging"]}
+{"10505549": ["confirmatory_feedback"]}
+{"105055410": ["questioning"]}
+{"105055411": ["giving_instruction"]}
+{"105055412": ["confirmatory_feedback"]}
+{"105055414": ["correcting"]}
+{"105055415": ["giving_instruction"]}
+{"105055416": ["giving_instruction"]}
+{"105055419": ["questioning"]}
+{"105055421": ["confirmatory_feedback"]}
+{"105055422": ["giving_instruction"]}
+{"105055425": ["praising_and_encouraging"]}
+{"105055426": ["giving_explanation", "praising_and_encouraging"]}
+{"105055429": ["encouraging_peer_tutoring", "praising_and_encouraging"]}
+{"3213111": ["giving_instruction"]}
+{"3213112": "giving_instruction"}
+{"3213115": ["managing_discussions"]}
+{"3213116": ["giving_instruction"]}
+{"31512201": ["giving_instruction"]}
+{"31512205": ["providing_further_references", "questioning"]}
+{"31512207": ["giving_instruction"]}
+{"31512209": ["giving_instruction"]}
+{"315122019": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"12786762": ["confirmatory_feedback", "giving_instruction"]}
+{"12786764": "giving_instruction"}
+{"12786766": ["correcting", "giving_instruction"]}
+{"13575641": ["giving_instruction"]}
+{"13575643": ["correcting", "giving_instruction"]}
+{"13575644": ["negative_feedback", "questioning"]}
+{"13575646": ["providing_further_references", "managing_discussions"]}
+{"22724021": ["asking_for_elaboration"]}
+{"22724023": ["giving_explanation", "praising_and_encouraging"]}
+{"22724025": ["giving_instruction", "giving_explanation", "praising_and_encouraging"]}
+{"22724027": ["giving_instruction", "giving_explanation", "praising_and_encouraging"]}
+{"12110741": ["questioning"]}
+{"12110743": ["giving_explanation"]}
+{"12110745": ["giving_instruction"]}
+{"32680252": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"32680255": ["praising_and_encouraging"]}
+{"32680256": ["confirmatory_feedback"]}
+{"32680257": ["managing_discussions", "encouraging_peer_tutoring"]}
+{"13169061": ["providing_further_references"]}
+{"13169063": ["giving_answers"]}
+{"13169064": ["questioning"]}
+{"13169067": ["giving_instruction", "questioning"]}
+{"1307723": ["providing_further_references"]}
+{"1307724": ["questioning"]}
+{"1307725": ["providing_further_references"]}
+{"1307727": ["providing_further_references", "managing_discussions"]}
+{"13644741": ["giving_instruction", "giving_explanation"]}
+{"13644743": ["giving_explanation"]}
+{"13644744": ["giving_answers"]}
+{"13644747": ["giving_explanation"]}
+{"13644748": ["praising_and_encouraging", "asking_for_elaboration"]}
+{"13200231": ["giving_instruction"]}
+{"13200232": ["negative_feedback", "correcting"]}
+{"13200234": ["giving_instruction"]}
+{"13200236": ["giving_instruction"]}
+{"13200238": ["giving_instruction"]}
+{"11706625": ["providing_further_references"]}
+{"23388083": ["confirmatory_feedback"]}
+{"23388084": ["giving_instruction"]}
+{"23388086": ["giving_instruction"]}
+{"23388087": ["correcting", "giving_explanation"]}
+{"12662171": ["asking_for_elaboration"]}
+{"12662172": ["giving_instruction", "managing_discussions"]}
+{"12662177": ["giving_instruction"]}
+{"23483511": "giving_instruction"}
+{"23483513": ["negative_feedback", "questioning"]}
+{"23483516": ["giving_explanation", "questioning"]}
+{"10542751": ["acknowledging_tutor_issue", "giving_instruction"]}
+{"10542752": ["asking_for_elaboration"]}
+{"10542755": ["giving_instruction", "giving_explanation"]}
+{"10542758": ["praising_and_encouraging"]}
+{"10542759": ["giving_instruction"]}
+{"12785785": ["questioning", "asking_for_elaboration"]}
+{"23065721": ["questioning"]}
+{"23065723": ["providing_further_references"]}
+{"23065724": ["giving_explanation"]}
+{"23065727": ["giving_instruction", "giving_explanation"]}
+{"19314": ["giving_answers"]}
+{"19316": ["giving_instruction"]}
+{"19318": ["praising_and_encouraging"]}
+{"193110": ["giving_explanation"]}
+{"193113": ["questioning"]}
+{"193114": ["giving_explanation"]}
+{"193115": ["praising_and_encouraging"]}
+{"22078571": ["confirmatory_feedback", "giving_explanation"]}
+{"22078574": ["questioning", "asking_for_elaboration"]}
+{"22078576": ["giving_explanation", "confirmatory_feedback"]}
+{"22078577": ["giving_explanation"]}
+{"31849412": ["negative_feedback", "giving_explanation"]}
+{"31849413": ["giving_explanation", "correcting"]}
+{"31849414": ["negative_feedback", "correcting", "praising_and_encouraging"]}
+{"13034251": ["questioning"]}
+{"13034252": ["questioning"]}
+{"13034253": ["providing_further_references"]}
+{"13034255": ["giving_instruction"]}
+{"13034257": ["negative_feedback", "correcting"]}
+{"23612384": ["giving_instruction"]}
+{"23612386": ["providing_further_references"]}
+{"2060531": ["providing_further_references"]}
+{"2060533": ["giving_instruction"]}
+{"2060534": ["providing_further_references"]}
+{"846451": ["giving_instruction"]}
+{"846453": ["giving_instruction"]}
+{"846454": ["giving_instruction"]}
+{"846457": ["providing_further_references"]}
+{"846458": ["praising_and_encouraging"]}
+{"31721852": ["confirmatory_feedback"]}
+{"31721854": ["confirmatory_feedback"]}
+{"31721855": ["praising_and_encouraging"]}
+{"31721857": ["other"]}
+{"1861762": ["giving_instruction"]}
+{"1861763": ["giving_instruction"]}
+{"1861766": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"1861767": ["correcting", "giving_instruction"]}
+{"21593651": ["questioning"]}
+{"21593653": ["confirmatory_feedback"]}
+{"21593655": ["giving_instruction"]}
+{"21593656": ["acknowledging_tutor_issue"]}
+{"31982221": ["providing_further_references", "questioning"]}
+{"31982222": ["asking_for_elaboration"]}
+{"31982225": ["negative_feedback", "giving_explanation"]}
+{"31982227": ["providing_further_references"]}
+{"12159121": ["giving_explanation"]}
+{"12159122": ["questioning", "praising_and_encouraging"]}
+{"12159124": ["giving_instruction", "giving_explanation"]}
+{"12159125": ["providing_further_references"]}
+{"12159127": ["providing_further_references", "praising_and_encouraging"]}
+{"738771": ["providing_further_references"]}
+{"738774": ["providing_further_references", "questioning"]}
+{"738777": ["questioning"]}
+{"10662831": ["correcting", "questioning"]}
+{"10662833": ["providing_further_references"]}
+{"10662834": ["praising_and_encouraging"]}
+{"10662838": ["providing_further_references"]}
+{"21199361": ["providing_further_references"]}
+{"21199366": ["praising_and_encouraging"]}
+{"31680811": ["confirmatory_feedback"]}
+{"31680812": "confirmatory_feedback"}
+{"31680814": ["praising_and_encouraging"]}
+{"31680816": "confirmatory_feedback"}
+{"12897571": ["giving_instruction"]}
+{"12897572": ["questioning"]}
+{"12897574": ["giving_instruction"]}
+{"12897576": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"22075451": ["giving_explanation"]}
+{"22075453": ["questioning"]}
+{"22075455": ["correcting", "giving_explanation"]}
+{"22075457": ["praising_and_encouraging"]}
+{"32264011": ["questioning", "giving_instruction"]}
+{"32264013": ["giving_instruction", "giving_explanation", "questioning"]}
+{"32264015": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"32264017": ["praising_and_encouraging"]}
+{"32264018": ["praising_and_encouraging"]}
+{"11840751": ["questioning"]}
+{"11840753": ["questioning"]}
+{"11840755": ["managing_discussions"]}
+{"11840758": ["questioning"]}
+{"31864371": ["questioning"]}
+{"31864375": ["giving_instruction"]}
+{"12079052": ["giving_explanation"]}
+{"12079054": ["questioning"]}
+{"12079056": ["providing_further_references"]}
+{"22773252": ["giving_explanation"]}
+{"22773253": ["questioning"]}
+{"22773256": ["praising_and_encouraging"]}
+{"32862933": ["providing_further_references"]}
+{"32862936": ["giving_explanation"]}
+{"32862938": ["questioning"]}
+{"22979051": ["questioning"]}
+{"22979052": ["questioning"]}
+{"22979055": ["questioning"]}
+{"22979056": ["asking_for_elaboration"]}
+{"21866622": ["giving_instruction"]}
+{"21866623": ["questioning"]}
+{"21021822": ["questioning"]}
+{"21021824": ["questioning"]}
+{"21021827": ["giving_instruction"]}
+{"21021828": ["giving_instruction"]}
+{"21021829": ["giving_instruction"]}
+{"210218211": ["providing_further_references"]}
+{"210218212": ["confirmatory_feedback", "giving_instruction"]}
+{"210218213": ["providing_further_references"]}
+{"210218224": ["negative_feedback", "asking_for_elaboration"]}
+{"210218226": ["questioning"]}
+{"210218227": "questioning"}
+{"210218228": ["questioning"]}
+{"210218230": ["questioning"]}
+{"210218231": ["giving_instruction"]}
+{"210218232": ["questioning"]}
+{"210218234": ["negative_feedback", "correcting"]}
+{"210218235": ["negative_feedback", "questioning"]}
+{"210218236": ["giving_instruction"]}
+{"210218237": ["giving_explanation", "correcting"]}
+{"210218238": ["giving_instruction", "correcting"]}
+{"210218239": ["negative_feedback", "correcting"]}
+{"210218240": ["giving_explanation"]}
+{"210218241": ["praising_and_encouraging"]}
+{"210218243": ["confirmatory_feedback"]}
+{"210218244": ["confirmatory_feedback"]}
+{"210218245": ["confirmatory_feedback"]}
+{"210218246": ["confirmatory_feedback"]}
+{"210218247": ["questioning"]}
+{"210218249": ["questioning"]}
+{"210218251": ["questioning"]}
+{"210218254": ["negative_feedback", "asking_for_elaboration"]}
+{"210218255": ["negative_feedback", "questioning"]}
+{"210218257": ["giving_instruction"]}
+{"210218258": ["giving_instruction"]}
+{"210218260": ["questioning"]}
+{"210218268": ["questioning"]}
+{"210218270": ["providing_further_references"]}
+{"210218280": ["questioning"]}
+{"31497261": ["questioning"]}
+{"31497263": ["giving_instruction"]}
+{"31497264": ["questioning"]}
+{"31497266": ["giving_explanation"]}
+{"31497269": ["giving_instruction", "correcting"]}
+{"314972610": ["giving_instruction"]}
+{"314972611": ["giving_instruction"]}
+{"314972612": ["acknowledging_tutor_issue"]}
+{"314972614": ["managing_discussions"]}
+{"314972616": "managing_discussions"}
+{"33163971": ["acknowledging_tutor_issue"]}
+{"33163973": ["asking_for_elaboration"]}
+{"33163975": ["confirmatory_feedback"]}
+{"10518641": ["giving_instruction"]}
+{"10518642": ["giving_explanation"]}
+{"10518643": ["giving_explanation"]}
+{"10518645": ["giving_answers"]}
+{"10518646": ["giving_explanation"]}
+{"10518648": ["confirmatory_feedback"]}
+{"10518649": ["confirmatory_feedback"]}
+{"105186410": ["giving_explanation"]}
+{"105186411": ["correcting"]}
+{"105186412": ["giving_explanation"]}
+{"105186415": ["giving_instruction"]}
+{"105186416": ["giving_instruction"]}
+{"105186417": ["giving_instruction"]}
+{"105186420": ["giving_instruction"]}
+{"2716841": ["giving_instruction", "giving_explanation", "questioning"]}
+{"2716842": ["managing_frustration", "praising_and_encouraging"]}
+{"2716846": ["praising_and_encouraging"]}
+{"24313841": ["giving_instruction"]}
+{"24313842": ["giving_explanation"]}
+{"24313843": ["providing_further_references"]}
+{"24313846": ["confirmatory_feedback"]}
+{"32898722": ["questioning"]}
+{"32898727": ["giving_instruction"]}
+{"32898728": ["managing_discussions"]}
+{"10520721": ["questioning"]}
+{"10520722": ["managing_discussions"]}
+{"10520723": ["questioning"]}
+{"10520726": "asking_for_elaboration"}
+{"10520728": ["asking_for_elaboration"]}
+{"105207210": ["giving_explanation"]}
+{"105207213": ["confirmatory_feedback"]}
+{"105207215": ["confirmatory_feedback"]}
+{"105207217": ["questioning"]}
+{"105207219": ["questioning"]}
+{"10502461": ["providing_further_references"]}
+{"10502462": ["providing_further_references"]}
+{"10502463": ["giving_instruction", "giving_explanation"]}
+{"10502468": ["other"]}
+{"105024611": ["praising_and_encouraging"]}
+{"105024612": ["encouraging_peer_tutoring"]}
+{"105024614": ["managing_frustration", "praising_and_encouraging"]}
+{"13562162": ["giving_explanation"]}
+{"13562163": ["questioning"]}
+{"13562165": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"23349611": ["questioning"]}
+{"23349614": ["negative_feedback"]}
+{"23349616": ["providing_further_references"]}
+{"23349617": ["giving_explanation"]}
+{"23349618": ["giving_explanation"]}
+{"32878793": ["giving_instruction"]}
+{"32878795": ["giving_instruction"]}
+{"32878796": ["giving_instruction"]}
+{"32878797": ["giving_explanation"]}
+{"32878798": ["giving_explanation"]}
+{"23105142": ["asking_for_elaboration"]}
+{"23105145": ["providing_further_references", "praising_and_encouraging"]}
+{"23105147": ["providing_further_references"]}
+{"10517171": ["giving_instruction"]}
+{"10517174": ["giving_instruction"]}
+{"10517175": ["giving_explanation"]}
+{"10517176": ["confirmatory_feedback"]}
+{"105171710": ["confirmatory_feedback"]}
+{"105171712": ["negative_feedback", "giving_explanation"]}
+{"13468322": ["providing_further_references"]}
+{"13468325": ["giving_instruction", "questioning"]}
+{"13468327": ["giving_explanation"]}
+{"13468328": ["giving_instruction", "giving_explanation"]}
+{"24219761": ["giving_answers"]}
+{"24219763": ["negative_feedback", "managing_discussions"]}
+{"24219765": ["giving_explanation"]}
+{"21628281": ["providing_further_references"]}
+{"21628282": ["giving_instruction", "questioning"]}
+{"21628283": ["correcting"]}
+{"21628285": ["questioning", "correcting"]}
+{"21628288": ["praising_and_encouraging"]}
+{"12908001": ["questioning"]}
+{"12908005": ["giving_explanation"]}
+{"12908006": ["negative_feedback"]}
+{"12908007": ["managing_discussions"]}
+{"21967841": ["questioning"]}
+{"21967842": ["providing_further_references"]}
+{"21967843": ["questioning"]}
+{"21967845": ["questioning"]}
+{"21967848": ["questioning", "giving_explanation"]}
+{"22238741": ["questioning"]}
+{"22238745": ["questioning", "managing_discussions"]}
+{"22238746": ["giving_explanation"]}
+{"32694351": ["giving_instruction"]}
+{"32694352": ["questioning"]}
+{"32694354": ["asking_for_elaboration"]}
+{"32694356": ["confirmatory_feedback"]}
+{"32694358": ["praising_and_encouraging"]}
+{"22749591": ["questioning"]}
+{"22749594": ["questioning"]}
+{"22749596": ["giving_answers"]}
+{"22749598": ["questioning"]}
+{"13117541": ["questioning"]}
+{"13117543": ["giving_instruction", "questioning"]}
+{"13117544": "questioning"}
+{"13117546": ["giving_explanation"]}
+{"13117548": ["questioning"]}
+{"23016283": ["giving_instruction"]}
+{"23016285": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"23016287": ["questioning"]}
+{"23016288": ["giving_explanation"]}
+{"13541691": ["correcting", "giving_instruction"]}
+{"13541696": ["giving_answers"]}
+{"10506682": ["giving_instruction"]}
+{"10506683": ["giving_instruction", "providing_further_references"]}
+{"10506684": "confirmatory_feedback"}
+{"10506686": ["praising_and_encouraging"]}
+{"10506687": ["giving_instruction"]}
+{"10506689": ["questioning"]}
+{"105066814": ["negative_feedback", "correcting"]}
+{"105066818": ["questioning"]}
+{"105066820": ["giving_instruction"]}
+{"105066821": ["negative_feedback"]}
+{"105066822": ["confirmatory_feedback"]}
+{"105066823": ["questioning"]}
+{"105066825": ["giving_instruction", "praising_and_encouraging"]}
+{"105066826": ["negative_feedback", "correcting"]}
+{"105066827": ["giving_explanation"]}
+{"105066828": ["confirmatory_feedback"]}
+{"105066830": ["confirmatory_feedback"]}
+{"105066832": ["questioning"]}
+{"105066834": ["correcting", "giving_instruction"]}
+{"105066835": ["giving_answers"]}
+{"105066836": ["confirmatory_feedback"]}
+{"31554622": ["acknowledging_tutor_issue"]}
+{"31554624": ["giving_explanation"]}
+{"31554628": ["giving_explanation"]}
+{"11525571": ["giving_instruction"]}
+{"11525576": ["managing_frustration"]}
+{"11525577": ["giving_instruction"]}
+{"32252051": ["giving_instruction"]}
+{"32252053": ["giving_instruction"]}
+{"32252056": ["negative_feedback", "questioning"]}
+{"32252058": ["giving_instruction"]}
+{"23854145": ["providing_further_references", "praising_and_encouraging"]}
+{"13027862": ["giving_explanation"]}
+{"13027863": ["giving_explanation", "giving_answers"]}
+{"13027864": ["providing_further_references"]}
+{"13027866": ["confirmatory_feedback", "giving_explanation"]}
+{"13027868": ["giving_instruction", "giving_explanation"]}
+{"21194163": ["acknowledging_tutor_issue", "providing_further_references"]}
+{"21194166": ["giving_explanation"]}
+{"10548831": ["questioning"]}
+{"10548833": ["giving_answers", "negative_feedback"]}
+{"10548834": ["negative_feedback", "giving_explanation"]}
+{"10548835": ["giving_explanation"]}
+{"10548837": ["correcting", "giving_instruction"]}
+{"10548838": ["giving_explanation"]}
+{"105488312": ["correcting"]}
+{"105488313": ["giving_explanation"]}
+{"105488314": ["confirmatory_feedback", "giving_explanation"]}
+{"105488316": ["confirmatory_feedback"]}
+{"105488317": ["giving_answers"]}
+{"105488318": ["confirmatory_feedback"]}
+{"105488320": ["giving_instruction", "giving_explanation", "praising_and_encouraging"]}
+{"105488321": ["praising_and_encouraging", "giving_explanation"]}
+{"105488322": ["praising_and_encouraging"]}
+{"105488323": ["encouraging_peer_tutoring"]}
+{"105488324": ["encouraging_peer_tutoring"]}
+{"105488325": ["confirmatory_feedback", "giving_explanation"]}
+{"105488326": ["encouraging_peer_tutoring"]}
+{"105488327": ["praising_and_encouraging"]}
+{"105488328": ["irrelevant_statement"]}
+{"105488329": ["irrelevant_statement"]}
+{"13025041": ["other"]}
+{"13025043": ["questioning"]}
+{"13025045": ["praising_and_encouraging"]}
+{"10503091": ["giving_instruction"]}
+{"10503092": ["giving_instruction", "giving_explanation"]}
+{"10503093": ["giving_instruction", "giving_explanation"]}
+{"10503094": ["giving_instruction", "giving_explanation"]}
+{"10503095": ["giving_instruction", "giving_explanation"]}
+{"10503098": ["giving_instruction", "giving_explanation"]}
+{"10503099": ["giving_instruction"]}
+{"105030910": ["giving_instruction"]}
+{"105030911": ["questioning"]}
+{"105030915": ["questioning"]}
+{"105030916": ["giving_instruction"]}
+{"105030918": ["confirmatory_feedback"]}
+{"105030919": ["questioning"]}
+{"105030920": ["giving_instruction", "giving_explanation"]}
+{"2579101": ["giving_explanation"]}
+{"2579103": ["acknowledging_tutor_issue"]}
+{"2579105": ["acknowledging_tutor_issue", "giving_explanation"]}
+{"2579106": ["giving_explanation"]}
+{"2579108": ["praising_and_encouraging"]}
+{"32897664": ["confirmatory_feedback"]}
+{"32897665": ["giving_explanation"]}
+{"32897668": ["providing_further_references"]}
+{"14187031": "giving_instruction"}
+{"14187037": ["giving_instruction"]}
+{"14187038": ["giving_instruction"]}
+{"21110141": ["confirmatory_feedback"]}
+{"21110142": ["confirmatory_feedback"]}
+{"21110143": ["questioning"]}
+{"21110146": ["giving_instruction", "giving_explanation"]}
+{"12027241": ["giving_explanation", "negative_feedback"]}
+{"12027243": ["confirmatory_feedback", "giving_explanation"]}
+{"12027245": ["confirmatory_feedback"]}
+{"12027246": ["confirmatory_feedback", "giving_instruction"]}
+{"2450161": ["questioning"]}
+{"2450164": "giving_instruction"}
+{"2450165": ["questioning"]}
+{"2450167": ["questioning"]}
+{"642601": ["providing_further_references"]}
+{"642604": ["giving_explanation"]}
+{"642606": ["providing_further_references", "praising_and_encouraging"]}
+{"13337152": ["negative_feedback"]}
+{"13337153": ["acknowledging_tutor_issue"]}
+{"13337155": ["negative_feedback"]}
+{"13337156": ["providing_further_references", "managing_discussions"]}
+{"12361661": ["questioning"]}
+{"12361662": "giving_instruction"}
+{"12361666": ["providing_further_references", "giving_explanation"]}
+{"12361667": ["giving_instruction", "providing_further_references"]}
+{"12538421": ["asking_for_elaboration"]}
+{"12538423": ["managing_frustration"]}
+{"12538425": ["managing_discussions", "managing_frustration"]}
+{"12538427": ["other"]}
+{"2048712": ["other"]}
+{"2048714": ["other"]}
+{"2048716": ["confirmatory_feedback"]}
+{"2048718": ["managing_discussions"]}
+{"56701": ["negative_feedback"]}
+{"56702": ["confirmatory_feedback", "giving_explanation"]}
+{"56703": ["asking_for_elaboration"]}
+{"56707": ["giving_explanation"]}
+{"567011": ["giving_answers"]}
+{"567012": ["providing_further_references"]}
+{"567013": ["giving_explanation", "giving_answers"]}
+{"567014": ["giving_instruction", "giving_explanation"]}
+{"567016": "giving_instruction"}
+{"567017": ["praising_and_encouraging"]}
+{"567018": ["praising_and_encouraging", "encouraging_peer_tutoring"]}
+{"567019": ["praising_and_encouraging"]}
+{"2156251": ["giving_instruction"]}
+{"2156252": ["giving_instruction"]}
+{"2156256": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"22237571": ["questioning"]}
+{"22237576": "questioning"}
+{"43871": ["giving_instruction", "questioning"]}
+{"43874": ["confirmatory_feedback", "giving_instruction", "questioning"]}
+{"43877": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"43878": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"438711": ["correcting", "giving_explanation"]}
+{"438713": ["giving_instruction", "giving_explanation"]}
+{"438714": ["giving_instruction"]}
+{"438718": ["confirmatory_feedback", "correcting"]}
+{"438720": ["confirmatory_feedback", "giving_explanation"]}
+{"438721": ["giving_instruction"]}
+{"438722": ["giving_instruction"]}
+{"438723": ["confirmatory_feedback", "giving_explanation"]}
+{"438724": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"438725": ["confirmatory_feedback", "giving_explanation"]}
+{"438727": ["giving_explanation"]}
+{"438728": ["giving_explanation"]}
+{"31543681": ["managing_discussions"]}
+{"31543682": ["giving_instruction"]}
+{"31543684": ["giving_instruction"]}
+{"31543687": ["providing_further_references"]}
+{"1590273": ["questioning"]}
+{"1590274": ["giving_explanation"]}
+{"22699121": ["giving_instruction"]}
+{"22699127": "giving_instruction"}
+{"22699128": ["giving_instruction", "questioning"]}
+{"1976141": ["negative_feedback", "giving_explanation"]}
+{"1976142": ["correcting", "giving_instruction"]}
+{"1976144": ["confirmatory_feedback"]}
+{"1976147": "confirmatory_feedback"}
+{"1976148": ["praising_and_encouraging"]}
+{"13837372": ["acknowledging_tutor_issue"]}
+{"13837373": ["managing_discussions"]}
+{"13837374": ["providing_further_references"]}
+{"13837375": ["confirmatory_feedback"]}
+{"13837378": ["providing_further_references"]}
+{"10491621": ["giving_answers"]}
+{"10491623": ["questioning", "praising_and_encouraging"]}
+{"10491624": ["giving_answers"]}
+{"10491625": ["questioning"]}
+{"10491626": ["giving_answers"]}
+{"10491627": ["confirmatory_feedback"]}
+{"10491628": ["negative_feedback"]}
+{"104916211": ["questioning"]}
+{"104916215": ["giving_explanation"]}
+{"104916216": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"104916217": ["giving_explanation"]}
+{"104916219": ["giving_answers"]}
+{"104916221": ["questioning"]}
+{"104916222": ["acknowledging_tutor_issue"]}
+{"104916223": ["questioning"]}
+{"104916224": ["managing_discussions"]}
+{"104916226": ["asking_for_elaboration"]}
+{"104916228": ["asking_for_elaboration"]}
+{"104916229": ["guiding_peer_tutoring"]}
+{"104916230": ["guiding_peer_tutoring"]}
+{"104916231": ["managing_discussions"]}
+{"104916235": ["guiding_peer_tutoring"]}
+{"104916236": ["guiding_peer_tutoring"]}
+{"104916237": ["guiding_peer_tutoring"]}
+{"104916239": ["giving_instruction"]}
+{"104916242": ["correcting"]}
+{"104916244": ["giving_instruction"]}
+{"104916245": ["managing_discussions"]}
+{"104916246": ["managing_discussions"]}
+{"104916248": ["managing_discussions"]}
+{"104916249": ["managing_discussions"]}
+{"104916252": ["giving_answers"]}
+{"104916253": ["managing_discussions"]}
+{"1494704": ["giving_answers"]}
+{"1494705": ["praising_and_encouraging", "questioning"]}
+{"1494706": ["praising_and_encouraging"]}
+{"22505003": ["providing_further_references"]}
+{"22505004": ["providing_further_references"]}
+{"22505006": ["giving_answers"]}
+{"10704661": ["giving_instruction"]}
+{"10704662": ["giving_instruction", "giving_explanation"]}
+{"10704663": ["giving_instruction"]}
+{"10704665": ["acknowledging_tutor_issue"]}
+{"10704667": ["encouraging_peer_tutoring"]}
+{"2102851": ["giving_answers", "giving_explanation"]}
+{"2102852": ["giving_instruction"]}
+{"2102853": ["questioning"]}
+{"23312721": ["giving_instruction", "giving_explanation"]}
+{"23312723": ["negative_feedback", "giving_explanation"]}
+{"23312725": ["giving_instruction", "giving_explanation"]}
+{"23312726": ["providing_further_references"]}
+{"23312728": ["giving_instruction"]}
+{"11356031": ["questioning"]}
+{"11356033": ["asking_for_elaboration"]}
+{"11356035": ["questioning"]}
+{"11356037": ["praising_and_encouraging"]}
+{"32592922": ["confirmatory_feedback"]}
+{"32592923": ["negative_feedback", "correcting", "giving_instruction"]}
+{"32592924": ["confirmatory_feedback"]}
+{"32592926": ["acknowledging_tutor_issue"]}
+{"32592928": ["confirmatory_feedback"]}
+{"10514981": ["questioning"]}
+{"10514982": ["questioning"]}
+{"10514983": ["giving_instruction"]}
+{"10514985": ["providing_further_references"]}
+{"10514986": ["giving_explanation"]}
+{"10514988": ["giving_explanation"]}
+{"10514989": ["giving_instruction"]}
+{"105149810": ["giving_instruction"]}
+{"105149812": ["questioning"]}
+{"105149816": ["giving_explanation"]}
+{"105149818": ["giving_explanation"]}
+{"105149821": ["praising_and_encouraging"]}
+{"105149822": ["confirmatory_feedback"]}
+{"105149823": ["giving_explanation"]}
+{"105149825": ["confirmatory_feedback"]}
+{"21013691": ["questioning", "providing_further_references", "praising_and_encouraging"]}
+{"21013693": "asking_for_elaboration"}
+{"21013695": ["giving_instruction"]}
+{"21013699": ["giving_instruction"]}
+{"210136912": ["giving_instruction"]}
+{"210136914": ["giving_instruction"]}
+{"210136916": ["giving_instruction"]}
+{"210136917": ["managing_frustration"]}
+{"210136918": ["correcting", "giving_explanation"]}
+{"210136920": ["negative_feedback", "correcting"]}
+{"210136922": ["giving_instruction"]}
+{"210136923": ["negative_feedback", "correcting", "asking_for_elaboration"]}
+{"210136924": ["negative_feedback", "correcting", "asking_for_elaboration"]}
+{"210136925": ["giving_answers"]}
+{"210136926": ["managing_discussions"]}
+{"210136931": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"210136934": ["confirmatory_feedback"]}
+{"1763621": ["giving_instruction"]}
+{"1763622": ["questioning"]}
+{"1763625": ["giving_instruction"]}
+{"23199181": ["confirmatory_feedback"]}
+{"23199182": ["giving_instruction", "questioning"]}
+{"23199187": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"22211892": ["questioning"]}
+{"22211894": ["asking_for_elaboration"]}
+{"22211896": ["questioning"]}
+{"22211897": ["acknowledging_tutor_issue"]}
+{"23933411": ["questioning"]}
+{"23933413": ["providing_further_references"]}
+{"23933415": ["providing_further_references"]}
+{"10553331": ["giving_instruction"]}
+{"10553333": ["giving_instruction"]}
+{"10553334": ["giving_instruction"]}
+{"10553335": ["giving_instruction", "giving_explanation"]}
+{"105533311": ["giving_explanation"]}
+{"105533313": ["questioning"]}
+{"105533315": ["confirmatory_feedback"]}
+{"105533318": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"105533320": ["confirmatory_feedback"]}
+{"22687311": ["providing_further_references"]}
+{"22687313": ["giving_explanation"]}
+{"21612242": ["questioning"]}
+{"21612243": ["questioning"]}
+{"21612244": ["confirmatory_feedback", "giving_explanation"]}
+{"21612247": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"12936041": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"12936043": ["giving_explanation"]}
+{"12936044": ["giving_explanation"]}
+{"13882701": ["questioning"]}
+{"13882703": ["questioning", "confirmatory_feedback"]}
+{"13882704": ["questioning"]}
+{"13882705": ["questioning"]}
+{"13882707": ["managing_discussions"]}
+{"13128063": ["giving_instruction"]}
+{"13128064": ["questioning"]}
+{"13128067": ["giving_instruction", "giving_explanation", "praising_and_encouraging"]}
+{"1615951": ["confirmatory_feedback", "providing_further_references"]}
+{"1615954": ["giving_explanation", "praising_and_encouraging"]}
+{"1615956": ["confirmatory_feedback"]}
+{"661781": ["questioning"]}
+{"661782": ["providing_further_references"]}
+{"661784": ["giving_explanation"]}
+{"661787": ["praising_and_encouraging"]}
+{"24416311": ["providing_further_references", "acknowledging_tutor_issue"]}
+{"24416315": ["giving_instruction"]}
+{"254771": ["giving_instruction"]}
+{"254774": ["giving_explanation", "acknowledging_tutor_issue"]}
+{"254776": ["giving_explanation"]}
+{"254777": ["questioning", "giving_instruction"]}
+{"254778": ["questioning"]}
+{"10523553": ["giving_instruction"]}
+{"10523555": ["confirmatory_feedback"]}
+{"10523558": ["questioning"]}
+{"105235511": ["negative_feedback", "correcting"]}
+{"105235513": ["praising_and_encouraging"]}
+{"105235516": ["praising_and_encouraging"]}
+{"3731693": ["praising_and_encouraging", "managing_frustration"]}
+{"3731694": ["praising_and_encouraging"]}
+{"3731696": "other"}
+{"3731698": ["other"]}
+{"14162873": ["providing_further_references"]}
+{"14162875": ["providing_further_references"]}
+{"14162876": ["praising_and_encouraging"]}
+{"14162877": ["confirmatory_feedback", "encouraging_peer_tutoring"]}
+{"3142891": ["confirmatory_feedback", "giving_instruction"]}
+{"3142892": ["acknowledging_tutor_issue"]}
+{"3142895": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"3142896": ["giving_instruction"]}
+{"14180893": ["giving_instruction"]}
+{"14180895": ["giving_instruction", "praising_and_encouraging"]}
+{"14180896": ["acknowledging_tutor_issue"]}
+{"14180897": ["giving_instruction"]}
+{"10543631": ["giving_instruction", "giving_explanation"]}
+{"10543634": ["correcting", "giving_instruction"]}
+{"10543636": ["giving_explanation"]}
+{"10543637": ["giving_explanation"]}
+{"10543639": ["questioning"]}
+{"105436311": ["questioning"]}
+{"105436313": ["questioning"]}
+{"105436317": ["giving_explanation", "confirmatory_feedback"]}
+{"105436318": ["giving_instruction"]}
+{"3977561": "giving_instruction"}
+{"3977564": ["acknowledging_tutor_issue"]}
+{"3977567": ["questioning"]}
+{"13531691": ["giving_answers"]}
+{"13531692": ["giving_answers"]}
+{"13531693": ["encouraging_peer_tutoring"]}
+{"13531696": ["praising_and_encouraging"]}
+{"13531697": ["praising_and_encouraging"]}
+{"21830631": ["questioning", "praising_and_encouraging"]}
+{"21830632": "questioning"}
+{"21830634": ["confirmatory_feedback", "giving_explanation", "questioning"]}
+{"21830636": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"21830638": ["praising_and_encouraging"]}
+{"12170001": ["giving_instruction"]}
+{"12170003": ["giving_instruction"]}
+{"12170004": ["confirmatory_feedback", "giving_instruction"]}
+{"12170008": ["other"]}
+{"21673541": ["giving_instruction", "giving_explanation"]}
+{"21673543": ["giving_instruction"]}
+{"21673545": ["confirmatory_feedback", "correcting", "giving_explanation"]}
+{"9121": ["giving_instruction", "giving_explanation", "questioning"]}
+{"9122": ["giving_explanation"]}
+{"9123": ["praising_and_encouraging"]}
+{"9125": "questioning"}
+{"9126": "confirmatory_feedback"}
+{"9129": ["giving_instruction", "giving_explanation"]}
+{"91210": ["giving_instruction"]}
+{"91211": ["praising_and_encouraging"]}
+{"91212": ["praising_and_encouraging"]}
+{"91213": ["correcting", "giving_explanation"]}
+{"23636821": ["giving_instruction"]}
+{"23636824": ["giving_instruction"]}
+{"23636827": ["praising_and_encouraging"]}
+{"23636828": ["praising_and_encouraging"]}
+{"753461": ["questioning"]}
+{"753463": ["providing_further_references"]}
+{"753465": ["managing_discussions"]}
+{"12948781": ["giving_instruction"]}
+{"12948783": ["negative_feedback", "correcting"]}
+{"12948785": ["confirmatory_feedback"]}
+{"12948787": ["praising_and_encouraging"]}
+{"22875281": ["questioning"]}
+{"22875283": "negative_feedback"}
+{"22875285": ["questioning"]}
+{"33048261": ["giving_instruction"]}
+{"33048263": ["giving_instruction"]}
+{"33048264": ["negative_feedback", "confirmatory_feedback", "questioning"]}
+{"3355163": ["questioning"]}
+{"3355165": ["managing_discussions"]}
+{"10511581": ["giving_instruction", "questioning"]}
+{"10511583": ["negative_feedback", "giving_instruction"]}
+{"10511584": ["giving_instruction", "questioning"]}
+{"10511586": ["giving_instruction"]}
+{"10511588": ["giving_instruction", "giving_explanation"]}
+{"10511589": ["praising_and_encouraging", "giving_instruction"]}
+{"105115812": ["confirmatory_feedback", "giving_instruction"]}
+{"105115813": ["confirmatory_feedback"]}
+{"105115814": ["confirmatory_feedback", "giving_explanation"]}
+{"105115815": ["giving_instruction"]}
+{"21007172": ["giving_instruction"]}
+{"21007174": ["questioning"]}
+{"21007175": ["providing_further_references"]}
+{"21007177": ["providing_further_references"]}
+{"210071710": ["questioning"]}
+{"210071712": ["confirmatory_feedback", "giving_instruction"]}
+{"210071714": ["giving_instruction", "giving_explanation"]}
+{"210071716": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"210071718": ["confirmatory_feedback"]}
+{"33102931": ["questioning"]}
+{"33102933": ["giving_instruction"]}
+{"33102936": ["giving_instruction"]}
+{"33102937": ["giving_instruction", "giving_explanation"]}
+{"33102938": ["giving_instruction", "giving_explanation"]}
+{"22548653": ["giving_instruction"]}
+{"22548654": ["providing_further_references"]}
+{"22548656": ["giving_instruction"]}
+{"10919762": ["questioning"]}
+{"17017": ["managing_frustration"]}
+{"24546251": ["negative_feedback", "correcting"]}
+{"24546252": ["questioning"]}
+{"24546254": ["asking_for_elaboration", "managing_frustration"]}
+{"24546258": ["confirmatory_feedback", "giving_instruction", "providing_further_references"]}
+{"14183871": ["confirmatory_feedback", "giving_instruction"]}
+{"14183872": ["other"]}
+{"14183875": ["confirmatory_feedback", "correcting"]}
+{"14183877": ["praising_and_encouraging"]}
+{"14183878": "other"}
+{"1566211": ["giving_explanation"]}
+{"1566214": ["giving_explanation", "correcting"]}
+{"1566216": ["giving_explanation"]}
+{"1566218": ["managing_discussions"]}
+{"23989131": ["questioning"]}
+{"23989133": ["giving_instruction"]}
+{"23989135": ["giving_instruction"]}
+{"23989136": ["confirmatory_feedback"]}
+{"12705101": ["asking_for_elaboration"]}
+{"12705102": ["providing_further_references", "questioning"]}
+{"12705105": ["giving_explanation"]}
+{"12705106": ["giving_instruction"]}
+{"31870234": ["giving_instruction"]}
+{"31870235": ["questioning"]}
+{"31870236": ["giving_explanation"]}
+{"31870237": ["giving_instruction"]}
+{"13987321": ["questioning"]}
+{"13987322": ["giving_instruction", "giving_explanation"]}
+{"13987325": ["providing_further_references"]}
+{"13987327": ["giving_instruction", "negative_feedback"]}
+{"12888992": ["confirmatory_feedback"]}
+{"12888995": ["negative_feedback", "questioning"]}
+{"32760761": ["giving_explanation"]}
+{"32760764": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"32760766": ["giving_explanation"]}
+{"32760768": ["providing_further_references"]}
+{"21896351": ["giving_instruction"]}
+{"21896352": ["giving_instruction"]}
+{"21896356": ["giving_instruction"]}
+{"527291": ["giving_answers"]}
+{"527295": ["questioning", "giving_instruction"]}
+{"527296": ["managing_discussions", "giving_instruction"]}
+{"527298": ["managing_discussions", "praising_and_encouraging"]}
+{"2037913": ["confirmatory_feedback"]}
+{"2037915": ["confirmatory_feedback", "giving_answers"]}
+{"2037916": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"24045611": ["providing_further_references"]}
+{"24045614": ["confirmatory_feedback", "giving_explanation"]}
+{"22269561": ["providing_further_references"]}
+{"22269564": ["giving_instruction", "giving_explanation"]}
+{"22269565": ["giving_explanation"]}
+{"22269566": ["giving_explanation", "correcting"]}
+{"22269568": ["confirmatory_feedback"]}
+{"24254401": ["providing_further_references"]}
+{"24254402": ["questioning"]}
+{"24254403": ["praising_and_encouraging"]}
+{"24254405": ["providing_further_references"]}
+{"24254407": ["asking_for_elaboration", "praising_and_encouraging"]}
+{"10560481": ["giving_instruction"]}
+{"10560482": ["giving_instruction"]}
+{"10560486": ["questioning"]}
+{"10560489": ["giving_instruction"]}
+{"105604810": ["giving_instruction"]}
+{"105604812": ["confirmatory_feedback"]}
+{"105604813": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"105604814": ["confirmatory_feedback"]}
+{"105604816": ["confirmatory_feedback", "giving_instruction"]}
+{"105604817": "confirmatory_feedback"}
+{"105604821": ["questioning"]}
+{"105604823": ["questioning", "asking_for_elaboration"]}
+{"105604826": "confirmatory_feedback"}
+{"105604828": ["giving_answers", "giving_explanation"]}
+{"33047922": ["giving_explanation"]}
+{"33047923": ["giving_explanation"]}
+{"33047925": ["acknowledging_tutor_issue"]}
+{"33047927": ["giving_explanation"]}
+{"20993671": ["providing_further_references"]}
+{"20993673": ["questioning"]}
+{"20993675": ["providing_further_references"]}
+{"20993677": ["giving_instruction"]}
+{"20993678": ["giving_explanation"]}
+{"209936710": ["praising_and_encouraging"]}
+{"31500481": ["confirmatory_feedback"]}
+{"31500482": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"31500483": ["questioning"]}
+{"31500488": ["acknowledging_tutor_issue"]}
+{"31500489": ["confirmatory_feedback"]}
+{"315004810": ["confirmatory_feedback", "giving_explanation"]}
+{"21123411": ["giving_instruction"]}
+{"21123412": ["giving_explanation", "negative_feedback"]}
+{"21123414": ["providing_further_references"]}
+{"21123415": ["negative_feedback", "questioning"]}
+{"21123418": ["confirmatory_feedback"]}
+{"24534021": ["confirmatory_feedback", "giving_answers"]}
+{"24534022": ["providing_further_references"]}
+{"24534024": ["acknowledging_tutor_issue"]}
+{"24534026": ["managing_discussions"]}
+{"23316751": ["providing_further_references"]}
+{"23316753": ["providing_further_references"]}
+{"23316755": ["questioning"]}
+{"23316756": ["giving_instruction"]}
+{"22683502": ["questioning"]}
+{"22683504": ["questioning"]}
+{"22683506": ["giving_instruction"]}
+{"22683508": ["giving_instruction"]}
+{"3575901": ["giving_instruction"]}
+{"3575902": ["giving_instruction"]}
+{"3575904": "giving_instruction"}
+{"3575905": ["praising_and_encouraging"]}
+{"3575908": ["providing_further_references"]}
+{"24717401": ["providing_further_references"]}
+{"24717402": ["questioning"]}
+{"24717405": ["giving_explanation", "giving_answers"]}
+{"24717408": ["managing_discussions", "managing_frustration"]}
+{"12851551": ["giving_instruction", "questioning"]}
+{"12851553": ["giving_explanation"]}
+{"12851554": ["confirmatory_feedback", "questioning"]}
+{"12851556": ["confirmatory_feedback"]}
+{"21003201": ["questioning"]}
+{"21003203": ["questioning"]}
+{"21003205": ["giving_explanation"]}
+{"21003207": ["giving_instruction"]}
+{"21003208": ["managing_discussions"]}
+{"210032010": ["giving_answers"]}
+{"210032011": ["giving_instruction"]}
+{"210032012": ["praising_and_encouraging"]}
+{"210032015": ["acknowledging_tutor_issue"]}
+{"210032017": ["correcting", "giving_explanation"]}
+{"210032018": ["questioning", "correcting"]}
+{"210032019": ["questioning"]}
+{"210032021": ["questioning"]}
+{"210032022": ["confirmatory_feedback", "praising_and_encouraging"]}
+{"210032024": ["confirmatory_feedback"]}
+{"13449891": ["asking_for_elaboration"]}
+{"13449893": ["questioning"]}
+{"13449894": ["giving_instruction"]}
+{"13449896": ["giving_instruction"]}
+{"13449898": ["questioning", "giving_instruction"]}
+{"3037761": ["giving_instruction"]}
+{"3037762": "questioning"}
+{"3037764": ["confirmatory_feedback"]}
+{"3037766": ["correcting", "giving_explanation"]}
+{"2176293": ["giving_instruction", "giving_explanation"]}
+{"2176296": ["negative_feedback", "correcting"]}
+{"12922502": ["acknowledging_tutor_issue"]}
+{"12922505": ["questioning"]}
+{"12922507": ["giving_explanation", "negative_feedback"]}
+{"12283622": ["questioning"]}
+{"12283625": ["asking_for_elaboration"]}
+{"12283627": ["giving_instruction", "giving_explanation"]}
+{"32327501": ["giving_instruction"]}
+{"32327504": ["giving_instruction", "giving_explanation", "praising_and_encouraging"]}
+{"32327506": ["negative_feedback", "correcting"]}
+{"32327508": ["negative_feedback", "giving_instruction"]}
+{"21021531": ["giving_instruction"]}
+{"21021532": ["questioning"]}
+{"21021534": ["negative_feedback", "giving_explanation"]}
+{"21021536": ["questioning"]}
+{"21021537": ["confirmatory_feedback"]}
+{"210215310": ["confirmatory_feedback"]}
+{"210215313": ["confirmatory_feedback"]}

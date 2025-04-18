@@ -1,0 +1,43 @@
+{
+    "dataset_name": "anation",
+    "prediction_label": "future_teacher_move_type",
+    "include_previous_turns": true,
+    "single_turn": false,
+    "model_config": {
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+        "pt_model_name": "trainable_lora_model",
+        "r": 16,
+        "lora_alpha": 16,
+        "epochs": 5,
+        "lr": 0.0002,
+        "wd": 0.01,
+        "gc": 1.0,
+        "batch_size": 1,
+        "grad_accum_steps": 64
+    },
+    "metrics": {
+        "accuracy": 0.25690184049079756,
+        "f1_macro": 0.11749541602226443,
+        "f1_micro": 0.297008547008547,
+        "f1_samples": 0.29654907975460115,
+        "f1_weighted": 0.21094902190723205,
+        "total_samples": 1304
+    },
+    "prediction_distribution": {
+        "['giving_instruction']": 958,
+        "['giving_explanation']": 104,
+        "['managing_discussions']": 22,
+        "['confirmatory_feedback']": 104,
+        "['confirmatory_feedback', 'giving_instruction']": 13,
+        "['confirmatory_feedback', 'questioning']": 3,
+        "['giving_answers']": 47,
+        "['praising_and_encouraging']": 8,
+        "['other']": 5,
+        "['providing_further_references']": 12,
+        "['asking_for_elaboration']": 4,
+        "['questioning']": 11,
+        "['confirmatory_feedback', 'giving_explanation']": 5,
+        "['irrelevant_statement']": 7,
+        "['confirmatory_feedback', 'giving_answers']": 1
+    }
+}

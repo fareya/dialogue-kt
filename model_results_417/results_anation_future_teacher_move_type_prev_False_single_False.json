@@ -1,0 +1,37 @@
+{
+    "dataset_name": "anation",
+    "prediction_label": "future_teacher_move_type",
+    "include_previous_turns": false,
+    "single_turn": false,
+    "model_config": {
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct",
+        "pt_model_name": "trainable_lora_model",
+        "r": 16,
+        "lora_alpha": 16,
+        "epochs": 5,
+        "lr": 0.0002,
+        "wd": 0.01,
+        "gc": 1.0,
+        "batch_size": 1,
+        "grad_accum_steps": 64
+    },
+    "metrics": {
+        "accuracy": 0.24539877300613497,
+        "f1_macro": 0.07976293634143833,
+        "f1_micro": 0.291220556745182,
+        "f1_samples": 0.28767893660531696,
+        "f1_weighted": 0.20239877313080387,
+        "total_samples": 1304
+    },
+    "prediction_distribution": {
+        "['giving_instruction']": 700,
+        "['confirmatory_feedback']": 130,
+        "['giving_explanation']": 435,
+        "['giving_answers']": 14,
+        "['praising_and_encouraging']": 5,
+        "['providing_further_references']": 3,
+        "['confirmatory_feedback', 'giving_instruction']": 14,
+        "['managing_discussions']": 1,
+        "['confirmatory_feedback', 'giving_explanation']": 2
+    }
+}

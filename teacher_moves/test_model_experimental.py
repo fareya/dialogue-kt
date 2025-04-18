@@ -52,18 +52,11 @@ def compute_metrics(preds, labels):
         if preds[i] == labels[i]:
             count += 1
     accuracy = count / len(preds)
-    f1 = f1_score(labels, preds, average="macro")
-    return {"accuracy": accuracy, "f1": f1}
-
-def compute_metrics(preds, labels):
-    # compute the accuracy
-    count = 0
-    for i in range(len(preds)):
-        if preds[i] == labels[i]:
-            count += 1
-    accuracy = count / len(preds)
-    f1 = f1_score(labels, preds, average="macro")
-    return {"accuracy": accuracy, "f1": f1}
+    f1_macro = f1_score(labels, preds, average="macro")
+    f1_micro = f1_score(labels, preds, average="micro")
+    # f1_samples = f1_score(labels, preds, average="samples")
+    f1_weighted = f1_score(labels, preds, average="weighted")
+    return {"accuracy": accuracy, "f1_macro": f1_macro, "f1_micro": f1_micro,"f1_weighted":f1_weighted}
 
 def evaluate_multi_label(y_true_raw, y_pred_raw):
     """
@@ -305,54 +298,68 @@ def evaluate_multi_label_safe_2(y_true_raw, y_pred_raw):
     y_true = [[label.strip() for label in ex] for ex in y_true]
     y_pred = [[label.strip() for label in ex] for ex in y_pred]
 
-    # Initialize binarizer with fixed class order
-    mlb = MultiLabelBinarizer(classes=all_labels)
-    mlb.fit(y_true + y_pred)
-
-    y_true_bin = mlb.transform(y_true)
+    mlb = MultiLabelBinarizer()
+    y_true_bin = mlb.fit_transform(y_true)
     y_pred_bin = mlb.transform(y_pred)
+    f1_micro = f1_score(y_true_bin, y_pred_bin, average='micro')  # or 'macro', 'samples'
+    f1_macro = f1_score(y_true_bin, y_pred_bin, average='macro') 
+    f1_samples = f1_score(y_true_bin, y_pred_bin, average='samples') 
+    f1_weighted = f1_score(y_true_bin, y_pred_bin, average='weighted') 
+    print("F1 Score(weighted):", f1_weighted)
+    print("F1 Score(micro):", f1_micro)
+    print("F1 Score(macro):", f1_macro)
+    print("F1 Score(samples):", f1_samples)
+    accuracy = accuracy_score(y_true_bin, y_pred_bin)
 
-    # Sanity check
-    if y_pred_bin.shape != y_true_bin.shape:
-        raise ValueError("Shape mismatch between predictions and ground truth after binarization.")
+    # # Initialize binarizer with fixed class order
+    # mlb = MultiLabelBinarizer(classes=all_labels)
+    # mlb.fit(y_true + y_pred)
 
-    # Compute metrics
-    f1 = f1_score(y_true_bin, y_pred_bin, average='samples')
-    exact_match_acc = accuracy_score(y_true_bin, y_pred_bin)
-    hamming_acc = 1 - hamming_loss(y_true_bin, y_pred_bin)
+    # y_true_bin = mlb.transform(y_true)
+    # y_pred_bin = mlb.transform(y_pred)
 
-    print(f"F1 Score (samples): {f1:.4f}")
-    print(f"Exact Match Accuracy: {exact_match_acc:.4f}")
-    print(f"Hamming Accuracy: {hamming_acc:.4f}")
+    # # Sanity check
+    # if y_pred_bin.shape != y_true_bin.shape:
+    #     raise ValueError("Shape mismatch between predictions and ground truth after binarization.")
 
-    # Analyze distributions of y_true and y_pred
-    y_true_flat = [label for sublist in y_true for label in sublist]
-    y_pred_flat = [label for sublist in y_pred for label in sublist]
+    # # Compute metrics
+    # f1 = f1_score(y_true_bin, y_pred_bin, average='samples')
+    # exact_match_acc = accuracy_score(y_true_bin, y_pred_bin)
+    # hamming_acc = 1 - hamming_loss(y_true_bin, y_pred_bin)
 
-    y_true_distribution = Counter(y_true_flat)
-    y_pred_distribution = Counter(y_pred_flat)
+    # print(f"F1 Score (samples): {f1:.4f}")
+    # print(f"Exact Match Accuracy: {exact_match_acc:.4f}")
+    # print(f"Hamming Accuracy: {hamming_acc:.4f}")
 
-    print("\nDistribution of y_true:")
-    for cls, count in y_true_distribution.items():
-        print(f"{cls}: {count}")
+    # # Analyze distributions of y_true and y_pred
+    # y_true_flat = [label for sublist in y_true for label in sublist]
+    # y_pred_flat = [label for sublist in y_pred for label in sublist]
 
-    print("\nDistribution of y_pred:")
-    for cls, count in y_pred_distribution.items():
-        print(f"{cls}: {count}")
+    # y_true_distribution = Counter(y_true_flat)
+    # y_pred_distribution = Counter(y_pred_flat)
 
-    # Identify most common misclassifications
-    misclassification_counts = Counter(
-        (true_label, pred_label)
-        for true_labels, pred_labels in zip(y_true, y_pred)
-        for true_label in true_labels
-        for pred_label in pred_labels
-        if true_label != pred_label
-    )
-    print("\nMost Common Misclassifications:")
-    for (true_label, pred_label), count in misclassification_counts.most_common(5):
-        print(f"True: {true_label}, Predicted: {pred_label}, Count: {count}")
+    # print("\nDistribution of y_true:")
+    # for cls, count in y_true_distribution.items():
+    #     print(f"{cls}: {count}")
 
-    return f1, exact_match_acc, hamming_acc
+    # print("\nDistribution of y_pred:")
+    # for cls, count in y_pred_distribution.items():
+    #     print(f"{cls}: {count}")
+
+    # # Identify most common misclassifications
+    # misclassification_counts = Counter(
+    #     (true_label, pred_label)
+    #     for true_labels, pred_labels in zip(y_true, y_pred)
+    #     for true_label in true_labels
+    #     for pred_label in pred_labels
+    #     if true_label != pred_label
+    # )
+    # print("\nMost Common Misclassifications:")
+    # for (true_label, pred_label), count in misclassification_counts.most_common(5):
+    #     print(f"True: {true_label}, Predicted: {pred_label}, Count: {count}")
+
+    return {"accuracy": accuracy, "f1_macro": f1_macro, "f1_micro": f1_micro, "f1_samples":f1_samples,"f1_weighted":f1_weighted, "total_samples":len(y_true)}
+
 
 # def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn):
 #     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -496,7 +503,7 @@ def evaluate_multi_label_safe_2(y_true_raw, y_pred_raw):
 
 from collections import Counter
 
-def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn):
+def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn=False):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     DATASET_NAME = dataset_name
@@ -519,9 +526,9 @@ def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn):
     print(f"Using single_turn: {SINGLE_TURN}")    
     print(f"Using device: {device}")
     if SINGLE_TURN:
-        lora_model_path = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/414_runs/{MODEL_NAME}_{DATASET_NAME}_{PRED_LABEL_NAME}_include_labels_{str(INCLUDE_PREV)}_single_turn_{str(SINGLE_TURN)}"
+        lora_model_path = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/saved_models/414_runs/{MODEL_NAME}_{DATASET_NAME}_{PRED_LABEL_NAME}_include_labels_{str(INCLUDE_PREV)}_single_turn_{str(SINGLE_TURN)}"
     else:
-        lora_model_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/teacher_moves/414_runs/"+MODEL_NAME+"_"+DATASET_NAME+"_"+PRED_LABEL_NAME+"_include_labels_"+str(INCLUDE_PREV)
+        lora_model_path = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/saved_models/414_runs/"+MODEL_NAME+"_"+DATASET_NAME+"_"+PRED_LABEL_NAME+"_include_labels_"+str(INCLUDE_PREV)
 
     print(f"Trained Model:{lora_model_path}")
     data = read_jsonl(DATA_PATH)
@@ -595,18 +602,17 @@ def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn):
             labels.extend(batch_labels)
 
     # Compute metrics
-    metrics = compute_metrics(predictions, labels)
-    print(metrics)
-
+    
     # Print prediction output distribution
     prediction_distribution = Counter(predictions)
     print("\nPrediction Output Distribution:")
     for label, count in prediction_distribution.items():
         print(f"{label}: {count}")
-
+    
+    metrics = compute_metrics(predictions, labels)
     if PRED_LABEL_NAME == "teacher_move_type" or PRED_LABEL_NAME == "future_teacher_move_type": 
         if dataset_name == ANATION:
-            evaluate_multi_label_safe_2(labels, predictions)
+            metrics = evaluate_multi_label_safe_2(labels, predictions)
         elif dataset_name == MATHDIAL:
             true_positive_true_negative_2(labels, predictions, decoded_inputs)
 
@@ -621,7 +627,7 @@ def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn):
         "prediction_distribution": dict(prediction_distribution)
     }
 
-    result_output_path = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/results/model_results/results_{dataset_name}_{pred_label_name}_prev_{include_prev}_single_{single_turn}.json"
+    result_output_path = f"/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/results/model_results_417/results_{dataset_name}_{pred_label_name}_prev_{include_prev}_single_{single_turn}.json"
 
     with open(result_output_path, "w") as f:
         json.dump(result_summary, f, indent=4)
@@ -630,12 +636,21 @@ def test_lora_model(dataset_name, pred_label_name, include_prev, single_turn):
     print(result_summary)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_name", type=str, choices=["mathdial", "anation"], required=True)
-    parser.add_argument("--pred_label_name", type=str, required=True)
-    parser.add_argument("--include_prev", action="store_true")
-    parser.add_argument("--single_turn", action="store_true", help="Baseline where we only train on a single teacher move")
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--dataset_name", type=str, choices=["mathdial", "anation"], required=True)
+    # parser.add_argument("--pred_label_name", type=str, required=True)
+    # parser.add_argument("--include_prev", action="store_true")
+    # parser.add_argument("--single_turn", action="store_true", help="Baseline where we only train on a single teacher move")
 
-    args = parser.parse_args()
+    #args = parser.parse_args()
+    for d in ["anation"]:
+        for prev in [True, False]:
+            tasks =  ["teacher_move_type", "future_teacher_move_type", "final_correctness"]
+            if d == "mathdial":
+                tasks.append("future_correctness_annotation")
+            for task in ["teacher_move_type", "future_teacher_move_type", "final_correctness"]:
+                test_lora_model(d, task, prev)
+        test_lora_model(d, "teacher_move_type",False, True)
 
-    test_lora_model(args.dataset_name, args.pred_label_name, args.include_prev, args.single_turn)
+        
+    #test_lora_model(args.dataset_name, args.pred_label_name, args.include_prev, args.single_turn)

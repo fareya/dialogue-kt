@@ -2,7 +2,7 @@ import json
 from ast import literal_eval
 import torch
 from collections import defaultdict
-
+from sklearn.metrics import f1_score, accuracy_score, hamming_loss
 from lstm import LSTMModel, create_dataloader, evaluate_model, train_model, split_train_val, save_results_to_jsonl
 
 # ---------- Parameters ---------- #
@@ -35,6 +35,7 @@ def chunk_list(lst, chunk_size):
 
 
 def evaluate_multi_label_safe_2(y_true, y_pred):
+    # This code IS for the multi-label
     import ast
     from collections import Counter
     from sklearn.preprocessing import MultiLabelBinarizer
@@ -52,7 +53,9 @@ def evaluate_multi_label_safe_2(y_true, y_pred):
     print("F1 Score(macro):", f1_macro)
     print("F1 Score(samples):", f1_samples)
 
-
+    accuracy = accuracy_score(y_true_bin, y_pred_bin)
+    print("Accuracy")
+    print(accuracy)
 
     all_labels = [
         'confirmatory feedback', 'negative feedback', 'correcting',
@@ -225,7 +228,7 @@ if __name__ == "__main__":
     ).to(device)
 
     # Train model and load best model at end
-    best_model_sd = train_model(model, train_loader, val_loader, True, 0.001, epochs=10, device=device)
+    best_model_sd, _ = train_model(model, train_loader, val_loader, True, 0.001, epochs=10, device=device)
     model.load_state_dict(best_model_sd)
 
     # Load and prepare test data
@@ -237,18 +240,31 @@ if __name__ == "__main__":
 
 
     results, yt, ypred = evaluate_model(model, test_loader, device, PREDICT_CORRECTNESS, True)
-    yt_proc = chunk_list(yt, len(LABEL_LIST))
-    ypred_proc = chunk_list(ypred, len(LABEL_LIST))
-    evaluate_multi_label_safe_2(yt_proc, ypred_proc)
-    total_corr = 0 
-    total = len(ypred)
+    # yt_proc = chunk_list(yt, len(LABEL_LIST))
+    # ypred_proc = chunk_list(ypred, len(LABEL_LIST))
+    # evaluate_multi_label_safe_2(yt_proc, ypred_proc)
+    # total_corr = 0 
+    # total = len(ypred)
 
-    if not PREDICT_CORRECTNESS:
-        for i in range(len(yt_proc)):
-            if yt_proc[i] == ypred_proc[i]:
-                total_corr= total_corr+1 
-        accuracy = total_corr/total
-        print(accuracy) # <-- exact match, is this right? 
+    # if not PREDICT_CORRECTNESS:
+    #     for i in range(len(yt_proc)):
+    #         if yt_proc[i] == ypred_proc[i]:
+    #             total_corr= total_corr+1 
+    #     accuracy = total_corr/total
+    #     print(accuracy) # <-- exact match, is this right? 
+
+    accuracy = accuracy_score(yt,ypred)
+    f1_micro = f1_score(yt, ypred, average='micro')
+    f1_macro = f1_score(yt, ypred, average='macro')
+    f1_weighted = f1_score(yt, ypred, average='weighted')
+    print("accuracy")
+    print(accuracy)
+    print("f1_micro")
+    print(f1_micro)
+    print("f1_macro")
+    print(f1_macro)
+    print("f1_weighted")
+    print(f1_weighted)
 
     if PREDICT_CORRECTNESS:
         name = "dialogue_correcntess"
@@ -362,6 +378,8 @@ if __name__ == "__main__":
 #     num_layers_list = [2]
 #     dropouts = [ 0.5]
 #     learning_rates = [1e-3]
+#     # pos_weights = [0.1,0.2,0.3,0.4,0.5]
+#     # pos_weights = [0.5,1,1.5,2,2.5,3]
 #     epochs = 10
 #     batch_size = 256
 
@@ -369,7 +387,7 @@ if __name__ == "__main__":
 #     best_model_state = None
 #     best_hparams = {}
 
-#     for hidden_dim, num_layers, dropout, lr in itertools.product(hidden_dims, num_layers_list, dropouts, learning_rates):
+#     for hidden_dim, num_layers, dropout, lr, ps in itertools.product(hidden_dims, num_layers_list, dropouts, learning_rates, pos_weights):
 #         print(f"\nTesting configuration: hidden_dim={hidden_dim}, num_layers={num_layers}, dropout={dropout}, lr={lr}")
 
 #         model = LSTMModel(
@@ -387,7 +405,8 @@ if __name__ == "__main__":
 #             True,
 #             lr=lr,
 #             epochs=epochs,
-#             device=device
+#             device=device,
+#             pos_weight = torch.FloatTensor([ps]).to(device),
 #         )
 
 #         if val_loss < best_val_loss:
@@ -397,7 +416,8 @@ if __name__ == "__main__":
 #                 "hidden_dim": hidden_dim,
 #                 "num_layers": num_layers,
 #                 "dropout": dropout,
-#                 "learning_rate": lr
+#                 "learning_rate": lr,
+#                 "ps":ps,
 #             }
 
 #     print(f"\nBest Hyperparameters: {best_hparams}")

@@ -11,7 +11,7 @@ from sklearn.metrics import f1_score
 from sklearn.preprocessing import MultiLabelBinarizer
 
 SYSTEM = "You are a math teacher who tutors student on a variety of problems."
-PROMPT_MATHDIAL = """Your task is to classify the text into one of four following categories: Focus, Probing, Telling, Generic. These four categories are described below.
+PROMPT_MATHDIAL = """Your task is to classify the last teacher move into one of four following categories: Focus, Probing, Telling, Generic. These four categories are described below.
 - Focus:
   - Seek Strategy: Ex. So what should you do next?
   - Guiding Student Focus: Ex. Can you calculate ...?
@@ -34,7 +34,7 @@ For example, the output would look like {"1234" : "focus"}. The key and the valu
 Please categorize the final teacher move in the following conversation: 
 """
 
-PROMPT_ANATION =  """Your task is to classify the text into one or more of the following categories: confirmatory_feedback, negative_feedback, correcting, giving_instruction, giving_explanation, giving_explanation, providing_further_references, questioning, asking_for_elaboration, praising_and_encouraging, managing_frustration, managing_discussions, giving_answers, encouraging_peer_tutoring, guiding_peer_tutoring, acknowledging_tutor_issue, and other. 
+PROMPT_ANATION =  """Your task is to classify the last teacher move into one or more of the following categories: confirmatory_feedback, negative_feedback, correcting, giving_instruction, giving_explanation, giving_explanation, providing_further_references, questioning, asking_for_elaboration, praising_and_encouraging, managing_frustration, managing_discussions, giving_answers, encouraging_peer_tutoring, guiding_peer_tutoring, acknowledging_tutor_issue, and other. 
 The categories are described below:
 
 - confirmatory_feedback : Whether a reply provides confirmatory feedback about an answer's correctness.
@@ -378,7 +378,7 @@ def compute_metrics(preds, labels):
     return {"accuracy": accuracy, "f1_macro": f1_macro, "f1_micro": f1_micro,"f1_weighted":f1_weighted}
 # -------- Main Script --------
 
-use_mathdial = False
+use_mathdial = True
 pred_label = "teacher_move_type"
 if use_mathdial:
     dataset = "MATHDIAL"
@@ -395,7 +395,7 @@ print(f"Data Path:{data_path}")
 data = read_jsonl(data_path)
 grouped_data = get_test_formatted(group_data_by_id(data))
 
-formatted_outputs, labels, turn_ids = format_fn(grouped_data,pred_label)
+formatted_outputs, labels, turn_ids = format_fn(grouped_data,pred_label, True)
 labels_ground_truth = [{turn_ids[i]:labels[i]} for i in range(len(turn_ids))]
 prompts = ["Dialogue ID:"+ str(turn_ids[i])+"\n" + PROMPT_MATHDIAL + formatted_outputs[i]  if use_mathdial else  "Dialogue ID:"+ str(turn_ids[i])+"\n" + PROMPT_ANATION + formatted_outputs[i]  for i in range(len(formatted_outputs))]
 
@@ -404,7 +404,7 @@ print(type(turn_ids[1]))
 print(prompts[1])
 print(labels[1])
 # store the prompts in a local file 
-prompts_output_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/results/prompts"+"_"+ dataset +"_"+ pred_label +".jsonl"
+prompts_output_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/results/prompts"+"_"+ dataset +"_"+ pred_label +"_with_prev.jsonl"
 
 # Write the prompts to the file
 with open(prompts_output_path, 'w') as file: 
@@ -413,24 +413,24 @@ with open(prompts_output_path, 'w') as file:
 
 print(f"Prompts have been written to: {prompts_output_path}")
 
-results_output_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/results/prompts"+"_"+ dataset +"_"+ pred_label +"_results.jsonl"
+results_output_path = "/work/pi_andrewlan_umass_edu/fikram_umass-edu/dialogue-kt/results/prompts"+"_"+ dataset +"_"+ pred_label +"_with_prev_results.jsonl"
 model = "gpt-4o"
 batch_size = 10
 
 print(os.getenv("AZURE_OPENAI_API_KEY"))
 print(os.getenv("AZURE_OPENAI_ENDPOINT"))
 
-# generation_args = {"max_tokens": 1000, "response_format": {"type": "json_object"}, "temperature":0}
+generation_args = {"max_tokens": 1000, "response_format": {"type": "json_object"}, "temperature":0}
 
-# client = OpenAIClient(use_azure_client=True)
-# responses = client.get_batched_responses(prompts, model, 10, generation_args, system_message=SYSTEM)
+client = OpenAIClient(use_azure_client=True)
+responses = client.get_batched_responses(prompts, model, 10, generation_args, system_message=SYSTEM)
 
-# print("RESPONSES")
-# print(len(responses))
-# for i in range(len(responses)):
-#     print(i)
-#     print(responses[i])
-# write_to_jsonl(results_output_path, responses)
+print("RESPONSES")
+print(len(responses))
+for i in range(len(responses)):
+    print(i)
+    print(responses[i])
+write_to_jsonl(results_output_path, responses)
 
 prediction_data = read_jsonl(results_output_path)
 print("labels")

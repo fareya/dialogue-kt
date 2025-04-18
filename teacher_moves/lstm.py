@@ -391,7 +391,7 @@ from sklearn.model_selection import train_test_split
 import json
 from collections import defaultdict
 import random
-from sklearn.metrics import precision_recall_fscore_support, accuracy_score
+from sklearn.metrics import precision_recall_fscore_support, accuracy_score, f1_score
 
 RANDOM_SEED = 42
 torch.manual_seed(RANDOM_SEED)
@@ -402,12 +402,20 @@ MOVE_TO_INDEX = {label: i for i, label in enumerate(MOVE_LIST)}
 CORR_LABEL_LIST = ['false', 'true']
 CORR_LABEL_TO_INDEX = {label: i for i, label in enumerate(CORR_LABEL_LIST)}
 
+LABEL_LIST = [
+    'questioning', 'giving_explanation', 'giving_instruction', 'confirmatory_feedback',
+    'negative_feedback', 'asking_for_elaboration', 'praising_and_encouraging',
+    'providing_further_references', 'managing_discussions', 'conceptual_knowledge', 'computational_skill', 
+    'irrelevant_statement', 'acknowledging_tutor_issue','encouraging_peer_tutoring','giving_answers', 'managing_frustration',
+    'guiding_peer_tutoring', 'correcting', 'other'
+]
+
 ### ======= Configuration ======= ###
 INPUT_KEY = "teacher_move_type"
 # LABEL_KEY = "final_correctness"  # options: "teacher_move_type", "future_teacher_move_type", "correctness_annotation", "final_correctness"
 # LABEL_KEY = "teacher_move_type"
 # LABEL_KEY = "future_teacher_move_type" 
-LABEL_KEY = "correctness_annotation" 
+LABEL_KEY = "final_correctness" 
 
 ### ======= Helper Functions ======= ###
 
@@ -559,15 +567,119 @@ class LSTMModel(nn.Module):
         return out
 
 ### ======= Training & Evaluation ======= ###
+import torch
+
+# def compute_pos_weight(train_loader, device):
+#     total_pos = None
+#     total_neg = None
+
+#     for _, y_batch in train_loader:
+#         y_batch = y_batch.to(device)
+#         batch_pos = y_batch.sum(dim=0)
+#         batch_neg = (y_batch == 0).sum(dim=0)
+
+#         if total_pos is None:
+#             total_pos = batch_pos
+#             total_neg = batch_neg
+#         else:
+#             total_pos += batch_pos
+#             total_neg += batch_neg
+
+#     pos_weight = total_neg / (total_pos + 1e-5)
+    # return pos_weight
+
+
+# def compute_pos_weight(train_loader, device):
+#     total_pos = None
+#     total_neg = None
+
+#     for _, y_batch in train_loader:
+#         y_batch = y_batch.to(device)
+#         if y_batch.ndim == 1:
+#             y_batch = y_batch.unsqueeze(0)
+
+#         batch_pos = y_batch.sum(dim=0)
+#         batch_neg = (y_batch == 0).sum(dim=0)
+
+#         if total_pos is None:
+#             total_pos = batch_pos
+#             total_neg = batch_neg
+#         else:
+#             # Pad smaller vector to match
+#             max_len = max(total_pos.shape[0], batch_pos.shape[0])
+#             if total_pos.shape[0] < max_len:
+#                 total_pos = torch.nn.functional.pad(total_pos, (0, max_len - total_pos.shape[0]))
+#                 total_neg = torch.nn.functional.pad(total_neg, (0, max_len - total_neg.shape[0]))
+#             elif batch_pos.shape[0] < max_len:
+#                 batch_pos = torch.nn.functional.pad(batch_pos, (0, max_len - batch_pos.shape[0]))
+#                 batch_neg = torch.nn.functional.pad(batch_neg, (0, max_len - batch_neg.shape[0]))
+
+#             total_pos += batch_pos
+#             total_neg += batch_neg
+
+#     pos_weight = total_neg / (total_pos + 1e-5)
+#     return pos_weight
+
+
+# def compute_pos_weight(train_loader, device):
+#     total_pos = torch.zeros(len(LABEL_LIST)).to(device)
+#     total_neg = torch.zeros(len(LABEL_LIST)).to(device)
+
+#     for _, y_batch in train_loader:
+#         y_batch = y_batch.to(device)
+
+#         # Ignore rows that were padded (all -100)
+#         valid_mask = ~(y_batch == -100).all(dim=1)
+#         y_batch = y_batch[valid_mask]
+
+#         # Ensure the batch isn't empty after masking
+#         if y_batch.shape[0] == 0:
+#             continue
+
+#         total_pos += y_batch.sum(dim=0)
+#         total_neg += (y_batch == 0).sum(dim=0)
+
+#     pos_weight = total_neg / (total_pos + 1e-5)
+#     return pos_weight
+
+
+# def compute_pos_weight(train_loader, device, num_labels):
+#     total_pos = torch.zeros(num_labels).to(device)
+#     total_neg = torch.zeros(num_labels).to(device)
+
+#     for _, y_batch in train_loader:
+#         y_batch = y_batch.to(device)
+
+#         # Ignore fully padded sequences
+#         valid_mask = ~(y_batch == -100).all(dim=-1)
+#         y_batch = y_batch[valid_mask]
+
+#         if y_batch.shape[0] == 0:
+#             continue
+
+#         total_pos += (y_batch == 1).sum(dim=(0, 1))
+#         total_neg += (y_batch == 0).sum(dim=(0, 1))
+
+#     pos_weight = total_neg / (total_pos + 1e-5)
+#     return pos_weight
+
+# def pos_weights(train_loader)
 def train_model(model: nn.Module, train_loader, val_loader, binary, lr, epochs, device):
-    w_p = torch.FloatTensor([3]).to(device)
+
+    # pos_count = torch.sum(targets == 1).item()
+    # neg_count = torch.sum(targets == 0).item()
+    #w_p = compute_pos_weight(train_loader, device, len(LABEL_LIST))
+    w_p = torch.ones(17)
+
+    pos_weight = w_p # torch.FloatTensor([4]).to(device)
     optimizer = optim.AdamW(model.parameters(), lr=lr)
-    if binary:
-        criterion = nn.BCEWithLogitsLoss(pos_weight = w_p)
-    else:
-        criterion = nn.CrossEntropyLoss()
     best_val_loss = None
     best_model_sd = None
+
+    if binary:
+        criterion = nn.BCEWithLogitsLoss(pos_weight = pos_weight)
+    else:
+        criterion = nn.CrossEntropyLoss()
     for epoch in range(epochs):
         model.train()
         total_loss = 0
@@ -604,7 +716,7 @@ def train_model(model: nn.Module, train_loader, val_loader, binary, lr, epochs, 
             best_val_loss = val_loss
             best_model_sd = model.state_dict()
 
-    return best_model_sd
+    return best_model_sd, best_val_loss
 
 def evaluate_model(model, test_loader, device, binary, multi_label):
     model.eval()
@@ -632,12 +744,21 @@ def evaluate_model(model, test_loader, device, binary, multi_label):
     accuracy = accuracy_score(y_true, y_pred)  # Calculate accuracy
     print(f"Test Accuracy: {accuracy:.4f}")
     print(f"Test Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}")
+
+    # this code below is not for the multi-class 
+    f1_micro = f1_score(y_true, y_pred, average='micro')  # or 'macro', 'samples'
+    f1_macro = f1_score(y_true, y_pred, average='macro') 
+    f1_weighted = f1_score(y_true, y_pred, average='weighted') 
+    print("F1 Score(weighted):", f1_weighted)
+    print("F1 Score(micro):", f1_micro)
+    print("F1 Score(macro):", f1_macro)
     return {
         "accuracy": accuracy,
         "precision": precision,
         "recall": recall,
         "f1": f1
     }, y_true, y_pred
+    # return y_true, y_pred
 
 # def evaluate_model(model, test_loader, device, binary, multi_label):
 #     model.eval()
@@ -745,7 +866,7 @@ if __name__ == "__main__":
     ).to(device)
 
     # Train model and load best model at end
-    best_model_sd = train_model(model, train_loader, val_loader, False, 0.001, epochs=10, device=device)
+    best_model_sd, _ = train_model(model, train_loader, val_loader, False, 0.001, epochs=10, device=device)
     model.load_state_dict(best_model_sd)
 
     # Test
