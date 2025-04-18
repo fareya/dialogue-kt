@@ -34,11 +34,25 @@ def chunk_list(lst, chunk_size):
     return decoded_list
 
 
-def evaluate_multi_label_safe_2(y_true_raw, y_pred_raw):
+def evaluate_multi_label_safe_2(y_true, y_pred):
     import ast
     from collections import Counter
     from sklearn.preprocessing import MultiLabelBinarizer
     from sklearn.metrics import f1_score, accuracy_score, hamming_loss
+
+    mlb = MultiLabelBinarizer()
+    y_true_bin = mlb.fit_transform(y_true)
+    y_pred_bin = mlb.transform(y_pred)
+    f1_micro = f1_score(y_true_bin, y_pred_bin, average='micro')  # or 'macro', 'samples'
+    f1_macro = f1_score(y_true_bin, y_pred_bin, average='macro') 
+    f1_samples = f1_score(y_true_bin, y_pred_bin, average='samples') 
+    f1_weighted = f1_score(y_true_bin, y_pred_bin, average='weighted') 
+    print("F1 Score(weighted):", f1_weighted)
+    print("F1 Score(micro):", f1_micro)
+    print("F1 Score(macro):", f1_macro)
+    print("F1 Score(samples):", f1_samples)
+
+
 
     all_labels = [
         'confirmatory feedback', 'negative feedback', 'correcting',
@@ -51,14 +65,19 @@ def evaluate_multi_label_safe_2(y_true_raw, y_pred_raw):
         'conceptual knowledge', 'strategic knowledge', 'affective control', 'none'
     ]
     # Parse and clean
-    y_true = [ast.literal_eval(s) if isinstance(s, str) else s for s in y_true_raw]
-    y_pred = [ast.literal_eval(s) if isinstance(s, str) else s for s in y_pred_raw]
+    # y_true = [ast.literal_eval(s) if isinstance(s, str) else s for s in y_true_raw]
+    # y_pred = [ast.literal_eval(s) if isinstance(s, str) else s for s in y_pred_raw]
 
+    # print(y_true)
+    # print(y_pred)
+    # # Strip spaces
+    # y_true = [[label.strip() for label in ex] for ex in y_true]
+    # y_pred = [[label.strip() for label in ex] for ex in y_pred]
+
+    print("y_true")
     print(y_true)
+    print("y_pred")
     print(y_pred)
-    # Strip spaces
-    y_true = [[label.strip() for label in ex] for ex in y_true]
-    y_pred = [[label.strip() for label in ex] for ex in y_pred]
 
     # Initialize binarizer with fixed class order
     mlb = MultiLabelBinarizer(classes=all_labels)
@@ -72,11 +91,11 @@ def evaluate_multi_label_safe_2(y_true_raw, y_pred_raw):
         raise ValueError("Shape mismatch between predictions and ground truth after binarization.")
 
     # Compute metrics
-    f1 = f1_score(y_true_bin, y_pred_bin, average='samples')
+    f1 = f1_score(y_true_bin, y_pred_bin, average='micro')
     exact_match_acc = accuracy_score(y_true_bin, y_pred_bin)
     hamming_acc = 1 - hamming_loss(y_true_bin, y_pred_bin)
 
-    print(f"F1 Score (samples): {f1:.4f}")
+    print(f"F1 Score (macro): {f1:.4f}")
     print(f"Exact Match Accuracy: {exact_match_acc:.4f}")
     print(f"Hamming Accuracy: {hamming_acc:.4f}")
 

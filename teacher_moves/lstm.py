@@ -503,6 +503,7 @@ def format_sequences_with_labels(data, input_key, label_key):
         input_seq, label_seq = [], []
         for turn in conversation:
             if input_key in turn and label_key in turn:
+                print(turn[label_key])
                 input_seq.append(turn[input_key])
                 label_seq.append(turn[label_key])
         sequences.append(input_seq)
@@ -514,6 +515,7 @@ def encode_teacher_moves(sequences, labels, label_map):
         torch.stack([F.one_hot(torch.tensor(MOVE_TO_INDEX[move]), len(MOVE_TO_INDEX)).type(torch.float32) for move in seq])
         for seq in sequences
     ]
+    # if this is all zeros we can make this a vector 
     encoded_y = [
         torch.tensor([label_map.get(label, -100) for label in seq_labels])
         for seq_labels in labels
@@ -558,9 +560,10 @@ class LSTMModel(nn.Module):
 
 ### ======= Training & Evaluation ======= ###
 def train_model(model: nn.Module, train_loader, val_loader, binary, lr, epochs, device):
+    w_p = torch.FloatTensor([3]).to(device)
     optimizer = optim.AdamW(model.parameters(), lr=lr)
     if binary:
-        criterion = nn.BCEWithLogitsLoss()
+        criterion = nn.BCEWithLogitsLoss(pos_weight = w_p)
     else:
         criterion = nn.CrossEntropyLoss()
     best_val_loss = None
@@ -611,6 +614,9 @@ def evaluate_model(model, test_loader, device, binary, multi_label):
             X_batch, y_batch = X_batch.to(device), y_batch.to(device)
             output = model(X_batch)
             mask = y_batch != -100
+            print(y_batch)
+            print("mask")
+            print(mask)
             if multi_label:
                 y_pred.extend((output[mask] > 0).tolist())
                 y_true.extend(y_batch[mask].tolist())
